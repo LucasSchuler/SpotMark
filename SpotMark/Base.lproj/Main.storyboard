@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -763,10 +763,10 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-uS-JQp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TV0-qB-Vpw">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TV0-qB-Vpw">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem image="Search" width="290" id="UXV-U5-p5V">
+                                    <barButtonItem image="Search" width="51" id="UXV-U5-p5V">
                                         <color key="tintColor" red="0.41176470590000003" green="0.93725490199999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="zoomIn:" destination="fRk-Dv-AX3" id="BAR-eW-SNs"/>
@@ -781,6 +781,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dpY-uS-JQp" secondAttribute="trailing" constant="-16" id="5uw-Ja-wb8"/>
                             <constraint firstItem="dpY-uS-JQp" firstAttribute="leading" secondItem="WUQ-MT-zbt" secondAttribute="leadingMargin" constant="-16" id="8XN-tD-asa"/>
                             <constraint firstItem="RrP-KT-CK7" firstAttribute="top" secondItem="dpY-uS-JQp" secondAttribute="bottom" id="Kxd-g7-AjL"/>
+                            <constraint firstItem="RrP-KT-CK7" firstAttribute="top" secondItem="TV0-qB-Vpw" secondAttribute="bottom" id="sGQ-VE-T6l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TV0-qB-Vpw" secondAttribute="trailing" constant="-16" id="tnf-ZN-rh1"/>
+                            <constraint firstItem="TV0-qB-Vpw" firstAttribute="leading" secondItem="WUQ-MT-zbt" secondAttribute="leadingMargin" constant="-16" id="vvq-X3-IsJ"/>
                         </constraints>
                     </view>
                     <connections>
