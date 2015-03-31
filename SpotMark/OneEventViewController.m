@@ -33,6 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _eventImage.image = [UIImage imageNamed:_evt.category];
     
     //SE O USUARIO NAO CRIOU O EVENTO O BOTAO P/ CONVIDAR NAO APARECE
     _user1 = [User sharedUser];

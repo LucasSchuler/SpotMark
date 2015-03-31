@@ -32,7 +32,7 @@
    
     self.title = @"Events";
   
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.rowHeight = 100;
     _tableView.backgroundColor = [UIColor clearColor];
 }
@@ -55,9 +55,10 @@
     EventTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     PFObject *e = [_events objectAtIndex:(int)indexPath.row];
     cell.nameLabel.text = e[@"name"];
-    cell.dateLabel.text = e[@"dateTime"];
+    cell.dateLabel.text = e[@"datetime"];
     cell.localLabel.text = e[@"local"];
-  //  cell.eventImage.image = e[@"category"];
+    cell.eventImage.image = [UIImage imageNamed:e[@"category"]];
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
@@ -69,6 +70,7 @@
     _evt.local = e[@"local"];
     _evt.datetime = e[@"datetime"];
     _evt.admin = e[@"admin"];
+    _evt.category = e[@"category"];
     _evt.idEvent = e.objectId;
     [self performSegueWithIdentifier:@"gotoEventDetail" sender: indexPath];
 }

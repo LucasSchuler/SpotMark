@@ -29,8 +29,8 @@
 		0A32C2941AC08FEB00025127 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C2901AC08FEB00025127 /* ParseFacebookUtils.framework */; };
 		0A32C2951AC0901E00025127 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C28F1AC08FEB00025127 /* Parse.framework */; };
 		0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */; };
-		0A3BD4A21AC9CF4700DAE12B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BD4A01AC9CF4700DAE12B /* Main.storyboard */; };
 		0A3BD4A41AC9D46A00DAE12B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BD4A31AC9D46A00DAE12B /* Images.xcassets */; };
+		0A3BD4A81ACB1D8D00DAE12B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BD4A61ACB1D8D00DAE12B /* Main.storyboard */; };
 		0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF09D1AC5281700F221E0 /* loadParse.m */; };
 		0AEBF0A41AC5D26000F221E0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A31AC5D26000F221E0 /* User.m */; };
 		0AEBF0A71AC5E0C400F221E0 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */; };
@@ -88,9 +88,9 @@
 		0A32C2901AC08FEB00025127 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		0A32C2991AC1ED8500025127 /* NewEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEventsViewController.h; sourceTree = "<group>"; };
 		0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventsViewController.m; sourceTree = "<group>"; };
-		0A3BD4A11AC9CF4700DAE12B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A3BD4A31AC9D46A00DAE12B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0A3BD4A51ACB11B900DAE12B /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		0A3BD4A71ACB1D8D00DAE12B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AEBF09C1AC5281700F221E0 /* loadParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadParse.h; sourceTree = "<group>"; };
 		0AEBF09D1AC5281700F221E0 /* loadParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadParse.m; sourceTree = "<group>"; };
 		0AEBF0A21AC5D26000F221E0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -178,8 +178,8 @@
 			children = (
 				0A32C1681ABF248F00025127 /* Model */,
 				955619701AC395AC00010C68 /* ViewController */,
-				0A3BD4A01AC9CF4700DAE12B /* Main.storyboard */,
 				0A3BD4A31AC9D46A00DAE12B /* Images.xcassets */,
+				0A3BD4A61ACB1D8D00DAE12B /* Main.storyboard */,
 				0A32BF0E1ABE039E00025127 /* Supporting Files */,
 			);
 			path = SpotMark;
@@ -375,7 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3BD4A41AC9D46A00DAE12B /* Images.xcassets in Resources */,
-				0A3BD4A21AC9CF4700DAE12B /* Main.storyboard in Resources */,
+				0A3BD4A81ACB1D8D00DAE12B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,10 +433,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0A3BD4A01AC9CF4700DAE12B /* Main.storyboard */ = {
+		0A3BD4A61ACB1D8D00DAE12B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0A3BD4A11AC9CF4700DAE12B /* Base */,
+				0A3BD4A71ACB1D8D00DAE12B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
