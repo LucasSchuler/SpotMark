@@ -532,7 +532,7 @@
 				INFOPLIST_FILE = SpotMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "db826cb5-d7fa-4b53-9ef7-07870b828ba5";
+				PROVISIONING_PROFILE = "1f237468-d92f-4f5b-9720-187ccf75974b";
 			};
 			name = Debug;
 		};
@@ -546,7 +546,7 @@
 				INFOPLIST_FILE = SpotMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "db826cb5-d7fa-4b53-9ef7-07870b828ba5";
+				PROVISIONING_PROFILE = "1f237468-d92f-4f5b-9720-187ccf75974b";
 			};
 			name = Release;
 		};
