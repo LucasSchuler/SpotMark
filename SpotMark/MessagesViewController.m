@@ -7,29 +7,26 @@
 //
 
 #import "MessagesViewController.h"
-#import "loadParse.h"
-#import "User.h"
 #import <Parse/Parse.h>
-#import "Chat.h"
+#import "loadParse.h"
+#import "Event.h"
+#import "User.h"
 
 @interface MessagesViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-@property Chat *chat;
-
+@property (weak, nonatomic) IBOutlet UITableView *tableViewM;
+@property User *user1;
 @end
 
 @implementation MessagesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
-    
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    _tableView.rowHeight = 75;
-    _tableView.backgroundColor = [UIColor clearColor];
+    _user1 = [User sharedUser];
+    NSLog(@"%@",_user1);
+    _tableViewM.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    _tableViewM.rowHeight = 75;
+    _tableViewM.backgroundColor = [UIColor clearColor];
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = @"Messages";
@@ -37,36 +34,38 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    //[_tableView reloadData];
-    //loadParse *lp = [[loadParse alloc] init];
-    //User *user1 = [User sharedUser];
- //   _messages = [lp loadMessages:user1.objectId];
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 2;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellIdentifier = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-  //  PFObject *e = [_messages objectAtIndex:(int)indexPath.row];
-    cell.textLabel.text = @"teste";
-    
-    return cell;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    [self performSegueWithIdentifier:@"gotoEventDetail" sender: indexPath];
+    [_tableViewM reloadData];
+    loadParse *lp = [[loadParse alloc] init];
+    NSLog(@"%@",_user1.name);
+    _events = [lp loadEvents:_user1.objectId];
+    NSLog(@"lu",_events.count);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _events.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"Cell";
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    PFObject *e = [_events objectAtIndex:(int)indexPath.row];
+    cell.textLabel.text = e[@"name"];
+    cell.backgroundColor = [UIColor colorWithRed:0.96 green:0.72 blue:0.36 alpha:1];
+    return cell;
+
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+}
+
 
 /*
 #pragma mark - Navigation

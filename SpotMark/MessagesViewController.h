@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MessagesViewController : UIViewController<UITableViewDelegate , UITableViewDataSource>
-
+@interface MessagesViewController : UIViewController <UITableViewDelegate , UITableViewDataSource>
+@property NSMutableArray *events;
 @end

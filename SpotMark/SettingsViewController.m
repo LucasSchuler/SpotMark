@@ -30,6 +30,7 @@
     [self loadUser];
     
     self.image.layer.cornerRadius = 100.0f;
+    
 }
 
 - (void)didReceiveMemoryWarning {

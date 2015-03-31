@@ -14,6 +14,7 @@
 @interface ViewController ()
 
 @property BOOL isLogged;
+@property BOOL load;
 
 @end
 
@@ -29,21 +30,19 @@
         
         //REQUEST USER FRIENDS
         FBRequest* friendsRequest = [FBRequest requestForMyFriends];
+        User *user1 = [User sharedUser];
+        user1.email = [user objectForKey:@"email"];
+        user1.name = [user name];
+        user1.objectId = [user objectID];
         [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,
                                                       NSError *error) {
             NSArray* friends = [result objectForKey:@"data"];
-            User *user1 = [User sharedUser];
-            user1.email = [user objectForKey:@"email"];
-            user1.name = [user name];
-            user1.objectId = [user objectID];
-            user1.friends_list = [friends mutableCopy];
+                    user1.friends_list = [friends mutableCopy];
         }];
         
         //NEXT SEGUE
         _isLogged=true;
         [self performSegueWithIdentifier:@"gotoEvents" sender:nil];
-        
-        
     }
 }
 
