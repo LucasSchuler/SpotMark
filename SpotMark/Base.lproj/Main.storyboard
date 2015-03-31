@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -115,21 +114,17 @@
                                     <constraint firstAttribute="width" secondItem="aFA-Zi-CSE" secondAttribute="height" multiplier="16:15" id="qge-0Z-cAf"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJs-Mr-D1q">
-                                <rect key="frame" x="167" y="72" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="SKE-2A-6f9"/>
-                                    <constraint firstAttribute="height" constant="200" id="hNh-F1-aSJ"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bJs-Mr-D1q">
+                                <rect key="frame" x="200" y="92" width="200" height="200"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBW-9l-vV9">
-                                <rect key="frame" x="246" y="316" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBW-9l-vV9">
+                                <rect key="frame" x="279" y="320" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kpb-ny-3UZ" customClass="FBLoginView">
-                                <rect key="frame" x="167" y="382" width="200" height="35"/>
+                                <rect key="frame" x="200" y="380" width="200" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="iQs-oE-owL" id="9P9-Te-7Ik"/>
@@ -138,23 +133,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bJs-Mr-D1q" firstAttribute="top" secondItem="RP2-cG-5he" secondAttribute="topMargin" constant="72" id="0vG-dT-TX0"/>
-                            <constraint firstItem="bJs-Mr-D1q" firstAttribute="centerX" secondItem="xeA-oc-8Hd" secondAttribute="centerX" constant="-33" id="6MN-Gk-f6G"/>
-                            <constraint firstItem="NBW-9l-vV9" firstAttribute="centerX" secondItem="bJs-Mr-D1q" secondAttribute="centerX" id="Cwz-gR-e7F"/>
+                            <constraint firstItem="NBW-9l-vV9" firstAttribute="top" secondItem="bJs-Mr-D1q" secondAttribute="bottom" constant="28" id="4kd-tS-TUP"/>
                             <constraint firstItem="xeA-oc-8Hd" firstAttribute="top" secondItem="RP2-cG-5he" secondAttribute="top" id="G5u-Xa-WlA"/>
-                            <constraint firstItem="bJs-Mr-D1q" firstAttribute="top" secondItem="RP2-cG-5he" secondAttribute="top" constant="72" id="KBv-fJ-uup"/>
-                            <constraint firstItem="bJs-Mr-D1q" firstAttribute="top" secondItem="RP2-cG-5he" secondAttribute="topMargin" constant="72" id="KMw-Wj-MRh"/>
                             <constraint firstItem="xeA-oc-8Hd" firstAttribute="centerX" secondItem="aFA-Zi-CSE" secondAttribute="centerX" id="PiK-dC-2mq"/>
                             <constraint firstItem="xeA-oc-8Hd" firstAttribute="leading" secondItem="RP2-cG-5he" secondAttribute="leading" id="Pk1-M6-t9S"/>
+                            <constraint firstItem="Kpb-ny-3UZ" firstAttribute="top" secondItem="NBW-9l-vV9" secondAttribute="bottom" constant="39" id="UQR-BL-rxr"/>
                             <constraint firstItem="xeA-oc-8Hd" firstAttribute="centerY" secondItem="bJs-Mr-D1q" secondAttribute="centerY" constant="124.5" id="Vd1-Bs-Xjt"/>
                             <constraint firstItem="NBW-9l-vV9" firstAttribute="top" secondItem="aFA-Zi-CSE" secondAttribute="bottom" constant="8" id="aTJ-gJ-kvI"/>
                             <constraint firstItem="aFA-Zi-CSE" firstAttribute="top" secondItem="7FP-wJ-Xn6" secondAttribute="bottom" constant="8" id="alc-jD-2hB"/>
-                            <constraint firstItem="Kpb-ny-3UZ" firstAttribute="top" secondItem="NBW-9l-vV9" secondAttribute="bottom" constant="45.5" id="bfO-P9-mnd"/>
                             <constraint firstItem="NBW-9l-vV9" firstAttribute="top" secondItem="aFA-Zi-CSE" secondAttribute="bottom" constant="8" id="eYy-Lz-ant"/>
                             <constraint firstAttribute="bottom" secondItem="xeA-oc-8Hd" secondAttribute="bottom" id="et2-e6-gLI"/>
                             <constraint firstItem="Kpb-ny-3UZ" firstAttribute="top" secondItem="aFA-Zi-CSE" secondAttribute="bottom" constant="37" id="noz-Ll-rJd"/>
-                            <constraint firstItem="NBW-9l-vV9" firstAttribute="top" secondItem="bJs-Mr-D1q" secondAttribute="bottom" constant="44" id="ntf-nn-gj5"/>
+                            <constraint firstItem="NBW-9l-vV9" firstAttribute="centerY" secondItem="xeA-oc-8Hd" secondAttribute="centerY" constant="30.5" id="nqY-fv-9Nb"/>
                             <constraint firstItem="xeA-oc-8Hd" firstAttribute="centerY" secondItem="aFA-Zi-CSE" secondAttribute="centerY" constant="153" id="scj-2i-fsq"/>
+                            <constraint firstItem="xeA-oc-8Hd" firstAttribute="centerX" secondItem="bJs-Mr-D1q" secondAttribute="centerX" id="x2l-g4-AVY"/>
+                            <constraint firstItem="xeA-oc-8Hd" firstAttribute="centerY" secondItem="Kpb-ny-3UZ" secondAttribute="centerY" constant="-97.5" id="ybG-3z-jzc"/>
                             <constraint firstAttribute="trailing" secondItem="xeA-oc-8Hd" secondAttribute="trailing" id="zhW-pd-azp"/>
                         </constraints>
                         <variation key="default">
@@ -943,8 +936,8 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Kvc-Bv-HLe"/>
         <segue reference="HFn-Re-Rbh"/>
-        <segue reference="07s-Np-hEV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.96470588235294119" green="0.80784313725490198" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
