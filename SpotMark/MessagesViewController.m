@@ -10,10 +10,13 @@
 #import "loadParse.h"
 #import "User.h"
 #import <Parse/Parse.h>
+#import "Chat.h"
 
 @interface MessagesViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *tableViewM;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property Chat *chat;
 
 @end
 
@@ -24,9 +27,9 @@
 
     
     
-    _tableViewM.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    _tableViewM.rowHeight = 75;
-    _tableViewM.backgroundColor = [UIColor clearColor];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    _tableView.rowHeight = 75;
+    _tableView.backgroundColor = [UIColor clearColor];
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = @"Messages";
@@ -34,37 +37,29 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [_tableViewM reloadData];
-    loadParse *lp = [[loadParse alloc] init];
-    User *user1 = [User sharedUser];
-    _messages = [lp loadEvents:user1.objectId];
+    //[_tableView reloadData];
+    //loadParse *lp = [[loadParse alloc] init];
+    //User *user1 = [User sharedUser];
+ //   _messages = [lp loadMessages:user1.objectId];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _messages.count;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cell = @"cell";
-    cell = [tableView dequeueReusableCellWithIdentifier:cell];
-    PFObject *e = [_messages objectAtIndex:(int)indexPath.row];
-    cell = e[@"name"];
+    static NSString *cellIdentifier = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+  //  PFObject *e = [_messages objectAtIndex:(int)indexPath.row];
+    cell.textLabel.text = @"teste";
     
-    //  cell.eventImage.image = e[@"category"];
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    _evt = [[Event alloc] init];
-    PFObject *e = [_events objectAtIndex:(int)indexPath.row];
-    _evt.name = e[@"name"];
-    _evt.desc = e[@"description"];
-    _evt.local = e[@"local"];
-    _evt.datetime = e[@"datetime"];
-    _evt.admin = e[@"admin"];
-    _evt.idEvent = e.objectId;
+    
     [self performSegueWithIdentifier:@"gotoEventDetail" sender: indexPath];
 }
 

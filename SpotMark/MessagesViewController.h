@@ -10,6 +10,4 @@
 
 @interface MessagesViewController : UIViewController<UITableViewDelegate , UITableViewDataSource>
 
-@property NSMutableArray *messages;
-
 @end

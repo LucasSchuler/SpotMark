@@ -279,7 +279,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableViewM" destination="JHe-eA-Cig" id="cSB-lO-CS7"/>
+                        <outlet property="tableView" destination="JHe-eA-Cig" id="hRy-NJ-jWf"/>
                         <segue destination="vnJ-lx-YrF" kind="show" id="gPy-Uq-59d"/>
                     </connections>
                 </viewController>

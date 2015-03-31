@@ -54,7 +54,7 @@
     static NSString *cellIdentifier = @"cell";
     EventTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     PFObject *e = [_events objectAtIndex:(int)indexPath.row];
-    cell. = e[@"name"];
+    cell.nameLabel.text = e[@"name"];
     cell.dateLabel.text = e[@"dateTime"];
     cell.localLabel.text = e[@"local"];
   //  cell.eventImage.image = e[@"category"];

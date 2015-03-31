@@ -14,5 +14,6 @@
 -(NSMutableArray *) loadPosts : (NSString *) idEvent;
 -(void) sairEvento : (NSString *) user : (NSString *) event;
 -(void) excluirEvento : (NSString *) event;
+-(NSMutableArray *) loadMessages : (NSString *) idEvent;
 
 @end
