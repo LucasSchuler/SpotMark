@@ -26,6 +26,7 @@
     _tableView.allowsMultipleSelection = YES;
     _user1 = [User sharedUser];
     _friend_list = [[NSMutableArray alloc] init];
+    _tableView.backgroundColor = [UIColor clearColor];
     // Do any additional setup after loading the view.
 }
 
@@ -48,6 +49,7 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=200&height=200", friend.objectID]];
     NSData *data = [NSData dataWithContentsOfURL:url];
     [cell.image setImage:[UIImage imageWithData:data]];
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
