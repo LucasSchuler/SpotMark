@@ -253,6 +253,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JHe-eA-Cig">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8kq-VU-38O" id="Uym-vv-yRb"/>
+                                    <outlet property="delegate" destination="8kq-VU-38O" id="K2D-RF-MzW"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -943,8 +947,8 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="TZB-Lm-RUj"/>
         <segue reference="HFn-Re-Rbh"/>
-        <segue reference="Kvc-Bv-HLe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.96470588235294119" green="0.80784313725490198" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
