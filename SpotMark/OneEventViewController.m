@@ -41,7 +41,7 @@
     _user1 = [User sharedUser];
     if(![_user1.email isEqual:_evt.admin]){
         _invite.hidden=YES;
-        [_exit setTitle:@"Sair do evento" forState:UIControlStateNormal];
+        [_exit setTitle:@"Exit Event" forState:UIControlStateNormal];
     }
     
     _tableView.backgroundColor = [UIColor clearColor];

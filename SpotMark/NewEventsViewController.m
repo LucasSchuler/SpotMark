@@ -36,7 +36,7 @@
     
     
     
-    _listCategory = @[@"Esporte", @"Reunião", @"Lazer", @"Festa"];
+    _listCategory = @[@"Sport", @"Party", @"Laisure", @"Meeting"];
     
     [self.datePicker setValue:[UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70] forKeyPath:@"textColor"];
     
@@ -103,7 +103,7 @@ static CGFloat keyboardHeightOffset = 0.0f;
     [userEvent saveInBackground];
     
     // SE NAO OCORRER ERRO MOSTRA MENSAGEM E VAI P/ A TELA DO EVENTO
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Evento criado com sucesso!"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully created event!"
                                                     message:@""
                                                    delegate:self
                                           cancelButtonTitle:@"OK"
