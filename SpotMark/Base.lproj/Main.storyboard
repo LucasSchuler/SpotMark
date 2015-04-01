@@ -482,7 +482,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                         <color key="backgroundColor" red="0.65098039215686276" green="0.41176470588235292" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="18"/>
-                                        <state key="normal" title="Postar">
+                                        <state key="normal" title="Post">
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -515,8 +515,8 @@
                                     <constraint firstItem="laU-K0-kHG" firstAttribute="leading" secondItem="SAT-z6-DlT" secondAttribute="trailing" id="z32-cn-veX"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-Ht-m22">
-                                <rect key="frame" x="480" y="238" width="100" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-Ht-m22">
+                                <rect key="frame" x="480" y="241" width="100" height="41"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Ffx-O9-5uc"/>
@@ -560,14 +560,14 @@
                                     <action selector="Invite:" destination="a7T-MV-DoO" eventType="touchUpInside" id="wK9-xg-jMv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-lE-Hh9">
-                                <rect key="frame" x="400" y="200" width="200" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-lE-Hh9">
+                                <rect key="frame" x="400" y="200" width="200" height="33"/>
                                 <color key="backgroundColor" red="0.35686274509803922" green="0.015686274509803921" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NiI-hT-mb7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="15"/>
-                                <state key="normal" title="Excluir Evento">
+                                <state key="normal" title="Delete Event">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -593,8 +593,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mfX-C6-Sg8">
-                                <rect key="frame" x="0.0" y="287" width="600" height="220"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mfX-C6-Sg8">
+                                <rect key="frame" x="0.0" y="290" width="600" height="217"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="mbs-ap-dam">
@@ -852,10 +852,10 @@
                                     <constraint firstAttribute="width" constant="435" id="afL-mO-v5l"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Esporte"/>
-                                    <segment title="Festa"/>
-                                    <segment title="Lazer"/>
-                                    <segment title="Reunião"/>
+                                    <segment title="Sport"/>
+                                    <segment title="Party"/>
+                                    <segment title="Laisure"/>
+                                    <segment title="Meeting"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeT-Tj-l0C">
@@ -1019,6 +1019,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="07s-Np-hEV"/>
         <segue reference="Ct6-r1-8sO"/>
+        <segue reference="vL7-Bs-del"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.96470588235294119" green="0.80784313725490198" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
