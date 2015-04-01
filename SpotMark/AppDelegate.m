@@ -56,9 +56,6 @@
     [currentInstallation setDeviceTokenFromData:deviceToken];
     currentInstallation.channels = @[ @"global" ];
     [currentInstallation saveInBackground];
-        
-    NSLog(@"My token is: %@", deviceToken);
-
 }
 
 
@@ -71,11 +68,6 @@
 {
     NSLog(@"Failed to get token, error: %@", error);
 }
-
-
-
-
-
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     //[FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];

@@ -72,4 +72,30 @@
     [delete deleteInBackground];
 }
 
+-(NSMutableArray *) loadChat : (NSString *) eventId{
+    NSUInteger limit = 1000;
+    NSLog(@"%@",eventId);
+    NSUInteger skip = 0;
+    PFQuery *query = [PFQuery queryWithClassName:@"Message"];
+    [query orderByAscending:@"createdAt"];
+    [query whereKey:@"eventId" equalTo:eventId];
+    [query setLimit: limit];
+    [query setSkip: skip];
+    NSArray *objects = query.findObjects;
+    return [objects mutableCopy];
+}
+
+-(NSMutableArray *) loadParticipants : (NSString *) idEvent{
+    NSUInteger limit = 1000;
+    NSUInteger skip = 0;
+    PFQuery *query = [PFQuery queryWithClassName:@"UserEvent"];
+    [query orderByDescending:@"createdAt"];
+    [query whereKey:@"event" equalTo:idEvent];
+    [query setLimit: limit];
+    [query setSkip: skip];
+    NSArray *objects = query.findObjects;
+    return [objects mutableCopy];
+}
+
+
 @end
