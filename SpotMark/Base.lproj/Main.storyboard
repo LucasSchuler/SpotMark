@@ -138,10 +138,6 @@
                             <constraint firstItem="xeA-oc-8Hd" firstAttribute="centerX" secondItem="aFA-Zi-CSE" secondAttribute="centerX" id="PiK-dC-2mq"/>
                             <constraint firstItem="xeA-oc-8Hd" firstAttribute="leading" secondItem="RP2-cG-5he" secondAttribute="leading" id="Pk1-M6-t9S"/>
                             <constraint firstItem="Kpb-ny-3UZ" firstAttribute="top" secondItem="NBW-9l-vV9" secondAttribute="bottom" constant="39" id="UQR-BL-rxr"/>
-                            <constraint firstItem="xeA-oc-8Hd" firstAttribute="centerY" secondItem="bJs-Mr-D1q" secondAttribute="centerY" constant="124.5" id="Vd1-Bs-Xjt"/>
-                            <constraint firstItem="NBW-9l-vV9" firstAttribute="top" secondItem="aFA-Zi-CSE" secondAttribute="bottom" constant="8" id="aTJ-gJ-kvI"/>
-                            <constraint firstItem="aFA-Zi-CSE" firstAttribute="top" secondItem="7FP-wJ-Xn6" secondAttribute="bottom" constant="8" id="alc-jD-2hB"/>
-                            <constraint firstItem="NBW-9l-vV9" firstAttribute="top" secondItem="aFA-Zi-CSE" secondAttribute="bottom" constant="8" id="eYy-Lz-ant"/>
                             <constraint firstAttribute="bottom" secondItem="xeA-oc-8Hd" secondAttribute="bottom" id="et2-e6-gLI"/>
                             <constraint firstItem="Kpb-ny-3UZ" firstAttribute="top" secondItem="aFA-Zi-CSE" secondAttribute="bottom" constant="37" id="noz-Ll-rJd"/>
                             <constraint firstItem="NBW-9l-vV9" firstAttribute="centerY" secondItem="xeA-oc-8Hd" secondAttribute="centerY" constant="30.5" id="nqY-fv-9Nb"/>
@@ -153,9 +149,6 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="aFA-Zi-CSE"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="Vd1-Bs-Xjt"/>
                             </mask>
                         </variation>
                     </view>
@@ -951,7 +944,7 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kvc-Bv-HLe"/>
+        <segue reference="07s-Np-hEV"/>
         <segue reference="Ct6-r1-8sO"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.96470588235294119" green="0.80784313725490198" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
