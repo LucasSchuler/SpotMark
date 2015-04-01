@@ -8,11 +8,15 @@
 
 #import "ChatViewController.h"
 #import "Event.h"
-
+#import "Message.h"
+#import "User.h"
+#import <Parse/Parse.h>
+#import "loadParse.h"
 
 @interface ChatViewController ()
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBottom;
+@property User *user1;
 
 @end
 
@@ -22,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _user1 = [User sharedUser];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = _evt.name;
     
@@ -31,15 +35,43 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    loadParse *lp = [[loadParse alloc] init];
+    _messages = [lp loadChat:_eventId];
+    [self loadViewMessages];
+}
+
+-(void) loadViewMessages{
+    for(int i=0; i<_messages.count; i++){
+        PFObject *m = [_messages objectAtIndex:i];
+        if([_user1.objectId isEqualToString:m[@"userId"]]){
+            _tvChat.textAlignment=NSTextAlignmentRight;
+            [_tvChat setText:[_tvChat.text stringByAppendingString:[NSString stringWithFormat:@"%@ :\n %@ \n\n", m[@"userName"], m[@"message"]]]];
+        }else{
+             _tvChat.textAlignment=NSTextAlignmentLeft;
+            [_tvChat setText:[_tvChat.text stringByAppendingString:[NSString stringWithFormat:@"%@ :\n %@ \n\n", m[@"userName"], m[@"message"]]]];
+        }
+    }
+}
+
 static CGFloat keyboardHeightOffset = 0.0f;
 
 - (IBAction)sendMessage:(id)sender {
-    
-    [self sendMyMessage];
+    Message *m = [[Message alloc]init];
+    m.userName = _user1.name;
+    m.userId = _user1.objectId;
+    m.eventId = _eventId;
+    m.message = _txtMessage.text;
+    PFObject *message = [PFObject objectWithClassName:@"Message"];
+    message [@"userName"] = m.userName;
+    message [@"userId"] = m.userId;
+    message [@"eventId"] = m.eventId;
+    message [@"message"] = m.message;
+    [message saveInBackground];
+   // [self sendMyMessage];
 }
 
 -(void)sendMyMessage{
-    
     //NSData *dataToSend = [_txtMessage.text dataUsingEncoding:NSUTF8StringEncoding];
     
     [_tvChat setText:[_tvChat.text stringByAppendingString:[NSString stringWithFormat:@"I wrote:\n%@\n\n", _txtMessage.text]]];

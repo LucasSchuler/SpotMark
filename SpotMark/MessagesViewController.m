@@ -11,11 +11,13 @@
 #import "loadParse.h"
 #import "Event.h"
 #import "User.h"
+#import "ChatViewController.h"
 
 @interface MessagesViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewM;
 @property User *user1;
+@property Event *evt;
 @end
 
 @implementation MessagesViewController
@@ -36,9 +38,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [_tableViewM reloadData];
     loadParse *lp = [[loadParse alloc] init];
-    NSLog(@"%@",_user1.name);
     _events = [lp loadEvents:_user1.objectId];
-    NSLog(@"lu",_events.count);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,9 +63,19 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    _evt = [[Event alloc] init];
+    PFObject *e = [_events objectAtIndex:(int)indexPath.row];
+    _evt.eventId = e.objectId;
+    [self performSegueWithIdentifier:@"gotoChat" sender:nil];
 }
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+     if ([segue.identifier isEqualToString:@"gotoChat"]){
+         ChatViewController *cvc = (ChatViewController *) segue.destinationViewController;
+         cvc.eventId = _evt.eventId;
+     }
+}
 
 /*
 #pragma mark - Navigation

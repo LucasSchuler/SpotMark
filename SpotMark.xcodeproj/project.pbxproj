@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0F98C91ACB3F9400B6D006 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0F98C81ACB3F9400B6D006 /* Message.m */; };
+		0A2D21AE1ACC27B8003EE2AE /* ParticipantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D21AD1ACC27B8003EE2AE /* ParticipantsViewController.m */; };
 		0A32BF111ABE039E00025127 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32BF101ABE039E00025127 /* main.m */; };
 		0A32BF141ABE039E00025127 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32BF131ABE039E00025127 /* AppDelegate.m */; };
 		0A32BF171ABE039E00025127 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32BF161ABE039E00025127 /* ViewController.m */; };
@@ -58,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0F98C71ACB3F9400B6D006 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		0A0F98C81ACB3F9400B6D006 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		0A2D21AC1ACC27B8003EE2AE /* ParticipantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipantsViewController.h; sourceTree = "<group>"; };
+		0A2D21AD1ACC27B8003EE2AE /* ParticipantsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantsViewController.m; sourceTree = "<group>"; };
 		0A32BF0B1ABE039E00025127 /* SpotMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A32BF0F1ABE039E00025127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A32BF101ABE039E00025127 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -228,6 +234,8 @@
 				0AEBF0A91AC635E000F221E0 /* CustonCellInvite.m */,
 				95FD4ACB1AC9D68C0075A78A /* EventTableCell.h */,
 				95FD4ACC1AC9D68C0075A78A /* EventTableCell.m */,
+				0A0F98C71ACB3F9400B6D006 /* Message.h */,
+				0A0F98C81ACB3F9400B6D006 /* Message.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -279,6 +287,8 @@
 				955619661AC3228F00010C68 /* ChatViewController.m */,
 				0AEBF0A51AC5E0C400F221E0 /* InviteViewController.h */,
 				0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */,
+				0A2D21AC1ACC27B8003EE2AE /* ParticipantsViewController.h */,
+				0A2D21AD1ACC27B8003EE2AE /* ParticipantsViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -393,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2D21AE1ACC27B8003EE2AE /* ParticipantsViewController.m in Sources */,
 				95FD4AC11AC5BD7E0075A78A /* Event.m in Sources */,
 				0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */,
 				955619781AC48ABA00010C68 /* Chat.m in Sources */,
@@ -402,6 +413,7 @@
 				955619671AC3228F00010C68 /* ChatViewController.m in Sources */,
 				9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */,
 				955619641AC3215400010C68 /* MessagesViewController.m in Sources */,
+				0A0F98C91ACB3F9400B6D006 /* Message.m in Sources */,
 				0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */,
 				0AEBF0AA1AC635E000F221E0 /* CustonCellInvite.m in Sources */,
 				955619611AC320DF00010C68 /* SettingsViewController.m in Sources */,

@@ -57,7 +57,10 @@
     cell.nameLabel.text = e[@"name"];
     cell.dateLabel.text = e[@"datetime"];
     cell.localLabel.text = e[@"local"];
-    cell.eventImage.image = [UIImage imageNamed:e[@"category"]];
+    if([e[@"category"] isEqualToString:@"Reunião"])
+        cell.eventImage.image = [UIImage imageNamed:@"Reuniao"];
+    else
+        cell.eventImage.image = [UIImage imageNamed:e[@"category"]];
     cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
@@ -70,7 +73,10 @@
     _evt.local = e[@"local"];
     _evt.datetime = e[@"datetime"];
     _evt.admin = e[@"admin"];
-    _evt.category = e[@"category"];
+    if([e[@"category"] isEqualToString:@"Reunião"])
+        _evt.category = @"Reuniao";
+     else
+         _evt.category = e[@"category"];
     _evt.idEvent = e.objectId;
     [self performSegueWithIdentifier:@"gotoEventDetail" sender: indexPath];
 }

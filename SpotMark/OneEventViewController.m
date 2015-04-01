@@ -14,6 +14,8 @@
 #import <Parse/Parse.h>
 #import "User.h"
 #import "InviteViewController.h"
+#import "ChatViewController.h"
+#import "ParticipantsViewController.h"
 
 @interface OneEventViewController () <MKMapViewDelegate>
 
@@ -39,10 +41,10 @@
     _user1 = [User sharedUser];
     if(![_user1.email isEqual:_evt.admin]){
         _invite.hidden=YES;
-        _exit.titleLabel.text = @"Sair do evento";
+        [_exit setTitle:@"Sair do evento" forState:UIControlStateNormal];
     }
     
-    
+    _tableView.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = _evt.name;
     
@@ -79,6 +81,12 @@
     }else if([segue.identifier isEqualToString:@"gotoInviteFromEvent"]){
         InviteViewController *ivc = (InviteViewController *) segue.destinationViewController;
         ivc.idEvent = _evt.idEvent;
+    }else if([segue.identifier isEqualToString:@"gotoChatFromOneEvent"]){
+        ChatViewController *cvc  = (ChatViewController *) segue.destinationViewController;
+        cvc.eventId = _evt.idEvent;
+    }else if([segue.identifier isEqualToString:@"gotoParticipants"]){
+        ParticipantsViewController *pc = (ParticipantsViewController *) segue.destinationViewController;
+        pc.idEvent = _evt.idEvent;
     }
 
 }
@@ -98,6 +106,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     PFObject *e = [_posts objectAtIndex:(int)indexPath.row];
     cell.textLabel.text = e[@"post"];
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
@@ -111,7 +120,6 @@
     [alertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
     /* Display a numerical keypad for this text field */
     UITextField *textField = [alertView textFieldAtIndex:0];
-    textField.keyboardType = UIKeyboardTypeNumberPad;
     [alertView show];
 }
 
@@ -128,7 +136,7 @@
 }
 
 - (IBAction)abrirChat:(id)sender {
-    //TODO
+    [self performSegueWithIdentifier:@"gotoChatFromOneEvent" sender:nil];
 }
 
 - (IBAction)Invite:(id)sender {
@@ -143,7 +151,7 @@
 }
 
 - (IBAction)participants:(id)sender {
-    //TODO
+    [self performSegueWithIdentifier:@"gotoParticipants" sender:nil];
 }
 
 -(IBAction)backFromInvite:(UIStoryboardSegue *)segue
