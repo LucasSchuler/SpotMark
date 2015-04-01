@@ -21,16 +21,26 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *category;
 @property Event *e;
 @property NSArray *listCategory;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *CreateButton;
+
 
 @end
 
-@implementation NewEventsViewController
+@implementation NewEventsViewController{
+    CGFloat _initialConstant;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    
     _listCategory = @[@"Esporte", @"Reunião", @"Lazer", @"Festa"];
     
     [self.datePicker setValue:[UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70] forKeyPath:@"textColor"];
+    
+    
     
     SEL selector = NSSelectorFromString(@"setHighlightsToday:");
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDatePicker instanceMethodSignatureForSelector:selector]];
@@ -40,10 +50,19 @@
     [invocation invokeWithTarget:self.datePicker];
     
     
+    
+    
+    
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.7]};
     self.title = @"New Event";
+    
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
-//
+
+static CGFloat keyboardHeightOffset = 0.0f;
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -103,14 +122,44 @@
     return YES;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
 }
-*/
+
+
+
+- (void)keyboardWillShow:(NSNotification*)notification {
+    
+    // Getting the keyboard frame and animation duration.
+    CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    if (!_initialConstant) {
+        _initialConstant = _CreateButton.constant;
+    }
+    
+    // If screen can fit everything, leave the constant untouched.
+    _CreateButton.constant = MAX(keyboardFrame.size.height + keyboardHeightOffset, _initialConstant);
+    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
+        // This method will automatically animate all views to satisfy new constants.
+        [self.view layoutIfNeeded];
+    }];
+    
+}
+
+- (void)keyboardWillHide:(NSNotification*)notification {
+    
+    // Getting the keyboard frame and animation duration.
+    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    // Putting everything back to place.
+    _CreateButton.constant = _initialConstant;
+    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
+    
+}
+
 
 @end

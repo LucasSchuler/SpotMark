@@ -342,7 +342,7 @@
 				TargetAttributes = {
 					0A32BF0A1ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6D93DA2TT6;
+						DevelopmentTeam = 6ZVL2ANYP3;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -354,7 +354,7 @@
 					};
 					0A32BF231ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6D93DA2TT6;
+						DevelopmentTeam = 6ZVL2ANYP3;
 						TestTargetID = 0A32BF0A1ABE039E00025127;
 					};
 				};
@@ -544,7 +544,7 @@
 				INFOPLIST_FILE = SpotMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0bac1631-aa6a-4071-babf-6d314b1d7640";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -558,7 +558,7 @@
 				INFOPLIST_FILE = SpotMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0bac1631-aa6a-4071-babf-6d314b1d7640";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Chat : NSObject
+@interface Chat: NSObject
+
 @property NSMutableArray *guestsList;
 @property NSMutableArray *messagesList;
+@property NSString *name;
 
 @end
