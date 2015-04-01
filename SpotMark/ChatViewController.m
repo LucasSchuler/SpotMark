@@ -36,12 +36,13 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    loadParse *lp = [[loadParse alloc] init];
-    _messages = [lp loadChat:_eventId];
     [self loadViewMessages];
 }
 
 -(void) loadViewMessages{
+    [_tvChat setText:@""];
+    loadParse *lp = [[loadParse alloc] init];
+    _messages = [lp loadChat:_eventId];
     for(int i=0; i<_messages.count; i++){
         PFObject *m = [_messages objectAtIndex:i];
         if([_user1.objectId isEqualToString:m[@"userId"]]){
@@ -68,19 +69,9 @@ static CGFloat keyboardHeightOffset = 0.0f;
     message [@"eventId"] = m.eventId;
     message [@"message"] = m.message;
     [message saveInBackground];
-   // [self sendMyMessage];
-}
-
--(void)sendMyMessage{
-    //NSData *dataToSend = [_txtMessage.text dataUsingEncoding:NSUTF8StringEncoding];
-    
-    [_tvChat setText:[_tvChat.text stringByAppendingString:[NSString stringWithFormat:@"I wrote:\n%@\n\n", _txtMessage.text]]];
     [_txtMessage setText:@""];
-    [_txtMessage resignFirstResponder];
-    
-    
+    [self loadViewMessages];
 }
-
 
 //MARK: Keyboard Methods
 - (IBAction)dismissKeyboard {
