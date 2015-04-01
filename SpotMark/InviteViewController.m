@@ -70,6 +70,7 @@
         NSDictionary<FBGraphUser> *friend = [_user1.friends_list objectAtIndex:(int)index];
         PFObject *object = [PFObject objectWithClassName:@"UserEvent"];
         object [@"user"] = friend.objectID;
+        object [@"userName"] = friend.name;
         object [@"event"] = _idEvent;
         [object saveInBackground];
     }

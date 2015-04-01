@@ -14,6 +14,8 @@
 @property Event *evt;
 @property (weak, nonatomic) IBOutlet UITextField *txtMessage;
 @property (weak, nonatomic) IBOutlet UITextView *tvChat;
+@property NSString *eventId;
+@property NSMutableArray *messages;
 
 - (IBAction)sendMessage:(id)sender;
 -(void)sendMyMessage;

@@ -58,7 +58,7 @@
     _e.name = _txtName.text;
     _e.desc = _txtDescription.text;
     _e.local = _txtLocalization.text;
-    [dateFormat setDateFormat:@"d/M/YYYY hh:mm"];
+    [dateFormat setDateFormat:@"d/M/YYYY HH:mm"];
     _e.datetime = [dateFormat stringFromDate:_datePicker.date];
    // [dateFormat setDateFormat:@"hh:mm"];
     //_e.time = [dateFormat stringFromDate:_datePicker.date];
@@ -78,6 +78,7 @@
     // ADICIONA O USUARIO AO EVENTO
     PFObject *userEvent = [PFObject objectWithClassName:@"UserEvent"];
     userEvent [@"user"] = user1.objectId;
+    userEvent [@"userName"] = user1.name;
     userEvent [@"event"] = _e.idEvent;
     [userEvent saveInBackground];
     

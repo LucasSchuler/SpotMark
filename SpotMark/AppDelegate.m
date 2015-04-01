@@ -55,9 +55,6 @@
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setDeviceTokenFromData:deviceToken];
     [currentInstallation saveInBackground];
-    
-    NSLog(@"My token is: %@", deviceToken);
-
 }
 
 
@@ -70,11 +67,6 @@
 {
     NSLog(@"Failed to get token, error: %@", error);
 }
-
-
-
-
-
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     //[FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
