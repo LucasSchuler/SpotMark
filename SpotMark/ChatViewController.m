@@ -68,7 +68,8 @@ static CGFloat keyboardHeightOffset = 0.0f;
     message [@"userId"] = m.userId;
     message [@"eventId"] = m.eventId;
     message [@"message"] = m.message;
-    [message saveInBackground];
+    if(![m.message isEqual:@""])
+        [message saveInBackground];
     [_txtMessage setText:@""];
     [self loadViewMessages];
 }

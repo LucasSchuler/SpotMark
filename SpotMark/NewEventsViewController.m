@@ -93,6 +93,7 @@ static CGFloat keyboardHeightOffset = 0.0f;
     saveObject[@"category"] = _e.category;
     [saveObject save];
     _e.idEvent = saveObject.objectId;
+    _e.admin = user1.email;
     
     // ADICIONA O USUARIO AO EVENTO
     PFObject *userEvent = [PFObject objectWithClassName:@"UserEvent"];
