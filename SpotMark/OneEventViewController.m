@@ -87,6 +87,7 @@
     }else if([segue.identifier isEqualToString:@"gotoParticipants"]){
         ParticipantsViewController *pc = (ParticipantsViewController *) segue.destinationViewController;
         pc.idEvent = _evt.idEvent;
+    }else if([segue.identifier isEqualToString:@"backtoEventFromEvent"]){
     }
 
 }
@@ -148,6 +149,7 @@
         [_lp sairEvento:_user1.objectId : _evt.idEvent];
     else
         [_lp excluirEvento:_evt.idEvent];
+    [self performSegueWithIdentifier:@"backtoEventFromEvent" sender:nil];
 }
 
 - (IBAction)participants:(id)sender {
