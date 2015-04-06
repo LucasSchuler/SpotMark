@@ -59,7 +59,6 @@
     cell.textLabel.text = e[@"name"];
     cell.backgroundColor = [UIColor colorWithRed:0.96 green:0.72 blue:0.36 alpha:1];
     return cell;
-
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

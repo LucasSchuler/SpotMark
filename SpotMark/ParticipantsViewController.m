@@ -45,7 +45,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
-    CustomCellInvite *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    CustomCellInvite *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     PFObject *e = [_participants objectAtIndex:(int)indexPath.row];
     cell.name.text = e[@"userName"];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=200&height=200", e[@"user"]]];
