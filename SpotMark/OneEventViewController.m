@@ -61,6 +61,7 @@
 -(void)loadPosts{
     _lp = [[loadParse alloc]init];
     _posts = [_lp loadPosts:_evt.idEvent];
+    [_tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,6 +88,7 @@
     }else if([segue.identifier isEqualToString:@"gotoParticipants"]){
         ParticipantsViewController *pc = (ParticipantsViewController *) segue.destinationViewController;
         pc.idEvent = _evt.idEvent;
+    }else if([segue.identifier isEqualToString:@"backtoEventFromEvent"]){
     }
 
 }
@@ -131,7 +133,6 @@
         saveObject[@"post"] = post;
         [saveObject saveInBackground];
         [self loadPosts];
-        [_tableView reloadData];
     }
 }
 
@@ -148,6 +149,7 @@
         [_lp sairEvento:_user1.objectId : _evt.idEvent];
     else
         [_lp excluirEvento:_evt.idEvent];
+    [self performSegueWithIdentifier:@"backtoEventFromEvent" sender:nil];
 }
 
 - (IBAction)participants:(id)sender {
