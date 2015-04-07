@@ -375,7 +375,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="147" id="MaC-Of-MTU" customClass="EventTableCell">
+                                    <tableViewCell contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="147" id="MaC-Of-MTU" customClass="EventTableCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MaC-Of-MTU" id="E9U-ww-9a6">
@@ -1029,8 +1029,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="9Yv-mm-iMM"/>
         <segue reference="Ct6-r1-8sO"/>
-        <segue reference="Kvc-Bv-HLe"/>
+        <segue reference="TZB-Lm-RUj"/>
         <segue reference="gPy-Uq-59d"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
