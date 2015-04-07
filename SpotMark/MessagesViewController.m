@@ -30,7 +30,7 @@
     _tableViewM.rowHeight = 75;
     _tableViewM.backgroundColor = [UIColor clearColor];
     
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = @"Messages";
     
 }
@@ -57,7 +57,7 @@
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     PFObject *e = [_events objectAtIndex:(int)indexPath.row];
     cell.textLabel.text = e[@"name"];
-    cell.backgroundColor = [UIColor colorWithRed:0.96 green:0.72 blue:0.36 alpha:1];
+    cell.backgroundColor = [UIColor colorWithRed:0.06 green:0.48 blue:0.40 alpha:0.7];
     return cell;
 
 }

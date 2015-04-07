@@ -2,17 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "Laisure.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Lazer@2x.png"
+      "filename" : "Laisure@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "Lazer@3x.png"
+      "filename" : "Laisure@3x.png"
     }
   ],
   "info" : {
