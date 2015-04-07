@@ -8,10 +8,17 @@
 
 #import <Parse/Parse.h>
 #import "loadParse.h"
+#import "SaveFile.h"
 
 @implementation loadParse
 
 -(NSMutableArray *)loadEvents : (NSString *) idUser{
+    SaveFile *save = [[SaveFile alloc]init];
+    NSMutableArray *eventsSaved = [save load];
+    
+    for(int i=0; i<eventsSaved.count; i++)
+        NSLog(@"%@", [eventsSaved objectAtIndex:i]);
+    
     NSUInteger limit = 1000;
     NSUInteger skip = 0;
     PFQuery *userQuery = [PFQuery queryWithClassName:@"UserEvent"];
@@ -25,6 +32,7 @@
     [eventQuery setSkip: skip];
     
     NSArray *objects = eventQuery.findObjects;
+    
     return [objects mutableCopy];
 }
 
