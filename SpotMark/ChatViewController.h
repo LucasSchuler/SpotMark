@@ -17,6 +17,7 @@
 @property NSString *eventId;
 @property NSMutableArray *messages;
 
+
 - (IBAction)sendMessage:(id)sender;
 -(void)sendMyMessage;
 

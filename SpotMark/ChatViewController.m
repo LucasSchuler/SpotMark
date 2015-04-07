@@ -30,6 +30,12 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
     self.title = _evt.name;
     
+    self.tview.delegate = self;
+    self.tview.dataSource = self;
+    _messages = [[NSMutableArray alloc]init];
+    
+    [self.txtMessage becomeFirstResponder];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
@@ -72,7 +78,13 @@ static CGFloat keyboardHeightOffset = 0.0f;
         [message saveInBackground];
     [_txtMessage setText:@""];
     [self loadViewMessages];
+    
+    
+    
+    
 }
+
+
 
 //MARK: Keyboard Methods
 - (IBAction)dismissKeyboard {
