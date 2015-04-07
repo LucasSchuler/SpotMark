@@ -38,7 +38,7 @@
     
     _listCategory = @[@"Sport", @"Party", @"Laisure", @"Meeting"];
     
-    [self.datePicker setValue:[UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70] forKeyPath:@"textColor"];
+    [self.datePicker setValue:[UIColor colorWithRed:22/255 green:162/255 blue:135/255 alpha:1] forKeyPath:@"textColor"];
     
     
     
