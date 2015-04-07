@@ -2,17 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "Sport.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Esporte@2x.png"
+      "filename" : "Sport@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "Esporte@3x.png"
+      "filename" : "Sport@3x.png"
     }
   ],
   "info" : {

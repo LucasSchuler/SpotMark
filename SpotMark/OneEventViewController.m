@@ -61,6 +61,7 @@
 -(void)loadPosts{
     _lp = [[loadParse alloc]init];
     _posts = [_lp loadPosts:_evt.idEvent];
+    [_tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -132,7 +133,6 @@
         saveObject[@"post"] = post;
         [saveObject saveInBackground];
         [self loadPosts];
-        [_tableView reloadData];
     }
 }
 
