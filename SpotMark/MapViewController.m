@@ -65,10 +65,7 @@
     
     MKLocalSearchRequest *request =
     [[MKLocalSearchRequest alloc] init];
-    if(_evt.local == nil)
-        request.naturalLanguageQuery = _txtAdress;
-    else
-        request.naturalLanguageQuery = _evt.local;
+    request.naturalLanguageQuery = _evt.local;
     request.region = _mapView.region;
     
     _matchingItems = [[NSMutableArray alloc] init];
@@ -82,13 +79,13 @@
             NSLog(@"No Matches");
         else
             for (MKMapItem *item in response.mapItems) {
-                if (item.name == _txtAdress) {
+               // if (item.name == _evt.local) {
                     [_matchingItems addObject:item];
                     MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
                     annotation.coordinate = item.placemark.coordinate;
                     annotation.title = item.name;
                     [_mapView addAnnotation:annotation];
-                }
+               // }
             }
     }];
 }
