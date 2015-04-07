@@ -24,8 +24,6 @@
     [eventQuery setLimit: limit];
     [eventQuery setSkip: skip];
     
-    NSLog(@"aqui");
-    
     NSArray *objects = eventQuery.findObjects;
     return [objects mutableCopy];
 }

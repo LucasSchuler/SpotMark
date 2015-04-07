@@ -23,7 +23,6 @@
 @property NSArray *listCategory;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *CreateButton;
 
-
 @end
 
 @implementation NewEventsViewController{
@@ -32,9 +31,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
     
     _listCategory = @[@"Sport", @"Party", @"Laisure", @"Meeting"];
     

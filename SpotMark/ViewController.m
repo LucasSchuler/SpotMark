@@ -46,10 +46,6 @@
     }
 }
 
--(void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView{
-    NSLog(@"you are logged out! :(");
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
