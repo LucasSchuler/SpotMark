@@ -33,7 +33,7 @@
     self.title = @"Events";
   
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.rowHeight = 150;
+    _tableView.rowHeight = 110;
     _tableView.backgroundColor = [UIColor clearColor];
 }
 
