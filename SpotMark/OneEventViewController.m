@@ -45,7 +45,7 @@
     }
     
     _tableView.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.70]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = _evt.name;
     
     //[_mapView setZoomEnabled:YES];
