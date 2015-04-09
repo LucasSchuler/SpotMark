@@ -19,6 +19,6 @@
 
 
 - (IBAction)sendMessage:(id)sender;
--(void)sendMyMessage;
+
 
 @end

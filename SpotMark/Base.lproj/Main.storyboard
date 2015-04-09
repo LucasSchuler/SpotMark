@@ -370,7 +370,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="147" id="MaC-Of-MTU" customClass="EventTableCell">
+                                    <tableViewCell contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="147" id="MaC-Of-MTU" customClass="EventTableCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MaC-Of-MTU" id="E9U-ww-9a6">
@@ -480,7 +480,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAT-z6-DlT">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
-                                        <color key="backgroundColor" red="0.65098039215686276" green="0.41176470588235292" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.086274509799999996" green="0.63529411759999999" blue="0.52941176469999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="18"/>
                                         <state key="normal" title="Post">
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -491,7 +491,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laU-K0-kHG">
                                         <rect key="frame" x="300" y="0.0" width="300" height="44"/>
-                                        <color key="backgroundColor" red="1" green="0.68235294117647061" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.086274509799999996" green="0.63529411759999999" blue="0.52941176469999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="18"/>
                                         <state key="normal" title="Chat">
                                             <color key="titleShadowColor" red="1" green="0.68235294120000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -517,14 +517,13 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-Ht-m22">
                                 <rect key="frame" x="480" y="241" width="100" height="41"/>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.63529411759999999" blue="0.52941176469999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Ffx-O9-5uc"/>
                                     <constraint firstAttribute="height" constant="41" id="lqY-3n-NdE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="15"/>
                                 <state key="normal" title="View on map">
-                                    <color key="titleColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -533,12 +532,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZC-3b-oCs">
                                 <rect key="frame" x="200" y="200" width="200" height="30"/>
-                                <color key="backgroundColor" red="0.070588235294117646" green="0.54509803921568623" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.63529411759999999" blue="0.52941176469999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="edo-0Q-qbi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="15"/>
                                 <state key="normal" title="Participants">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -547,7 +547,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKh-vJ-dzy">
                                 <rect key="frame" x="0.0" y="200" width="200" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.34901960784313724" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.63529411759999999" blue="0.52941176469999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jFW-4g-iHG"/>
                                 </constraints>
@@ -562,7 +562,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-lE-Hh9">
                                 <rect key="frame" x="400" y="200" width="200" height="33"/>
-                                <color key="backgroundColor" red="0.35686274509803922" green="0.015686274509803921" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.63529411759999999" blue="0.52941176469999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NiI-hT-mb7"/>
                                 </constraints>
@@ -977,7 +977,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2M-3y-96n">
                                 <rect key="frame" x="0.0" y="501" width="600" height="50"/>
-                                <color key="backgroundColor" red="0.65098039220000004" green="0.41176470590000003" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.63529411759999999" blue="0.52941176469999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="t7i-Gf-oEx"/>
                                 </constraints>
@@ -1025,7 +1025,7 @@
         <segue reference="9Yv-mm-iMM"/>
         <segue reference="Ct6-r1-8sO"/>
         <segue reference="Kvc-Bv-HLe"/>
-        <segue reference="gPy-Uq-59d"/>
+        <segue reference="vL7-Bs-del"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
 </document>
