@@ -16,6 +16,7 @@
 #import "InviteViewController.h"
 #import "ChatViewController.h"
 #import "ParticipantsViewController.h"
+#import "Participant.h"
 
 @interface OneEventViewController () <MKMapViewDelegate>
 
@@ -28,6 +29,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *eventImage;
 @property (weak, nonatomic) IBOutlet UIButton *invite;
 @property (weak, nonatomic) IBOutlet UIButton *exit;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActIndicator;
+@property BOOL loaded;
 
 @end
 
@@ -56,6 +59,10 @@
     [self loadPosts];
     if(_newEvent)
         [self Invite:nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self loadParticipants];
 }
 
 -(void)loadPosts{
@@ -88,6 +95,7 @@
     }else if([segue.identifier isEqualToString:@"gotoParticipants"]){
         ParticipantsViewController *pc = (ParticipantsViewController *) segue.destinationViewController;
         pc.idEvent = _evt.idEvent;
+        pc.participants = _evt.participants;
     }else if([segue.identifier isEqualToString:@"backtoEventFromEvent"]){
     }
 
@@ -153,7 +161,43 @@
 }
 
 - (IBAction)participants:(id)sender {
-    [self performSegueWithIdentifier:@"gotoParticipants" sender:nil];
+      [_ActIndicator startAnimating];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        while(_loaded == NO){
+            //do nothing
+        }
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [_ActIndicator stopAnimating];
+            [self performSegueWithIdentifier:@"gotoParticipants" sender:nil];
+        });
+    });
+}
+
+-(void) loadParticipants{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+      //  [_ActIndicator startAnimating];
+        NSUInteger limit = 1000;
+        NSUInteger skip = 0;
+        PFQuery *query = [PFQuery queryWithClassName:@"UserEvent"];
+        [query orderByDescending:@"createdAt"];
+        [query whereKey:@"event" equalTo:_evt.idEvent];
+        [query setLimit: limit];
+        [query setSkip: skip];
+        NSArray *a = [query findObjects];
+        NSMutableArray *participants = [[NSMutableArray alloc]init];
+        for(int i=0; i<a.count; i++){
+            Participant *p = [[Participant alloc]init];
+            PFObject *e = [a objectAtIndex:i];
+            p.name = e[@"userName"];
+            [p loadImage:e[@"user"]];
+            [participants addObject:p];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            _evt.participants = participants;
+            _loaded = YES;
+         //   [_ActIndicator stopAnimating];
+        });
+    });
 }
 
 -(IBAction)backFromInvite:(UIStoryboardSegue *)segue

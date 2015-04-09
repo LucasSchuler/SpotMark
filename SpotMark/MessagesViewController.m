@@ -64,7 +64,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     _evt = [[Event alloc] init];
     PFObject *e = [_events objectAtIndex:(int)indexPath.row];
-    _evt.eventId = e.objectId;
+    _evt.idEvent = e.objectId;
     [self performSegueWithIdentifier:@"gotoChat" sender:nil];
 }
 
@@ -72,7 +72,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
      if ([segue.identifier isEqualToString:@"gotoChat"]){
          ChatViewController *cvc = (ChatViewController *) segue.destinationViewController;
-         cvc.eventId = _evt.eventId;
+         cvc.eventId = _evt.idEvent;
      }
 }
 

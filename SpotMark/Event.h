@@ -18,15 +18,9 @@
 @property NSString *local;
 @property NSString *datetime;
 @property NSMutableArray *participants;
-@property NSMutableArray *feed;
-@property NSString *eventId;
+//@property NSMutableArray *feed;
 @property NSString *admin;
 @property NSString *category;
-
-+(Event *)eventCreator;
--(void)postCreator : (NSString *)title : (NSString *)post;
--(void)openChat;
--(void)change;
 
 @end
 

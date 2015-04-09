@@ -8,17 +8,10 @@
 
 #import <Parse/Parse.h>
 #import "loadParse.h"
-#import "SaveFile.h"
 
 @implementation loadParse
 
 -(NSMutableArray *)loadEvents : (NSString *) idUser{
-    SaveFile *save = [[SaveFile alloc]init];
-    NSMutableArray *eventsSaved = [save load];
-    
-    for(int i=0; i<eventsSaved.count; i++)
-        NSLog(@"%@", [eventsSaved objectAtIndex:i]);
-    
     NSUInteger limit = 1000;
     NSUInteger skip = 0;
     PFQuery *userQuery = [PFQuery queryWithClassName:@"UserEvent"];
@@ -91,17 +84,23 @@
     return [objects mutableCopy];
 }
 
--(NSMutableArray *) loadParticipants : (NSString *) idEvent{
-    NSUInteger limit = 1000;
-    NSUInteger skip = 0;
-    PFQuery *query = [PFQuery queryWithClassName:@"UserEvent"];
-    [query orderByDescending:@"createdAt"];
-    [query whereKey:@"event" equalTo:idEvent];
-    [query setLimit: limit];
-    [query setSkip: skip];
-    NSArray *objects = query.findObjects;
-    return [objects mutableCopy];
-}
+//-(NSMutableArray *) loadParticipants : (NSString *) idEvent{
+//    NSArray *objects = [[NSMutableArray alloc]init];
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        NSUInteger limit = 1000;
+//        NSUInteger skip = 0;
+//        PFQuery *query = [PFQuery queryWithClassName:@"UserEvent"];
+//        [query orderByDescending:@"createdAt"];
+//        [query whereKey:@"event" equalTo:idEvent];
+//        [query setLimit: limit];
+//        [query setSkip: skip];
+//        NSArray *objects = [query findObjects];
+//        dispatch_async(dispatch_get_main_queue(), ^(void) {
+//          
+//        });
+//    });
+//    return [objects mutableCopy];
+//}
 
 
 @end
