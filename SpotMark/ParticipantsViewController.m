@@ -11,6 +11,7 @@
 #import "loadParse.h"
 #import "User.h"
 #import <Parse/Parse.h>
+#import "Participant.h"
 
 @interface ParticipantsViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -26,9 +27,6 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    loadParse *lp = [[loadParse alloc] init];
-    User *user1 = [User sharedUser];
-    _participants = [lp loadParticipants:_idEvent];
     _tableView.backgroundColor = [UIColor clearColor];
 }
 
@@ -45,12 +43,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
-    CustomCellInvite *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    PFObject *e = [_participants objectAtIndex:(int)indexPath.row];
-    cell.name.text = e[@"userName"];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=200&height=200", e[@"user"]]];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    [cell.image setImage:[UIImage imageWithData:data]];
+    CustomCellInvite *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    Participant *p = [_participants objectAtIndex:(int)indexPath.row];
+    cell.name.text = p.name;
+    [cell.image setImage:[UIImage imageWithData:p.dataImage]];
     cell.backgroundColor = [UIColor clearColor];
     return cell;
 }

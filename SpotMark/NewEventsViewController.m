@@ -15,14 +15,15 @@
 @interface NewEventsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
-@property (weak, nonatomic) IBOutlet UITextField *txtDescription;
+@property (weak, nonatomic) IBOutlet UITextView *txtDescription;
 @property (weak, nonatomic) IBOutlet UITextField *txtLocalization;
-@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *category;
 @property Event *e;
 @property NSArray *listCategory;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *CreateButton;
-
+@property (weak, nonatomic) IBOutlet UITextField *txtDate;
+@property UIActionSheet *pickerViewPopup;
+@property UIDatePicker *dtPicker;
 
 @end
 
@@ -32,33 +33,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
-    
     _listCategory = @[@"Sport", @"Party", @"Laisure", @"Meeting"];
+    [self createDatePicker];
     
-    [self.datePicker setValue:[UIColor colorWithRed:22/255 green:162/255 blue:135/255 alpha:1] forKeyPath:@"textColor"];
-    
-    
-    
-    SEL selector = NSSelectorFromString(@"setHighlightsToday:");
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDatePicker instanceMethodSignatureForSelector:selector]];
-    BOOL no = NO;
-    [invocation setSelector:selector];
-    [invocation setArgument:&no atIndex:2];
-    [invocation invokeWithTarget:self.datePicker];
-    
+//    [self.datePicker setValue:[UIColor colorWithRed:22/255 green:162/255 blue:135/255 alpha:1] forKeyPath:@"textColor"];
+//    
+//    SEL selector = NSSelectorFromString(@"setHighlightsToday:");
+//    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDatePicker instanceMethodSignatureForSelector:selector]];
+//    BOOL no = NO;
+//    [invocation setSelector:selector];
+//    [invocation setArgument:&no atIndex:2];
+//    [invocation invokeWithTarget:self.datePicker];
     
     
-    
-    
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1 green:0.97 blue:0.84 alpha:0.7]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = @"New Event";
-    
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-    
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+-(void)createDatePicker{
+    _dtPicker = [[UIDatePicker alloc]init];
+    _dtPicker.datePickerMode=UIDatePickerModeDateAndTime;
+    [_txtDate setInputView:_dtPicker];
+    UIToolbar *toolBar=[[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    [toolBar setTintColor:[UIColor grayColor]];
+    UIBarButtonItem *doneBtn=[[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(ShowSelectedDate)];
+    UIBarButtonItem *space=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [toolBar setItems:[NSArray arrayWithObjects:space,doneBtn,nil]];
+    [_txtDate setInputAccessoryView:toolBar];
+}
+
+-(void) ShowSelectedDate{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"d/M/YYYY HH:mm"];
+    _txtDate.text = [formatter stringFromDate:_dtPicker.date];
+    [_txtDate resignFirstResponder];
 }
 
 static CGFloat keyboardHeightOffset = 0.0f;
@@ -72,15 +80,12 @@ static CGFloat keyboardHeightOffset = 0.0f;
     User *user1 = [User sharedUser];
     
     //CRIA O EVENTO
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     _e = [[Event alloc] init];
     _e.name = _txtName.text;
     _e.desc = _txtDescription.text;
     _e.local = _txtLocalization.text;
-    [dateFormat setDateFormat:@"d/M/YYYY HH:mm"];
-    _e.datetime = [dateFormat stringFromDate:_datePicker.date];
-   // [dateFormat setDateFormat:@"hh:mm"];
-    //_e.time = [dateFormat stringFromDate:_datePicker.date];
+    
+    _e.datetime = _txtDate.text;
     _e.category = [_category titleForSegmentAtIndex:[_category selectedSegmentIndex]];
     
     //ADICIONA O EVENTO AO PARSE
@@ -119,6 +124,12 @@ static CGFloat keyboardHeightOffset = 0.0f;
     oevt.newEvent=YES;
 }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+
+    return NO;
+}
+
+
 - (BOOL) hidesBottomBarWhenPushed{
     return YES;
 }
@@ -127,8 +138,6 @@ static CGFloat keyboardHeightOffset = 0.0f;
 {
     [self.view endEditing:YES];
 }
-
-
 
 - (void)keyboardWillShow:(NSNotification*)notification {
     

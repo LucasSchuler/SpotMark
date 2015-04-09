@@ -52,7 +52,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cell";
-    EventTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    EventTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     PFObject *e = [_events objectAtIndex:(int)indexPath.row];
     cell.nameLabel.text = e[@"name"];
     cell.dateLabel.text = e[@"datetime"];
@@ -67,7 +67,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     _evt = [[Event alloc] init];
-    PFObject *e = [_events objectAtIndex:(int)indexPath.row];
+    PFObject *e = [_events objectAtIndex:(int) indexPath.row];
     _evt.name = e[@"name"];
     _evt.desc = e[@"description"];
     _evt.local = e[@"local"];

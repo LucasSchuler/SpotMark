@@ -56,7 +56,7 @@
 - (IBAction)zoomIn:(id)sender {
     MKUserLocation *userLocation = _mapView.userLocation;
     MKCoordinateRegion region =
-    MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, 4000, 4000);
+    MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, 11000, 11000);
     [_mapView setRegion:region animated:NO];
 }
 
@@ -65,10 +65,7 @@
     
     MKLocalSearchRequest *request =
     [[MKLocalSearchRequest alloc] init];
-    if(_evt.local == nil)
-        request.naturalLanguageQuery = _txtAdress;
-    else
-        request.naturalLanguageQuery = _evt.local;
+    request.naturalLanguageQuery = _evt.local;
     request.region = _mapView.region;
     
     _matchingItems = [[NSMutableArray alloc] init];
@@ -81,13 +78,14 @@
         if (response.mapItems.count == 0)
             NSLog(@"No Matches");
         else
-            for (MKMapItem *item in response.mapItems)
-            {
-                [_matchingItems addObject:item];
-                MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
-                annotation.coordinate = item.placemark.coordinate;
-                annotation.title = item.name;
-                [_mapView addAnnotation:annotation];
+            for (MKMapItem *item in response.mapItems) {
+               // if (item.name == _evt.local) {
+                    [_matchingItems addObject:item];
+                    MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
+                    annotation.coordinate = item.placemark.coordinate;
+                    annotation.title = item.name;
+                    [_mapView addAnnotation:annotation];
+               // }
             }
     }];
 }
