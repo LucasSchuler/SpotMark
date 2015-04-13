@@ -40,9 +40,7 @@
 
 -(void) loadUser{
     _lblUsername.text = _user1.name;
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=200&height=200", _user1.objectId]];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    [_image setImage:[UIImage imageWithData:data]];
+    [_image setImage:[UIImage imageWithData:_user1.image]];
 }
 
 -(void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView{

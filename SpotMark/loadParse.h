@@ -15,4 +15,5 @@
 -(void) sairEvento : (NSString *) user : (NSString *) event;
 -(void) excluirEvento : (NSString *) event;
 -(NSMutableArray *) loadChat : (NSString *) eventId;
+-(NSMutableArray *) loadParticipants : (NSString *) eventId;
 @end

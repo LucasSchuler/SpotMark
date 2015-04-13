@@ -80,42 +80,47 @@ static CGFloat keyboardHeightOffset = 0.0f;
     User *user1 = [User sharedUser];
     
     //CRIA O EVENTO
-    _e = [[Event alloc] init];
-    _e.name = _txtName.text;
-    _e.desc = _txtDescription.text;
-    _e.local = _txtLocalization.text;
     
-    _e.datetime = _txtDate.text;
-    _e.category = [_category titleForSegmentAtIndex:[_category selectedSegmentIndex]];
-    
-    //ADICIONA O EVENTO AO PARSE
-    PFObject *saveObject = [PFObject objectWithClassName:@"Event"];
-    saveObject[@"name"] =  _e.name;
-    saveObject[@"description"] = _e.desc;
-    saveObject[@"local"] = _e.local;
-    saveObject[@"datetime"] = _e.datetime;
-    saveObject[@"admin"] = user1.email;
-    saveObject[@"category"] = _e.category;
-    [saveObject save];
-    _e.idEvent = saveObject.objectId;
-    _e.admin = user1.email;
-    
-    // ADICIONA O USUARIO AO EVENTO
-    PFObject *userEvent = [PFObject objectWithClassName:@"UserEvent"];
-    userEvent [@"user"] = user1.objectId;
-    userEvent [@"userName"] = user1.name;
-    userEvent [@"event"] = _e.idEvent;
-    [userEvent saveInBackground];
-    
-    // SE NAO OCORRER ERRO MOSTRA MENSAGEM E VAI P/ A TELA DO EVENTO
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully created event!"
-                                                    message:@""
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
-    [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
+    @try {
+            _e = [[Event alloc]initWithValues:_txtName.text : _txtDescription.text : _txtLocalization.text : _txtDate.text : [_category titleForSegmentAtIndex:[_category selectedSegmentIndex]] : user1.email];
+        
+        //ADICIONA O EVENTO AO PARSE
+        PFObject *saveObject = [PFObject objectWithClassName:@"Event"];
+        saveObject[@"name"] =  _e.name;
+        saveObject[@"description"] = _e.desc;
+        saveObject[@"local"] = _e.local;
+        saveObject[@"datetime"] = _e.datetime;
+        saveObject[@"admin"] = user1.email;
+        saveObject[@"category"] = _e.category;
+        [saveObject save];
+        _e.idEvent = saveObject.objectId;
+        // _e.admin = user1.email;
+        
+        // ADICIONA O USUARIO AO EVENTO
+        PFObject *userEvent = [PFObject objectWithClassName:@"UserEvent"];
+        userEvent [@"user"] = user1.objectId;
+        userEvent [@"userName"] = user1.name;
+        userEvent [@"event"] = _e.idEvent;
+        [userEvent saveInBackground];
+        
+        // SE NAO OCORRER ERRO MOSTRA MENSAGEM E VAI P/ A TELA DO EVENTO
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully created event!"
+                                                        message:@""
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
+    }
+    @catch (NSException *e) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
+                                                        message:[NSString stringWithFormat:@"%@", e]
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
 
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

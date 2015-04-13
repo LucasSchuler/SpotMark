@@ -10,6 +10,32 @@
 
 @implementation Event
 
+-(id)initWithValues: (NSString *)name : (NSString *)desc : (NSString *)local : (NSString *)datetime : (NSString *)category : (NSString *)admin{
+    
+    self = [super init];
+    if(self){
+        if([name isEqualToString:@""]){
+           NSException *exception = [NSException exceptionWithName:@"" reason:@"The name can not be empty!" userInfo:nil];
+            @throw exception;
+        }else if([desc isEqualToString:@""]){
+            NSException *exception = [NSException exceptionWithName:@"" reason:@"The description can not be empty!" userInfo:nil];
+            @throw exception;
+        }if([local isEqualToString:@""]){
+            NSException *exception = [NSException exceptionWithName:@"" reason:@"The address can not be empty!" userInfo:nil];
+            @throw exception;
+        }if([datetime isEqualToString:@""]){
+            NSException *exception = [NSException exceptionWithName:@"" reason:@"Select a date for the event!" userInfo:nil];
+            @throw exception;
+        }
+        _name = name;
+        _desc = desc;
+        _local = local;
+        _datetime = datetime;
+        _category = category;
+        _admin = admin;
+    }
+    return self;
+}
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeObject:_idEvent forKey:@"_idEvent"];
@@ -31,5 +57,7 @@
     _admin = [decoder decodeObjectForKey:@"_admin"];
     return self;
 }
+
+//[NSException raise:@"Invalid foo value" format:@"foo of %d is invalid", foo];
 
 @end

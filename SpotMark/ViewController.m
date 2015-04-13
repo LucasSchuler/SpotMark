@@ -28,12 +28,22 @@
 -(void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
     if (FBSession.activeSession.isOpen && _isLogged==false) {
         
-        //REQUEST USER FRIENDS
         FBRequest* friendsRequest = [FBRequest requestForMyFriends];
         User *user1 = [User sharedUser];
         user1.email = [user objectForKey:@"email"];
         user1.name = [user name];
         user1.objectId = [user objectID];
+        
+        //REQUEST IMAGE
+         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+             NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=200&height=200", user1.objectId ]];
+             NSData *image = [NSData dataWithContentsOfURL:url];
+             dispatch_async(dispatch_get_main_queue(), ^(void) {
+                 user1.image = image;
+             });
+        });
+        
+        //REQUEST USER FRIENDS
         [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,
                                                       NSError *error) {
             NSArray* friends = [result objectForKey:@"data"];
