@@ -7,6 +7,8 @@
 //
 
 #import "SaveFile.h"
+#import "Event.h"
+#import <Parse/Parse.h>
 
 @implementation SaveFile
 
@@ -21,11 +23,9 @@
     return self;
 }
 
-
 -(BOOL)save:(NSArray *)array{
     if(array != nil){
-        NSMutableArray *objects = [self selectEventsToFile:array];
-        [NSKeyedArchiver archiveRootObject:objects toFile:_path];
+        [NSKeyedArchiver archiveRootObject:array toFile:_path];
         return YES;
     }
     return NO;
@@ -37,7 +37,14 @@
 
 -(NSMutableArray *) selectEventsToFile : (NSArray *) array{
     NSMutableArray *eventsSaved = [self load];
-    return nil;
+    NSMutableArray *save = [[NSMutableArray alloc]init];
+    for(int i=0; i<array.count; i++){
+        PFObject *e = [array objectAtIndex:i];
+        for(int j=0; j<eventsSaved.count; j++){
+            
+        }
+    }
+    return save;
 }
 
 @end
