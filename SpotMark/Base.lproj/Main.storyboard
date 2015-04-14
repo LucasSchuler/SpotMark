@@ -593,19 +593,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mfX-C6-Sg8">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mfX-C6-Sg8">
                                 <rect key="frame" x="0.0" y="287" width="600" height="269"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="81" id="mbs-ap-dam" customClass="CustomCellPost">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="110" id="mbs-ap-dam" customClass="CustomCellPost">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mbs-ap-dam" id="cmN-84-kq4">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9R-DX-hCa">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9R-DX-hCa">
                                                     <rect key="frame" x="2" y="2" width="459" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -615,24 +615,25 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmO-28-Oge">
-                                                    <rect key="frame" x="2" y="26" width="590" height="52.5"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmO-28-Oge">
+                                                    <rect key="frame" x="2" y="26" width="590" height="76"/>
+                                                    <color key="backgroundColor" red="0.3411764706" green="0.6705882353" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGn-zv-CdO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGn-zv-CdO">
                                                     <rect key="frame" x="478" y="2" width="120" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="Bre-Aw-sxV"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="HmO-28-Oge" secondAttribute="bottom" constant="2" id="5Gc-qo-A5G"/>
+                                                <constraint firstAttribute="bottom" secondItem="HmO-28-Oge" secondAttribute="bottom" constant="8" id="5Gc-qo-A5G"/>
                                                 <constraint firstAttribute="trailing" secondItem="o9R-DX-hCa" secondAttribute="trailing" constant="139" id="7wQ-JV-qpo"/>
                                                 <constraint firstItem="o9R-DX-hCa" firstAttribute="top" secondItem="cmN-84-kq4" secondAttribute="top" constant="2" id="8dJ-XL-f2v"/>
                                                 <constraint firstItem="o9R-DX-hCa" firstAttribute="leading" secondItem="cmN-84-kq4" secondAttribute="leading" constant="2" id="DPc-aG-tD0"/>
@@ -649,6 +650,7 @@
                                         <connections>
                                             <outlet property="date" destination="KGn-zv-CdO" id="qZX-7T-09z"/>
                                             <outlet property="name" destination="o9R-DX-hCa" id="18v-YH-zy3"/>
+                                            <outlet property="post" destination="HmO-28-Oge" id="lhl-dn-0f1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
