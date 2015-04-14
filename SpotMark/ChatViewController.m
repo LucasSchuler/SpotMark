@@ -76,14 +76,11 @@ static CGFloat keyboardHeightOffset = 0.0f;
 
 //MARK: Keyboard Methods
 - (IBAction)dismissKeyboard {
-    
     // This method will resign all responders, dropping the keyboard.
     [self.view endEditing:YES];
-    
 }
 
 - (void)keyboardWillShow:(NSNotification*)notification {
-    
     // Getting the keyboard frame and animation duration.
     CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
     NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];

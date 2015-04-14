@@ -38,6 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _eventImage.image = [UIImage imageNamed:_evt.category];
     
     //SE O USUARIO NAO CRIOU O EVENTO O BOTAO P/ CONVIDAR NAO APARECE
@@ -50,9 +51,6 @@
     _tableView.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = _evt.name;
-    
-    //[_mapView setZoomEnabled:YES];
-    
     _eventName.text = _evt.name;
     _eventDescription.text = _evt.desc;
     _eventAdress.text = _evt.local;
@@ -121,16 +119,17 @@
 }
 
 - (IBAction)postar:(id)sender {
-    UIAlertView *alertView = [[UIAlertView alloc]
-                              initWithTitle:@"Post"
-                              message:@"Please enter your post:"
-                              delegate:self
-                              cancelButtonTitle:@"Cancel"
-                              otherButtonTitles:@"Ok", nil];
-    [alertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    /* Display a numerical keypad for this text field */
-    UITextField *textField = [alertView textFieldAtIndex:0];
-    [alertView show];
+    UITextView *textView = [[UITextView alloc]initWithFrame:CGRectMake(12, 50, 260, 50)];
+    
+    [textView setText:@"lashdasjh asdasjdas asdlajsdl adsjajadsd aslj daj sdjasdjasjdlasjd as dlasj d"];
+    
+    UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"Type Your Message" message:@"\n\n\n\n\n\n" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Send",nil];
+    
+    
+    
+    [av addSubview:textView];
+    
+    [av show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -204,6 +203,9 @@
 {
 }
 
+- (void)goBack:(id)sender {
+    [self performSegueWithIdentifier:@"backtoEventFromEvent" sender:nil];
+}
 //
 //- (void)zoomIn{
 //    MKUserLocation *userLocation = _mapView.userLocation;
