@@ -12,5 +12,6 @@
 
 @property NSMutableArray *friend_list;
 @property NSString *idEvent;
+@property NSString *eventName;
 
 @end

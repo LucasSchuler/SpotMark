@@ -12,6 +12,8 @@
 
 @interface Event : NSObject
 
+-(id)initWithValues: (NSString *)name : (NSString *)desc : (NSString *)local : (NSString *)datetime : (NSString *)category : (NSString *)admin;
+
 @property NSString *idEvent;
 @property NSString *name;
 @property NSString *desc;

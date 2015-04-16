@@ -15,6 +15,7 @@
 @property (nonatomic, retain) NSString *email;
 @property (nonatomic, retain) NSMutableArray *friends_list;
 @property (nonatomic, retain) NSString *objectId;
+@property (nonatomic, retain) NSData *image;
 
 + (id)sharedUser;
 

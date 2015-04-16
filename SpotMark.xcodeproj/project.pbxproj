@@ -35,6 +35,8 @@
 		0AEBF0A41AC5D26000F221E0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A31AC5D26000F221E0 /* User.m */; };
 		0AEBF0A71AC5E0C400F221E0 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */; };
 		0AEBF0AA1AC635E000F221E0 /* CustonCellInvite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A91AC635E000F221E0 /* CustonCellInvite.m */; };
+		0AF8A8761ADC549000498AC6 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A8751ADC549000498AC6 /* CustomTabBarViewController.m */; };
+		0AF8A8791ADD93A900498AC6 /* CustomCellPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A8781ADD93A900498AC6 /* CustomCellPost.m */; };
 		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		955619671AC3228F00010C68 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619661AC3228F00010C68 /* ChatViewController.m */; };
@@ -110,6 +112,10 @@
 		0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
 		0AEBF0A81AC635E000F221E0 /* CustonCellInvite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustonCellInvite.h; sourceTree = "<group>"; };
 		0AEBF0A91AC635E000F221E0 /* CustonCellInvite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustonCellInvite.m; sourceTree = "<group>"; };
+		0AF8A8741ADC549000498AC6 /* CustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
+		0AF8A8751ADC549000498AC6 /* CustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
+		0AF8A8771ADD93A900498AC6 /* CustomCellPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellPost.h; sourceTree = "<group>"; };
+		0AF8A8781ADD93A900498AC6 /* CustomCellPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellPost.m; sourceTree = "<group>"; };
 		9556195F1AC320DF00010C68 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		955619601AC320DF00010C68 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		955619621AC3215400010C68 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
@@ -260,6 +266,8 @@
 				0A0F98C81ACB3F9400B6D006 /* Message.m */,
 				0AC5530E1AD594D100FC3F22 /* Participant.h */,
 				0AC5530F1AD594D100FC3F22 /* Participant.m */,
+				0AF8A8771ADD93A900498AC6 /* CustomCellPost.h */,
+				0AF8A8781ADD93A900498AC6 /* CustomCellPost.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -317,6 +325,8 @@
 				0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */,
 				0A2D21AC1ACC27B8003EE2AE /* ParticipantsViewController.h */,
 				0A2D21AD1ACC27B8003EE2AE /* ParticipantsViewController.m */,
+				0AF8A8741ADC549000498AC6 /* CustomTabBarViewController.h */,
+				0AF8A8751ADC549000498AC6 /* CustomTabBarViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -370,7 +380,7 @@
 				TargetAttributes = {
 					0A32BF0A1ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6ZVL2ANYP3;
+						DevelopmentTeam = 6D93DA2TT6;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -382,7 +392,7 @@
 					};
 					0A32BF231ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6ZVL2ANYP3;
+						DevelopmentTeam = 6D93DA2TT6;
 						TestTargetID = 0A32BF0A1ABE039E00025127;
 					};
 				};
@@ -438,6 +448,7 @@
 				955619781AC48ABA00010C68 /* Chat.m in Sources */,
 				0A32C16F1ABF24A800025127 /* Invites.m in Sources */,
 				95FD4AC21AC5BD7E0075A78A /* EventsViewController.m in Sources */,
+				0AF8A8791ADD93A900498AC6 /* CustomCellPost.m in Sources */,
 				0AC553101AD594D100FC3F22 /* Participant.m in Sources */,
 				0AEBF0A41AC5D26000F221E0 /* User.m in Sources */,
 				955619671AC3228F00010C68 /* ChatViewController.m in Sources */,
@@ -451,6 +462,7 @@
 				95FD4ACD1AC9D68C0075A78A /* EventTableCell.m in Sources */,
 				0A32BF141ABE039E00025127 /* AppDelegate.m in Sources */,
 				0A32BF111ABE039E00025127 /* main.m in Sources */,
+				0AF8A8761ADC549000498AC6 /* CustomTabBarViewController.m in Sources */,
 				95FD4AC51AC5BDF80075A78A /* MapViewController.m in Sources */,
 				0AEBF0A71AC5E0C400F221E0 /* InviteViewController.m in Sources */,
 			);

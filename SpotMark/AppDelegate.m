@@ -36,8 +36,24 @@
     
     [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:0.1 green:0.73 blue:0.61 alpha:1]];
     //[[UITabBar appearance] setBackgroundImage:[UIImage new]];
-
+    
+    //PUSH NOTIFICATIONS
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+        PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+        [currentInstallation setDeviceTokenFromData:deviceToken];
+       // currentInstallation.channels = @[];
+        [currentInstallation saveInBackground];
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error

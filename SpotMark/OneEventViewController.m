@@ -10,13 +10,13 @@
 #import "Event.h"
 #import "loadParse.h"
 #import "MapViewController.h"
-#import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
 #import "User.h"
 #import "InviteViewController.h"
 #import "ChatViewController.h"
 #import "ParticipantsViewController.h"
 #import "Participant.h"
+#import "CustomCellPost.h"
 
 @interface OneEventViewController () <MKMapViewDelegate>
 
@@ -24,13 +24,14 @@
 @property loadParse *lp;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *eventName;
-@property (weak, nonatomic) IBOutlet UILabel *eventDescription;
+@property (weak, nonatomic) IBOutlet UITextView *eventDescription;
 @property (weak, nonatomic) IBOutlet UILabel *eventAdress;
 @property (weak, nonatomic) IBOutlet UIImageView *eventImage;
 @property (weak, nonatomic) IBOutlet UIButton *invite;
 @property (weak, nonatomic) IBOutlet UIButton *exit;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActIndicator;
 @property BOOL loaded;
+@property UITextView *textView;
 
 @end
 
@@ -38,6 +39,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _eventImage.image = [UIImage imageNamed:_evt.category];
     
     //SE O USUARIO NAO CRIOU O EVENTO O BOTAO P/ CONVIDAR NAO APARECE
@@ -50,16 +52,41 @@
     _tableView.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = _evt.name;
-    
-    //[_mapView setZoomEnabled:YES];
-    
     _eventName.text = _evt.name;
     _eventDescription.text = _evt.desc;
     _eventAdress.text = _evt.local;
     [self loadPosts];
     if(_newEvent)
         [self Invite:nil];
+    
+   
+
+    self.navigationItem.title = @"Awesome";
+    self.navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:_navigationBar];
+    [self.navigationBar pushNavigationItem:self.navigationItem animated:NO];
+    
+//    _navController = [[UINavigationController alloc] initWithRootViewController:self];
+//    [self.navigationController presentViewController:_navController animated:YES completion: nil];
+//    
+    
 }
+//
+//-(void)layoutNavigationBar{
+//    self.navigationBar.frame = CGRectMake(0, self.tableView.contentOffset.y, self.tableView.frame.size.width, self.topLayoutGuide.length + 44);
+//    self.tableView.contentInset = UIEdgeInsetsMake(self.navigationBar.frame.size.height, 0, 0, 0);
+//}
+//
+//-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    //no need to call super
+//    [self layoutNavigationBar];
+//}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    [self layoutNavigationBar];
+}
+
 
 -(void)viewWillAppear:(BOOL)animated{
     [self loadParticipants];
@@ -89,6 +116,7 @@
     }else if([segue.identifier isEqualToString:@"gotoInviteFromEvent"]){
         InviteViewController *ivc = (InviteViewController *) segue.destinationViewController;
         ivc.idEvent = _evt.idEvent;
+        ivc.eventName = _evt.name;
     }else if([segue.identifier isEqualToString:@"gotoChatFromOneEvent"]){
         ChatViewController *cvc  = (ChatViewController *) segue.destinationViewController;
         cvc.eventId = _evt.idEvent;
@@ -113,33 +141,47 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CustomCellPost *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     PFObject *e = [_posts objectAtIndex:(int)indexPath.row];
-    cell.textLabel.text = e[@"post"];
+    cell.name.text = e[@"name"];
+    cell.date.text = e[@"datetime"];
+    cell.post.text = e[@"post"];
     cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
 - (IBAction)postar:(id)sender {
-    UIAlertView *alertView = [[UIAlertView alloc]
-                              initWithTitle:@"Post"
-                              message:@"Please enter your post:"
-                              delegate:self
-                              cancelButtonTitle:@"Cancel"
-                              otherButtonTitles:@"Ok", nil];
-    [alertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    /* Display a numerical keypad for this text field */
-    UITextField *textField = [alertView textFieldAtIndex:0];
-    [alertView show];
+    UIAlertView *testAlert = [[UIAlertView alloc] initWithTitle:@"Post"
+                                                        message:@""
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Done", nil];
+    _textView = [UITextView new];
+    [testAlert setValue: _textView forKey:@"accessoryView"];
+    [testAlert show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex != [alertView cancelButtonIndex]){
-        NSString *post = [alertView textFieldAtIndex:0].text;
+        NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
+        [DateFormatter setDateFormat:@"d/M/YYYY HH:mm"];
+        NSString *post = _textView.text;
         PFObject *saveObject = [PFObject objectWithClassName:@"Post"];
         saveObject[@"idEvent"] = _evt.idEvent;
         saveObject[@"post"] = post;
+        saveObject[@"name"] = _user1.name;
+        saveObject[@"datetime"] = [DateFormatter stringFromDate:[NSDate date]];
         [saveObject saveInBackground];
+        
+        // Send a notification to all devices subscribed to the channel.
+        PFPush *push = [[PFPush alloc] init];
+        [push setChannel:[@"event" stringByAppendingString:_evt.idEvent]];
+        NSString *message = [_user1.name stringByAppendingString:@" publicou no evento "];
+        NSString *message2 =[message stringByAppendingString:_evt.name];
+        [push setMessage:message2];
+        [push sendPushInBackground];
+        
+        
         [self loadPosts];
     }
 }
@@ -204,6 +246,9 @@
 {
 }
 
+- (void)goBack:(id)sender {
+    [self performSegueWithIdentifier:@"backtoEventFromEvent" sender:nil];
+}
 //
 //- (void)zoomIn{
 //    MKUserLocation *userLocation = _mapView.userLocation;
