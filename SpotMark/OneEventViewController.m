@@ -10,7 +10,6 @@
 #import "Event.h"
 #import "loadParse.h"
 #import "MapViewController.h"
-#import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
 #import "User.h"
 #import "InviteViewController.h"
@@ -31,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *exit;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActIndicator;
 @property BOOL loaded;
+@property (strong) UINavigationBar *navigationBar;
 
 @end
 
@@ -57,7 +57,35 @@
     [self loadPosts];
     if(_newEvent)
         [self Invite:nil];
+    
+   
+
+    self.navigationItem.title = @"Awesome";
+    self.navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:_navigationBar];
+    [self.navigationBar pushNavigationItem:self.navigationItem animated:NO];
+    
+//    _navController = [[UINavigationController alloc] initWithRootViewController:self];
+//    [self.navigationController presentViewController:_navController animated:YES completion: nil];
+//    
+    
 }
+//
+//-(void)layoutNavigationBar{
+//    self.navigationBar.frame = CGRectMake(0, self.tableView.contentOffset.y, self.tableView.frame.size.width, self.topLayoutGuide.length + 44);
+//    self.tableView.contentInset = UIEdgeInsetsMake(self.navigationBar.frame.size.height, 0, 0, 0);
+//}
+//
+//-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    //no need to call super
+//    [self layoutNavigationBar];
+//}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    [self layoutNavigationBar];
+}
+
 
 -(void)viewWillAppear:(BOOL)animated{
     [self loadParticipants];
