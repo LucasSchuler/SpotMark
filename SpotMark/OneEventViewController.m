@@ -16,6 +16,7 @@
 #import "ChatViewController.h"
 #import "ParticipantsViewController.h"
 #import "Participant.h"
+#import "CustomCellPost.h"
 
 @interface OneEventViewController () <MKMapViewDelegate>
 
@@ -30,7 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *exit;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActIndicator;
 @property BOOL loaded;
-@property (strong) UINavigationBar *navigationBar;
+@property UITextView *textView;
 
 @end
 
@@ -115,6 +116,7 @@
     }else if([segue.identifier isEqualToString:@"gotoInviteFromEvent"]){
         InviteViewController *ivc = (InviteViewController *) segue.destinationViewController;
         ivc.idEvent = _evt.idEvent;
+        ivc.eventName = _evt.name;
     }else if([segue.identifier isEqualToString:@"gotoChatFromOneEvent"]){
         ChatViewController *cvc  = (ChatViewController *) segue.destinationViewController;
         cvc.eventId = _evt.idEvent;
@@ -139,34 +141,47 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CustomCellPost *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     PFObject *e = [_posts objectAtIndex:(int)indexPath.row];
-    cell.textLabel.text = e[@"post"];
+    cell.name.text = e[@"name"];
+    cell.date.text = e[@"datetime"];
+    cell.post.text = e[@"post"];
     cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
 - (IBAction)postar:(id)sender {
-    UITextView *textView = [[UITextView alloc]initWithFrame:CGRectMake(12, 50, 260, 50)];
-    
-    [textView setText:@"lashdasjh asdasjdas asdlajsdl adsjajadsd aslj daj sdjasdjasjdlasjd as dlasj d"];
-    
-    UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"Type Your Message" message:@"\n\n\n\n\n\n" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Send",nil];
-    
-    
-    
-    [av addSubview:textView];
-    
-    [av show];
+    UIAlertView *testAlert = [[UIAlertView alloc] initWithTitle:@"Post"
+                                                        message:@""
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Done", nil];
+    _textView = [UITextView new];
+    [testAlert setValue: _textView forKey:@"accessoryView"];
+    [testAlert show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex != [alertView cancelButtonIndex]){
-        NSString *post = [alertView textFieldAtIndex:0].text;
+        NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
+        [DateFormatter setDateFormat:@"d/M/YYYY HH:mm"];
+        NSString *post = _textView.text;
         PFObject *saveObject = [PFObject objectWithClassName:@"Post"];
         saveObject[@"idEvent"] = _evt.idEvent;
         saveObject[@"post"] = post;
+        saveObject[@"name"] = _user1.name;
+        saveObject[@"datetime"] = [DateFormatter stringFromDate:[NSDate date]];
         [saveObject saveInBackground];
+        
+        // Send a notification to all devices subscribed to the channel.
+        PFPush *push = [[PFPush alloc] init];
+        [push setChannel:[@"event" stringByAppendingString:_evt.idEvent]];
+        NSString *message = [_user1.name stringByAppendingString:@" publicou no evento "];
+        NSString *message2 =[message stringByAppendingString:_evt.name];
+        [push setMessage:message2];
+        [push sendPushInBackground];
+        
+        
         [self loadPosts];
     }
 }

@@ -173,7 +173,6 @@ static CGFloat keyboardHeightOffset = 0.0f;
     [UIView animateWithDuration:keyboardAnimationDuration animations:^{
         [self.view layoutIfNeeded];
     }];
-    
 }
 
 
