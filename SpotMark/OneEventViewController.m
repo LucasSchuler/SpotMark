@@ -89,6 +89,7 @@
     }else if([segue.identifier isEqualToString:@"gotoInviteFromEvent"]){
         InviteViewController *ivc = (InviteViewController *) segue.destinationViewController;
         ivc.idEvent = _evt.idEvent;
+        ivc.eventName = _evt.name;
     }else if([segue.identifier isEqualToString:@"gotoChatFromOneEvent"]){
         ChatViewController *cvc  = (ChatViewController *) segue.destinationViewController;
         cvc.eventId = _evt.idEvent;
@@ -144,6 +145,16 @@
         saveObject[@"name"] = _user1.name;
         saveObject[@"datetime"] = [DateFormatter stringFromDate:[NSDate date]];
         [saveObject saveInBackground];
+        
+        // Send a notification to all devices subscribed to the channel.
+        PFPush *push = [[PFPush alloc] init];
+        [push setChannel:[@"event" stringByAppendingString:_evt.idEvent]];
+        NSString *message = [_user1.name stringByAppendingString:@" publicou no evento "];
+        NSString *message2 =[message stringByAppendingString:_evt.name];
+        [push setMessage:message2];
+        [push sendPushInBackground];
+        
+        
         [self loadPosts];
     }
 }

@@ -10,6 +10,7 @@
 #import "User.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <Parse/Parse.h>
 
 @interface ViewController ()
 
@@ -33,6 +34,11 @@
         user1.email = [user objectForKey:@"email"];
         user1.name = [user name];
         user1.objectId = [user objectID];
+        
+        PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+        [currentInstallation addUniqueObject:[@"user" stringByAppendingString:user1.objectId] forKey:@"channels"];
+        [currentInstallation saveInBackground];
+        
         
         //REQUEST IMAGE
          dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

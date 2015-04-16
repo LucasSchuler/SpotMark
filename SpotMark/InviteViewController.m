@@ -46,9 +46,15 @@
     CustomCellInvite *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     NSDictionary<FBGraphUser> *friend = [_user1.friends_list objectAtIndex:(int)indexPath.row];
     cell.name.text = friend.name;
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=200&height=200", friend.objectID]];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    [cell.image setImage:[UIImage imageWithData:data]];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [cell.actIndicator startAnimating];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=200&height=200", friend.objectID]];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [cell.image setImage:[UIImage imageWithData:data]];
+            [cell.actIndicator stopAnimating];
+        });
+    });
     cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
@@ -73,6 +79,22 @@
         object [@"userName"] = friend.name;
         object [@"event"] = _idEvent;
         [object saveInBackground];
+        
+        // Send a notification to all devices subscribed to the channel.
+        PFPush *push = [[PFPush alloc] init];
+        [push setChannel:[@"user" stringByAppendingString:friend.objectID]];
+        NSString *message = [_user1.name stringByAppendingString:@" Convidou você para o evento "];
+        NSString *message2 =[message stringByAppendingString:_eventName];
+        [push setMessage:message2];
+        [push sendPushInBackground];
+        
+        
+        
+        
+  
+//        PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+//        [currentInstallation addUniqueObject:[@"event" stringByAppendingString:_idEvent] forKey:@"channels"];
+//        [currentInstallation saveInBackground];
     }
     [self performSegueWithIdentifier:@"backToOneEvent" sender:nil];
 }

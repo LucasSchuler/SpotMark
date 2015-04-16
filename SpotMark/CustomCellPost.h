@@ -13,5 +13,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *date;
 @property (weak, nonatomic) IBOutlet UITextView *post;
 
-
 @end
