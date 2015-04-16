@@ -32,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActIndicator;
 @property BOOL loaded;
 @property UITextView *textView;
+@property UINavigationBar *navigationBar;
 
 @end
 
@@ -82,10 +83,10 @@
 //    [self layoutNavigationBar];
 //}
 
--(void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    [self layoutNavigationBar];
-}
+//-(void)viewDidLayoutSubviews{
+//    [super viewDidLayoutSubviews];
+//    [self layoutNavigationBar];
+//}
 
 
 -(void)viewWillAppear:(BOOL)animated{
