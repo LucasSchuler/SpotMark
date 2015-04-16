@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Event.h"
+#import "MNCChatMessage.h"
 
-@interface ChatViewController : UIViewController <UITextViewDelegate>
+@interface ChatViewController : UIViewController <UITextViewDelegate, UITableViewDataSource>
 
 @property Event *evt;
 @property (weak, nonatomic) IBOutlet UITextField *txtMessage;

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "User.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import <Sinch/Sinch.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface ViewController ()

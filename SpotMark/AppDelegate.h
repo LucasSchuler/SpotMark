@@ -7,10 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import "Config.h"
+#import <Sinch/Sinch.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, SINClientDelegate, SINMessageClientDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) id<SINClient> sinchClient;
+@property (strong, nonatomic) id<SINMessageClient> sinchMessageClient;
+
+- (void)sendTextMessage:(NSString *)messageText toRecipient:(NSString *)recipientID;
 
 @end
 

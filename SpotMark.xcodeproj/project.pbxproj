@@ -46,9 +46,13 @@
 		95FD4AC51AC5BDF80075A78A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4AC41AC5BDF80075A78A /* MapViewController.m */; };
 		95FD4ACD1AC9D68C0075A78A /* EventTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4ACC1AC9D68C0075A78A /* EventTableCell.m */; };
 		F27E98601ADC286F0053F557 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E985E1ADC286F0053F557 /* Parse.framework */; };
-		F27E98611ADC286F0053F557 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E985F1ADC286F0053F557 /* ParseFacebookUtilsV4.framework */; };
 		F27E98631ADC28A70053F557 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E98621ADC28A70053F557 /* Bolts.framework */; };
-		F27E98651ADC28C50053F557 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E98641ADC28C50053F557 /* ParseFacebookUtils.framework */; };
+		F27E987C1ADEE9870053F557 /* Sinch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E987B1ADEE9870053F557 /* Sinch.framework */; };
+		F27E987E1ADEEAD20053F557 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E987D1ADEEAD20053F557 /* AVFoundation.framework */; };
+		F27E98801ADEECC90053F557 /* Sinch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E987F1ADEECC90053F557 /* Sinch.framework */; };
+		F27E98841ADEF76C0053F557 /* MNCChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F27E98831ADEF76C0053F557 /* MNCChatMessage.m */; };
+		F27E98861AE02B550053F557 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E98851AE02B550053F557 /* ParseFacebookUtilsV4.framework */; };
+		F27E98881AE02B980053F557 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E98871AE02B980053F557 /* ParseFacebookUtils.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,9 +129,15 @@
 		95FD4ACB1AC9D68C0075A78A /* EventTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableCell.h; sourceTree = "<group>"; };
 		95FD4ACC1AC9D68C0075A78A /* EventTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableCell.m; sourceTree = "<group>"; };
 		F27E985E1ADC286F0053F557 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		F27E985F1ADC286F0053F557 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		F27E98621ADC28A70053F557 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		F27E98641ADC28C50053F557 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		F27E987B1ADEE9870053F557 /* Sinch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sinch.framework; sourceTree = "<group>"; };
+		F27E987D1ADEEAD20053F557 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F27E987F1ADEECC90053F557 /* Sinch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sinch.framework; path = ../Downloads/Sinch/Sinch.framework; sourceTree = "<group>"; };
+		F27E98811ADEEDB50053F557 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		F27E98821ADEF76C0053F557 /* MNCChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCChatMessage.h; sourceTree = "<group>"; };
+		F27E98831ADEF76C0053F557 /* MNCChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCChatMessage.m; sourceTree = "<group>"; };
+		F27E98851AE02B550053F557 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		F27E98871AE02B980053F557 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,22 +145,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A32C14C1ABE597900025127 /* Security.framework in Frameworks */,
+				F27E987E1ADEEAD20053F557 /* AVFoundation.framework in Frameworks */,
+				F27E98861AE02B550053F557 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				0A32C1461ABE597900025127 /* AudioToolbox.framework in Frameworks */,
 				955619721AC46B8900010C68 /* MapKit.framework in Frameworks */,
 				0A32C2921AC08FEB00025127 /* FacebookSDK.framework in Frameworks */,
-				F27E98651ADC28C50053F557 /* ParseFacebookUtils.framework in Frameworks */,
 				0A32C1521ABE598F00025127 /* libsqlite3.dylib in Frameworks */,
 				0A32C1531ABE598F00025127 /* libz.dylib in Frameworks */,
 				0A32C1451ABE597900025127 /* Accounts.framework in Frameworks */,
+				F27E987C1ADEE9870053F557 /* Sinch.framework in Frameworks */,
 				F27E98601ADC286F0053F557 /* Parse.framework in Frameworks */,
-				0A32C1461ABE597900025127 /* AudioToolbox.framework in Frameworks */,
+				F27E98801ADEECC90053F557 /* Sinch.framework in Frameworks */,
 				0A32C1471ABE597900025127 /* CFNetwork.framework in Frameworks */,
 				0A32C1481ABE597900025127 /* CoreGraphics.framework in Frameworks */,
+				F27E98881AE02B980053F557 /* ParseFacebookUtils.framework in Frameworks */,
 				0A32C1491ABE597900025127 /* CoreLocation.framework in Frameworks */,
 				0A32C14A1ABE597900025127 /* MobileCoreServices.framework in Frameworks */,
 				0A32C14B1ABE597900025127 /* QuartzCore.framework in Frameworks */,
 				F27E98631ADC28A70053F557 /* Bolts.framework in Frameworks */,
-				0A32C14C1ABE597900025127 /* Security.framework in Frameworks */,
-				F27E98611ADC286F0053F557 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				0A32C14D1ABE597900025127 /* Social.framework in Frameworks */,
 				0A32C14F1ABE597900025127 /* SystemConfiguration.framework in Frameworks */,
 			);
@@ -228,6 +241,9 @@
 			children = (
 				0AEBF0A21AC5D26000F221E0 /* User.h */,
 				0AEBF0A31AC5D26000F221E0 /* User.m */,
+				F27E98811ADEEDB50053F557 /* Config.h */,
+				F27E98821ADEF76C0053F557 /* MNCChatMessage.h */,
+				F27E98831ADEF76C0053F557 /* MNCChatMessage.m */,
 				0A3BD4A51ACB11B900DAE12B /* Event.h */,
 				95FD4ABE1AC5BD7E0075A78A /* Event.m */,
 				955619761AC48ABA00010C68 /* Chat.h */,
@@ -251,13 +267,16 @@
 		955619551AC1B2E600010C68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F27E98641ADC28C50053F557 /* ParseFacebookUtils.framework */,
+				F27E987F1ADEECC90053F557 /* Sinch.framework */,
+				F27E987D1ADEEAD20053F557 /* AVFoundation.framework */,
 				F27E98621ADC28A70053F557 /* Bolts.framework */,
 				F27E985E1ADC286F0053F557 /* Parse.framework */,
-				F27E985F1ADC286F0053F557 /* ParseFacebookUtilsV4.framework */,
 				955619711AC46B8900010C68 /* MapKit.framework */,
 				0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */,
 				0A32C1501ABE598F00025127 /* libsqlite3.dylib */,
+				F27E98871AE02B980053F557 /* ParseFacebookUtils.framework */,
+				F27E98851AE02B550053F557 /* ParseFacebookUtilsV4.framework */,
+				F27E987B1ADEE9870053F557 /* Sinch.framework */,
 				0A32C1511ABE598F00025127 /* libz.dylib */,
 				0A32C13A1ABE597900025127 /* Accounts.framework */,
 				0A32C13B1ABE597900025127 /* AudioToolbox.framework */,
@@ -412,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27E98841ADEF76C0053F557 /* MNCChatMessage.m in Sources */,
 				0A2D21AE1ACC27B8003EE2AE /* ParticipantsViewController.m in Sources */,
 				95FD4AC11AC5BD7E0075A78A /* Event.m in Sources */,
 				0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */,
@@ -550,10 +570,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					/Users/matheusbaptistabondan/Downloads/Sinch,
+				);
 				INFOPLIST_FILE = SpotMark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-Xlinker",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -565,11 +593,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					/Users/matheusbaptistabondan/Downloads/Sinch,
+				);
 				INFOPLIST_FILE = SpotMark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-Xlinker",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
