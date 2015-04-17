@@ -10,6 +10,7 @@
 #import "Event.h"
 #import "loadParse.h"
 #import "MapViewController.h"
+#import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
 #import "User.h"
 #import "InviteViewController.h"
@@ -24,6 +25,7 @@
 @property loadParse *lp;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *eventName;
+@property (weak, nonatomic) IBOutlet UILabel *eventDateTime;
 @property (weak, nonatomic) IBOutlet UITextView *eventDescription;
 @property (weak, nonatomic) IBOutlet UILabel *eventAdress;
 @property (weak, nonatomic) IBOutlet UIImageView *eventImage;
@@ -54,6 +56,7 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = _evt.name;
     _eventName.text = _evt.name;
+    _eventDateTime.text = _evt.datetime;
     _eventDescription.text = _evt.desc;
     _eventAdress.text = _evt.local;
     [self loadPosts];
@@ -62,7 +65,7 @@
     
    
 
-    self.navigationItem.title = @"Awesome";
+//    self.navigationItem.title = @"Awesome";
     self.navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectZero];
     [self.view addSubview:_navigationBar];
     [self.navigationBar pushNavigationItem:self.navigationItem animated:NO];
@@ -72,21 +75,21 @@
 //    
     
 }
-//
-//-(void)layoutNavigationBar{
-//    self.navigationBar.frame = CGRectMake(0, self.tableView.contentOffset.y, self.tableView.frame.size.width, self.topLayoutGuide.length + 44);
-//    self.tableView.contentInset = UIEdgeInsetsMake(self.navigationBar.frame.size.height, 0, 0, 0);
-//}
-//
-//-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-//    //no need to call super
-//    [self layoutNavigationBar];
-//}
 
-//-(void)viewDidLayoutSubviews{
-//    [super viewDidLayoutSubviews];
-//    [self layoutNavigationBar];
-//}
+-(void)layoutNavigationBar{
+    self.navigationBar.frame = CGRectMake(0, self.tableView.contentOffset.y, self.tableView.frame.size.width, self.topLayoutGuide.length + 44);
+    self.tableView.contentInset = UIEdgeInsetsMake(self.navigationBar.frame.size.height, 0, 0, 0);
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    //no need to call super
+    [self layoutNavigationBar];
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    [self layoutNavigationBar];
+}
 
 
 -(void)viewWillAppear:(BOOL)animated{
