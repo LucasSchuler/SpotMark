@@ -88,9 +88,6 @@
         [push setMessage:message2];
         [push sendPushInBackground];
         
-        
-        
-        
   
 //        PFInstallation *currentInstallation = [PFInstallation currentInstallation];
 //        [currentInstallation addUniqueObject:[@"event" stringByAppendingString:_idEvent] forKey:@"channels"];
