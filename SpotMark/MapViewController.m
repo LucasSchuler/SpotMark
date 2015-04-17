@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "Event.h"
 
 @interface MapViewController ()
 
@@ -63,12 +64,10 @@
 
 - (void) performSearch {
     
+    
     MKLocalSearchRequest *request =
     [[MKLocalSearchRequest alloc] init];
-    if(_evt.local == nil)
-        request.naturalLanguageQuery = _txtAdress;
-    else
-        request.naturalLanguageQuery = _evt.local;
+    request.naturalLanguageQuery = _txtAdress;
     request.region = _mapView.region;
     
     _matchingItems = [[NSMutableArray alloc] init];
