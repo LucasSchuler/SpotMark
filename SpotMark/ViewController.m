@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "User.h"
 #import <FacebookSDK/FacebookSDK.h>
-#import <Sinch/Sinch.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <Parse/Parse.h>
 
@@ -39,6 +38,13 @@
         PFInstallation *currentInstallation = [PFInstallation currentInstallation];
         [currentInstallation addUniqueObject:[@"user" stringByAppendingString:user1.objectId] forKey:@"channels"];
         [currentInstallation saveInBackground];
+        
+        
+        PFUser *pfUser = [PFUser user];
+        pfUser.username = user1.name;
+        pfUser.objectId = user1.objectId;
+        [pfUser saveInBackground];
+        
         
         
         //REQUEST IMAGE

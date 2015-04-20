@@ -17,7 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBottom;
 @property User *user1;
-@property (weak, nonatomic) IBOutlet UITableView *hitoricalMessagesTableView;
 
 @end
 
@@ -37,10 +36,10 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    //[self loadViewMessages];
+    [self loadViewMessages];
 }
 
-/*-(void) loadViewMessages{
+-(void) loadViewMessages{
     [_tvChat setText:@""];
     loadParse *lp = [[loadParse alloc] init];
     _messages = [lp loadChat:_eventId];
@@ -55,11 +54,11 @@
         }
     }
 }
-*/
-//static CGFloat keyboardHeightOffset = 0.0f;
+
+static CGFloat keyboardHeightOffset = 0.0f;
 
 - (IBAction)sendMessage:(id)sender {
-   /* Message *m = [[Message alloc]init];
+    Message *m = [[Message alloc]init];
     m.userName = _user1.name;
     m.userId = _user1.objectId;
     m.eventId = _eventId;
@@ -111,7 +110,7 @@
     }];
     
 }
-*/
+
 
 
 
