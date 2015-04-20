@@ -8,6 +8,7 @@
 
 #import "NewEventsViewController.h"
 #import "OneEventViewController.h"
+#import <MapKit/MapKit.h>
 #import "Event.h"
 #import <Parse/Parse.h>
 #import "User.h"
@@ -56,7 +57,7 @@
     [_txtDate setInputView:_dtPicker];
     UIToolbar *toolBar=[[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
     [toolBar setTintColor:[UIColor grayColor]];
-    UIBarButtonItem *doneBtn=[[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(ShowSelectedDate)];
+    UIBarButtonItem * doneBtn=[[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(ShowSelectedDate)];
     UIBarButtonItem *space=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [toolBar setItems:[NSArray arrayWithObjects:space,doneBtn,nil]];
     [_txtDate setInputAccessoryView:toolBar];

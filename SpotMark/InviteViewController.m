@@ -83,9 +83,10 @@
         // Send a notification to all devices subscribed to the channel.
         PFPush *push = [[PFPush alloc] init];
         [push setChannel:[@"user" stringByAppendingString:friend.objectID]];
-        NSString *message = [_user1.name stringByAppendingString:@" Convidou você para o evento "];
+        NSString *message = [_user1.name stringByAppendingString:@" invited you to \""];
         NSString *message2 =[message stringByAppendingString:_eventName];
-        [push setMessage:message2];
+        NSString *message3 =[message2 stringByAppendingString:@"\" "];
+        [push setMessage:message3];
         [push sendPushInBackground];
         
   

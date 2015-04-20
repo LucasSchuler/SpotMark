@@ -13,18 +13,6 @@
 		0A32BF141ABE039E00025127 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32BF131ABE039E00025127 /* AppDelegate.m */; };
 		0A32BF171ABE039E00025127 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32BF161ABE039E00025127 /* ViewController.m */; };
 		0A32BF2B1ABE039E00025127 /* SpotMarkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32BF2A1ABE039E00025127 /* SpotMarkTests.m */; };
-		0A32C1451ABE597900025127 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13A1ABE597900025127 /* Accounts.framework */; };
-		0A32C1461ABE597900025127 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13B1ABE597900025127 /* AudioToolbox.framework */; };
-		0A32C1471ABE597900025127 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13C1ABE597900025127 /* CFNetwork.framework */; };
-		0A32C1481ABE597900025127 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13D1ABE597900025127 /* CoreGraphics.framework */; };
-		0A32C1491ABE597900025127 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13E1ABE597900025127 /* CoreLocation.framework */; };
-		0A32C14A1ABE597900025127 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13F1ABE597900025127 /* MobileCoreServices.framework */; };
-		0A32C14B1ABE597900025127 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1401ABE597900025127 /* QuartzCore.framework */; };
-		0A32C14C1ABE597900025127 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1411ABE597900025127 /* Security.framework */; };
-		0A32C14D1ABE597900025127 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1421ABE597900025127 /* Social.framework */; };
-		0A32C14F1ABE597900025127 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1441ABE597900025127 /* SystemConfiguration.framework */; };
-		0A32C1521ABE598F00025127 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1501ABE598F00025127 /* libsqlite3.dylib */; };
-		0A32C1531ABE598F00025127 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1511ABE598F00025127 /* libz.dylib */; };
 		0A32C16F1ABF24A800025127 /* Invites.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C16B1ABF24A800025127 /* Invites.m */; };
 		0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */; };
 		0A3BD4A41AC9D46A00DAE12B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BD4A31AC9D46A00DAE12B /* Images.xcassets */; };
@@ -366,7 +354,11 @@
 				TargetAttributes = {
 					0A32BF0A1ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
+<<<<<<< HEAD
+						DevelopmentTeam = 6ZVL2ANYP3;
+=======
 						DevelopmentTeam = 958464RCCM;
+>>>>>>> 3c91423148256cb20b531e1661739d4d7a248ce4
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;

@@ -62,6 +62,9 @@
     [self loadPosts];
     if(_newEvent)
         [self Invite:nil];
+<<<<<<< HEAD
+}
+=======
     
    
 
@@ -91,6 +94,7 @@
     [self layoutNavigationBar];
 }
 
+>>>>>>> 3c91423148256cb20b531e1661739d4d7a248ce4
 
 -(void)viewWillAppear:(BOOL)animated{
     [self loadParticipants];
