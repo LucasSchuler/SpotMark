@@ -52,6 +52,8 @@
         [_exit setTitle:@"Exit Event" forState:UIControlStateNormal];
     }
     
+    
+    
     _tableView.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = _evt.name;
@@ -63,7 +65,7 @@
     if(_newEvent)
         [self Invite:nil];
     
-   
+    
 
 //    self.navigationItem.title = @"Awesome";
     self.navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectZero];
