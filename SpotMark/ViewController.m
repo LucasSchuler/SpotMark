@@ -11,6 +11,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <Parse/Parse.h>
+#import "push.h"
 
 @interface ViewController ()
 
@@ -35,10 +36,33 @@
         user1.name = [user name];
         user1.objectId = [user objectID];
         
-        PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-        [currentInstallation addUniqueObject:[@"user" stringByAppendingString:user1.objectId] forKey:@"channels"];
-        [currentInstallation saveInBackground];
+//        PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+//        [currentInstallation addUniqueObject:[@"user" stringByAppendingString:user1.objectId] forKey:@"channels"];
+//        [currentInstallation saveInBackground];
+
         
+        PFUser *user = [PFUser user];
+        user.username = user1.objectId;
+        user.password = @"pass";
+        user.email = user1.email;
+        user[@"name"] = user1.name;
+        
+        [PFUser logInWithUsernameInBackground:user.username password:user.password block:^(PFUser *user, NSError *error)
+         {
+             if (user != nil)
+             {
+                 ParsePushUserAssign(user.username);
+            }
+             else{
+                 [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
+                  {
+                      if (error == nil)
+                      {
+                          ParsePushUserAssign(user.username);
+                      }
+                  }];
+             }
+         }];
         
         PFUser *pfUser = [PFUser user];
         pfUser.username = user1.name;
