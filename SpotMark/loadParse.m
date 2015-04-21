@@ -14,18 +14,12 @@
 -(NSMutableArray *)loadEvents : (NSString *) idUser{
     NSUInteger limit = 1000;
     NSUInteger skip = 0;
-    PFQuery *userQuery = [PFQuery queryWithClassName:@"UserEvent"];
     PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
-    
-    [userQuery whereKey:@"user" equalTo:idUser];
-    [eventQuery whereKey:@"objectId" matchesKey:@"event" inQuery:userQuery];
+    [eventQuery whereKey:@"members" equalTo:idUser];
     [eventQuery orderByDescending:@"createdAt"];
-
     [eventQuery setLimit: limit];
     [eventQuery setSkip: skip];
-    
     NSArray *objects = eventQuery.findObjects;
-    
     return [objects mutableCopy];
 }
 

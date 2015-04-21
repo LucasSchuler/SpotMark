@@ -8,7 +8,6 @@
 
 #import "NewEventsViewController.h"
 #import "OneEventViewController.h"
-#import <MapKit/MapKit.h>
 #import "Event.h"
 #import <Parse/Parse.h>
 #import "User.h"
@@ -57,7 +56,7 @@
     [_txtDate setInputView:_dtPicker];
     UIToolbar *toolBar=[[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
     [toolBar setTintColor:[UIColor grayColor]];
-    UIBarButtonItem * doneBtn=[[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(ShowSelectedDate)];
+    UIBarButtonItem *doneBtn=[[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(ShowSelectedDate)];
     UIBarButtonItem *space=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [toolBar setItems:[NSArray arrayWithObjects:space,doneBtn,nil]];
     [_txtDate setInputAccessoryView:toolBar];
@@ -86,6 +85,8 @@ static CGFloat keyboardHeightOffset = 0.0f;
             _e = [[Event alloc]initWithValues:_txtName.text : _txtDescription.text : _txtLocalization.text : _txtDate.text : [_category titleForSegmentAtIndex:[_category selectedSegmentIndex]] : user1.email];
         
         //ADICIONA O EVENTO AO PARSE
+        NSMutableArray *usuario = [[NSMutableArray alloc]init];
+        [usuario addObject:user1.objectId];
         PFObject *saveObject = [PFObject objectWithClassName:@"Event"];
         saveObject[@"name"] =  _e.name;
         saveObject[@"description"] = _e.desc;
@@ -93,16 +94,17 @@ static CGFloat keyboardHeightOffset = 0.0f;
         saveObject[@"datetime"] = _e.datetime;
         saveObject[@"admin"] = user1.email;
         saveObject[@"category"] = _e.category;
+        saveObject[@"members"] = usuario;
         [saveObject save];
         _e.idEvent = saveObject.objectId;
         // _e.admin = user1.email;
         
-        // ADICIONA O USUARIO AO EVENTO
-        PFObject *userEvent = [PFObject objectWithClassName:@"UserEvent"];
-        userEvent [@"user"] = user1.objectId;
-        userEvent [@"userName"] = user1.name;
-        userEvent [@"event"] = _e.idEvent;
-        [userEvent saveInBackground];
+//        // ADICIONA O USUARIO AO EVENTO
+//        PFObject *userEvent = [PFObject objectWithClassName:@"UserEvent"];
+//        userEvent [@"user"] = user1.objectId;
+//        userEvent [@"userName"] = user1.name;
+//        userEvent [@"event"] = _e.idEvent;
+//        [userEvent saveInBackground];
         
         // SE NAO OCORRER ERRO MOSTRA MENSAGEM E VAI P/ A TELA DO EVENTO
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully created event!"

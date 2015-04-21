@@ -11,7 +11,7 @@
 #import "loadParse.h"
 #import "Event.h"
 #import "User.h"
-#import "ChatViewController.h"
+#import "ChatView.h"
 
 @interface MessagesViewController ()
 
@@ -66,15 +66,16 @@
     _evt = [[Event alloc] init];
     PFObject *e = [_events objectAtIndex:(int)indexPath.row];
     _evt.idEvent = e.objectId;
-    [self performSegueWithIdentifier:@"gotoChat" sender:nil];
+    _evt.name = e[@"name"];
+    ChatView *chatView = [[ChatView alloc] initWith:e.objectId];
+    chatView.hidesBottomBarWhenPushed = YES;
+    chatView.name = _evt.name;
+    [self.navigationController pushViewController:chatView animated:YES];
 }
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-     if ([segue.identifier isEqualToString:@"gotoChat"]){
-         ChatViewController *cvc = (ChatViewController *) segue.destinationViewController;
-         cvc.eventId = _evt.idEvent;
-     }
+     
 }
 
 /*

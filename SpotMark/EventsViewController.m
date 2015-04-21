@@ -9,7 +9,6 @@
 #import "EventsViewController.h"
 #import "OneEventViewController.h"
 #import <Parse/Parse.h>
-#import <MapKit/MapKit.h>
 #import <UIKit/UIKit.h>
 #import "Event.h"
 #import "loadParse.h"
