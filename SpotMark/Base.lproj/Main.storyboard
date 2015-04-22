@@ -232,7 +232,7 @@
                         <viewControllerLayoutGuide type="top" id="p33-Ta-Vs0"/>
                         <viewControllerLayoutGuide type="bottom" id="PGc-P8-tfl"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleAspectFit" id="iq0-T4-fYr">
+                    <view key="view" contentMode="scaleAspectFit" id="iq0-T4-fYr" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -260,6 +260,9 @@
                             <constraint firstAttribute="trailing" secondItem="jad-YL-lZN" secondAttribute="trailing" id="gFW-Py-gK9"/>
                             <constraint firstItem="jad-YL-lZN" firstAttribute="leading" secondItem="iq0-T4-fYr" secondAttribute="leading" id="vE7-T5-45s"/>
                         </constraints>
+                        <connections>
+                            <action selector="dismissKeyboard:" destination="8kq-VU-38O" eventType="touchDown" id="pC4-8o-Znj"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Messages" id="BWt-wF-wfO">
                         <barButtonItem key="rightBarButtonItem" image="Plus" id="HAc-YK-GD8">
@@ -537,7 +540,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9R-DX-hCa">
                                                     <rect key="frame" x="2" y="2" width="459" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="793-9c-HGY">
@@ -558,7 +561,7 @@
                                                         <constraint firstAttribute="width" constant="120" id="Bre-Aw-sxV"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>

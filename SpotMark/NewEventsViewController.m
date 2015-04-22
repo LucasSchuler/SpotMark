@@ -36,16 +36,6 @@
     _listCategory = @[@"Sport", @"Party", @"Laisure", @"Meeting"];
     [self createDatePicker];
     
-//    [self.datePicker setValue:[UIColor colorWithRed:22/255 green:162/255 blue:135/255 alpha:1] forKeyPath:@"textColor"];
-//    
-//    SEL selector = NSSelectorFromString(@"setHighlightsToday:");
-//    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDatePicker instanceMethodSignatureForSelector:selector]];
-//    BOOL no = NO;
-//    [invocation setSelector:selector];
-//    [invocation setArgument:&no atIndex:2];
-//    [invocation invokeWithTarget:self.datePicker];
-    
-    
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = @"New Event";
 }
