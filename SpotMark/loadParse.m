@@ -49,9 +49,9 @@
 
 
 -(void)sairEvento:(NSString *)user :(NSString *)event{
-    PFQuery *query = [PFQuery queryWithClassName:@"UserEvent"];
-    [query whereKey:@"user" equalTo:user];
-    [query whereKey:@"event" equalTo:event];
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query whereKey:@"members" equalTo:user];
+    [query whereKey:@"objectId" equalTo:event];
     NSArray *objects = query.findObjects;
     PFObject *delete = [objects objectAtIndex:0];
     [delete deleteInBackground];
