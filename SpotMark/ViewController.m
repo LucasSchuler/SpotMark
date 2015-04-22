@@ -64,6 +64,13 @@
              }
          }];
         
+        PFUser *pfUser = [PFUser user];
+        pfUser.username = user1.name;
+        pfUser.objectId = user1.objectId;
+        [pfUser saveInBackground];
+        
+        
+        
         //REQUEST IMAGE
          dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
              NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=200&height=200", user1.objectId ]];
