@@ -273,6 +273,19 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     NSLog(@"MEMORY WARNING: %s", __PRETTY_FUNCTION__);
 }
 
+
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    [self.view endEditing:YES];
+//}
+
+- (IBAction)dismissKeyboard {
+    [self.view endEditing:YES];
+}
+
+
+
+
 #pragma mark - View rotation
 
 - (BOOL)shouldAutorotate

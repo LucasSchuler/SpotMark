@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -231,7 +232,7 @@
                         <viewControllerLayoutGuide type="top" id="p33-Ta-Vs0"/>
                         <viewControllerLayoutGuide type="bottom" id="PGc-P8-tfl"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleAspectFit" id="iq0-T4-fYr">
+                    <view key="view" contentMode="scaleAspectFit" id="iq0-T4-fYr" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -259,6 +260,9 @@
                             <constraint firstAttribute="trailing" secondItem="jad-YL-lZN" secondAttribute="trailing" id="gFW-Py-gK9"/>
                             <constraint firstItem="jad-YL-lZN" firstAttribute="leading" secondItem="iq0-T4-fYr" secondAttribute="leading" id="vE7-T5-45s"/>
                         </constraints>
+                        <connections>
+                            <action selector="dismissKeyboard:" destination="8kq-VU-38O" eventType="touchDown" id="pC4-8o-Znj"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Messages" id="BWt-wF-wfO">
                         <barButtonItem key="rightBarButtonItem" image="Plus" id="HAc-YK-GD8">
@@ -536,7 +540,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9R-DX-hCa">
                                                     <rect key="frame" x="2" y="2" width="459" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="793-9c-HGY">
@@ -545,8 +549,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HmO-28-Oge">
-                                                    <rect key="frame" x="2" y="22" width="596" height="71.5"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HmO-28-Oge">
+                                                    <rect key="frame" x="2" y="22" width="596" height="72"/>
                                                     <color key="backgroundColor" red="0.3411764706" green="0.6705882353" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -557,7 +561,7 @@
                                                         <constraint firstAttribute="width" constant="120" id="Bre-Aw-sxV"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -657,7 +661,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZj-KZ-1Q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="2549"/>
+            <point key="canvasLocation" x="503" y="2498"/>
         </scene>
         <!--Participants View Controller-->
         <scene sceneID="mbA-E2-XjD">
@@ -928,7 +932,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNc-8N-NY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1582" y="2557"/>
+            <point key="canvasLocation" x="1687" y="2557"/>
         </scene>
         <!--Invite View Controller-->
         <scene sceneID="8ir-LP-kMH">
@@ -1037,8 +1041,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9Yv-mm-iMM"/>
-        <segue reference="yi9-bJ-R6a"/>
-        <segue reference="07s-Np-hEV"/>
+        <segue reference="pIX-m6-7rI"/>
+        <segue reference="Kvc-Bv-HLe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
