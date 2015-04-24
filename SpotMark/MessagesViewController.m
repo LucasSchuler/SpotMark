@@ -41,7 +41,6 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-   // self.tabBarController.selectedIndex = 1;
     [_tableViewM reloadData];
     loadParse *lp = [[loadParse alloc] init];
     _events = [lp loadEvents:_user1.objectId];

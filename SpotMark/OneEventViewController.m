@@ -99,7 +99,6 @@
     if ([segue.identifier isEqualToString:@"goToMap"]){
         MapViewController *map = (MapViewController *) segue.destinationViewController;
         map.txtAdress = _evt.local;
-        NSLog(@"%@", map.txtAdress);
     }else if([segue.identifier isEqualToString:@"gotoInviteFromEvent"]){
         InviteViewController *ivc = (InviteViewController *) segue.destinationViewController;
         ivc.idEvent = _evt.idEvent;
