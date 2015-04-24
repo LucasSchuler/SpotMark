@@ -53,7 +53,15 @@
     //UIBarButtonItem *gotoEvents = [[UIBarButtonItem alloc] initWithTitle:@"Events" style:UIBarButtonItemStylePlain target:nil action:@selector(goToEvents)];
     //[self.navigationItem setBackBarButtonItem:gotoEvents];
     
-    //self.navigationController.navigationItem.backBarButtonItem
+    //UIBarButtonItem *backB = [[UIBarButtonItem alloc] init];
+    //backB.title = @"Back";
+    //backB.action = @selector(goToEvents);
+    //self.navigationItem.backBarButtonItem = backB;
+  
+    self.navigationItem.hidesBackButton=NO;
+    SEL callback = @selector(goToEvents);
+    [self.navigationController.navigationItem.backBarButtonItem setAction:callback];
+    
     
     _tableView.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
@@ -75,8 +83,8 @@
 
 -(void)goToEvents
 {
-    OneEventViewController *oevc = [[OneEventViewController alloc]init];
-    [[self navigationController]pushViewController:oevc animated:YES];
+    //customb *oevc = [[OneEventViewController alloc]init];
+    //[[self navigationController]pushViewController:oevc animated:YES];
 }
 
 -(void)loadPosts{
