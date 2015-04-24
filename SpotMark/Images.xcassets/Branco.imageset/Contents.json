@@ -3,16 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Events.png"
+      "filename" : "Branco.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Events@2x.png"
+      "filename" : "Branco@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "Branco@3x.png"
     }
   ],
   "info" : {

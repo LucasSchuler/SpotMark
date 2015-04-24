@@ -3,16 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Messages.png"
+      "filename" : "MessagesBranco.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Messages@2x.png"
+      "filename" : "MessagesBranco@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "MessagesBranco@3x.png"
     }
   ],
   "info" : {

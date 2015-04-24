@@ -394,4 +394,5 @@ typedef void (^JSQAnimationCompletionBlock)(BOOL finished);
     }
 }
 
+
 @end

@@ -35,13 +35,26 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.rowHeight = 110;
     _tableView.backgroundColor = [UIColor clearColor];
+    
+    
+    self.navigationController.tabBarItem.selectedImage = [[UIImage imageNamed: @"Branco.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"Verde.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [_tableView reloadData];
     loadParse *lp = [[loadParse alloc] init];
     User *user1 = [User sharedUser];
-    _events = [lp loadEvents:user1.objectId];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSMutableArray *a = [lp loadEvents:user1.objectId];
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            _events = a;
+            [_tableView reloadData];
+        });
+    });
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

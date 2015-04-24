@@ -33,10 +33,14 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = @"Messages";
     
+    self.navigationController.tabBarItem.selectedImage = [[UIImage imageNamed: @"MessagesBranco.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"MessagesVerde.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-   // self.tabBarController.selectedIndex = 1;
     [_tableViewM reloadData];
     loadParse *lp = [[loadParse alloc] init];
     _events = [lp loadEvents:_user1.objectId];
@@ -77,6 +81,8 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
      
 }
+
+
 
 /*
 #pragma mark - Navigation

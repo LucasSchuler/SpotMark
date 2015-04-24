@@ -14,7 +14,10 @@
 }
 @end
 
-@implementation ChatView
+@implementation ChatView {
+    CGFloat _initialConstant;
+}
+
 
 - (id)initWith:(NSString *)groupId_{
 	self = [super init];
@@ -57,6 +60,47 @@
 	[super viewWillDisappear:animated];
 	[timer invalidate];
 }
+
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
+
+
+- (void)keyboardWillShow:(NSNotification*)notification {
+    
+    // Getting the keyboard frame and animation duration.
+    CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+//    if (!_initialConstant) {
+//        _initialConstant = _CreateButton.constant;
+//    }
+    
+    // If screen can fit everything, leave the constant untouched.
+//    _CreateButton.constant = MAX(keyboardFrame.size.height + keyboardHeightOffset, _initialConstant);
+    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
+        // This method will automatically animate all views to satisfy new constants.
+        [self.view layoutIfNeeded];
+    }];
+    
+}
+
+- (void)keyboardWillHide:(NSNotification*)notification {
+    
+    // Getting the keyboard frame and animation duration.
+    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    // Putting everything back to place.
+//    _CreateButton.constant = _initialConstant;
+    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
 
 #pragma mark - Backend methods
 
