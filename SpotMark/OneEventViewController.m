@@ -50,12 +50,8 @@
         [_exit setTitle:@"Exit Event" forState:UIControlStateNormal];
     }
     
-    //UIBarButtonItem *gotoEvents = [[UIBarButtonItem alloc] initWithTitle:@"Events" style:UIBarButtonItemStylePlain target:nil action:@selector(goToEvents)];
-    //[self.navigationItem setBackBarButtonItem:gotoEvents];
-    
-    //self.navigationController.navigationItem.backBarButtonItem
-    
     _tableView.backgroundColor = [UIColor clearColor];
+    
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = _evt.name;
     _eventName.text = _evt.name;
