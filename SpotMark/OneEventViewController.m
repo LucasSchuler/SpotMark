@@ -66,9 +66,6 @@
        [self Invite:nil];
 }
 
-
-
-
 -(void)viewWillAppear:(BOOL)animated{
   //  [self loadParticipants];
 }

@@ -85,7 +85,6 @@
         NSString *message2 =[message stringByAppendingString:_eventName];
         [push setMessage:message2];
         [push sendPushInBackground];
-        
     }
     [self performSegueWithIdentifier:@"backToOneEvent" sender:nil];
 }

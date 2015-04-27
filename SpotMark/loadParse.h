@@ -14,5 +14,4 @@
 -(NSMutableArray *) loadPosts : (NSString *) idEvent;
 -(void) sairEvento : (NSString *) user : (NSString *) event;
 -(void) excluirEvento : (NSString *) event;
--(NSMutableArray *) loadChat : (NSString *) eventId;
 @end
