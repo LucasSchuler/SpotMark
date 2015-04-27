@@ -32,7 +32,6 @@
 
     UITabBarItem *tabBarItem3 = [self.tabBar.items objectAtIndex:2];
     tabBarItem3.image = [[UIImage imageNamed:@"SettingsVede.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
-
     
     self.selectedIndex = 1;
     
