@@ -7,6 +7,7 @@
 //
 
 #import "CustomTabBarViewController.h"
+#import "MessagesViewController.h"
 
 @interface CustomTabBarViewController ()
 
@@ -22,6 +23,17 @@
     [UITabBarItem.appearance setTitleTextAttributes:
      @{NSForegroundColorAttributeName : [UIColor greenColor]}
                                            forState:UIControlStateNormal];
+    
+    UITabBarItem *tabBarItem1 = [self.tabBar.items objectAtIndex:0];
+    tabBarItem1.image = [[UIImage imageNamed:@"MessagesVerde.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+    
+    UITabBarItem *tabBarItem2 = [self.tabBar.items objectAtIndex:1];
+    tabBarItem2.image = [[UIImage imageNamed:@"Verde.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+
+    UITabBarItem *tabBarItem3 = [self.tabBar.items objectAtIndex:2];
+    tabBarItem3.image = [[UIImage imageNamed:@"SettingsVede.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+
+    
     self.selectedIndex = 1;
     
 }
