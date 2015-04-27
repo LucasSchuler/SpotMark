@@ -47,14 +47,10 @@
     return [objects mutableCopy];
 }
 
-
 -(void)sairEvento:(NSString *)user :(NSString *)event{
-    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    [query whereKey:@"members" equalTo:user];
-    [query whereKey:@"objectId" equalTo:event];
-    NSArray *objects = query.findObjects;
-    PFObject *delete = [objects objectAtIndex:0];
-    [delete deleteInBackground];
+    PFObject *object = [PFObject objectWithoutDataWithClassName:@"Event" objectId: event];
+    [object removeObject:user forKey:@"members"];
+    [object saveInBackground];
 }
 
 -(void) excluirEvento:(NSString *)event{
@@ -63,19 +59,6 @@
     NSArray *objects = query.findObjects;
     PFObject *delete = [objects objectAtIndex:0];
     [delete deleteInBackground];
-}
-
--(NSMutableArray *) loadChat : (NSString *) eventId{
-    NSUInteger limit = 1000;
-    NSLog(@"%@",eventId);
-    NSUInteger skip = 0;
-    PFQuery *query = [PFQuery queryWithClassName:@"Message"];
-    [query orderByAscending:@"createdAt"];
-    [query whereKey:@"eventId" equalTo:eventId];
-    [query setLimit: limit];
-    [query setSkip: skip];
-    NSArray *objects = query.findObjects;
-    return [objects mutableCopy];
 }
 
 @end

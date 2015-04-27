@@ -68,9 +68,6 @@
        [self Invite:nil];
 }
 
-
-
-
 -(void)viewWillAppear:(BOOL)animated{
   //  [self loadParticipants];
 }
@@ -78,9 +75,13 @@
 
 
 -(void)loadPosts{
-    _lp = [[loadParse alloc]init];
-    _posts = [_lp loadPosts:_evt.idEvent];
-    [_tableView reloadData];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        _lp = [[loadParse alloc]init];
+        _posts = [_lp loadPosts:_evt.idEvent];
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [_tableView reloadData];
+        });
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -162,7 +163,6 @@
         [push setMessage:message2];
         [push sendPushInBackground];
         
-        
         [self loadPosts];
     }
 }
@@ -215,15 +215,13 @@
         NSMutableArray *participants = [[NSMutableArray alloc]init];
         for(int i=0; i<b.count; i++){
             Participant *p = [[Participant alloc]init];
-            
-            //ARRUMAR NOME -----------------
-            
             PFQuery *query = [PFUser query];
             [query whereKey:@"username" equalTo:b[i]];
             NSArray *u = query.findObjects;
             PFUser *uu = u[0];
             p.name = uu[@"name"];
-            [p loadImage:b[i]];
+            p.userid = b[i];
+           // [p loadImage:b[i]];
             [participants addObject:p];
         }
         dispatch_async(dispatch_get_main_queue(), ^(void) {

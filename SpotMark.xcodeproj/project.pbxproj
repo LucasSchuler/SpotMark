@@ -86,7 +86,6 @@
 		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
-		955619781AC48ABA00010C68 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619771AC48ABA00010C68 /* Chat.m */; };
 		95FD4AC11AC5BD7E0075A78A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4ABE1AC5BD7E0075A78A /* Event.m */; };
 		95FD4AC21AC5BD7E0075A78A /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4AC01AC5BD7E0075A78A /* EventsViewController.m */; };
 		95FD4AC51AC5BDF80075A78A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4AC41AC5BDF80075A78A /* MapViewController.m */; };
@@ -253,8 +252,6 @@
 		955619681AC3229D00010C68 /* OneEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneEventViewController.h; sourceTree = "<group>"; };
 		955619691AC3229D00010C68 /* OneEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneEventViewController.m; sourceTree = "<group>"; };
 		955619711AC46B8900010C68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		955619761AC48ABA00010C68 /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
-		955619771AC48ABA00010C68 /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.m; sourceTree = "<group>"; };
 		95FD4ABE1AC5BD7E0075A78A /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		95FD4ABF1AC5BD7E0075A78A /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		95FD4AC01AC5BD7E0075A78A /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
@@ -540,8 +537,6 @@
 				0AEBF0A31AC5D26000F221E0 /* User.m */,
 				0A3BD4A51ACB11B900DAE12B /* Event.h */,
 				95FD4ABE1AC5BD7E0075A78A /* Event.m */,
-				955619761AC48ABA00010C68 /* Chat.h */,
-				955619771AC48ABA00010C68 /* Chat.m */,
 				0AEBF09C1AC5281700F221E0 /* loadParse.h */,
 				0AEBF09D1AC5281700F221E0 /* loadParse.m */,
 				0AEBF0A81AC635E000F221E0 /* CustonCellInvite.h */,
@@ -746,7 +741,6 @@
 				0A2187081AE5D83E00F7CDDD /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
 				0A2187161AE5D83E00F7CDDD /* JSQMessagesToolbarButtonFactory.m in Sources */,
 				0A21870F1AE5D83E00F7CDDD /* JSQMessagesKeyboardController.m in Sources */,
-				955619781AC48ABA00010C68 /* Chat.m in Sources */,
 				0A2187171AE5D83E00F7CDDD /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
 				0A2187151AE5D83E00F7CDDD /* JSQMessagesTimestampFormatter.m in Sources */,
 				0A2187351AE62AC900F7CDDD /* ChatView.m in Sources */,

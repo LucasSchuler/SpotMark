@@ -52,6 +52,8 @@
         NSData *data = [NSData dataWithContentsOfURL:url];
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             [cell.image setImage:[UIImage imageWithData:data]];
+            cell.image.layer.cornerRadius = cell.image.frame.size.width / 2;
+            cell.image.clipsToBounds = YES;
             [cell.actIndicator stopAnimating];
         });
     });
@@ -85,7 +87,6 @@
         NSString *message2 =[message stringByAppendingString:_eventName];
         [push setMessage:message2];
         [push sendPushInBackground];
-        
     }
     [self performSegueWithIdentifier:@"backToOneEvent" sender:nil];
 }
