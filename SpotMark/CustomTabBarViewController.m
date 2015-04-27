@@ -20,6 +20,8 @@
     
     self.selectedIndex = 1;
     
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
