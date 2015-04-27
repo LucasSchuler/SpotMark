@@ -33,18 +33,23 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = @"Messages";
     
-//    self.navigationController.tabBarItem.selectedImage = [[UIImage imageNamed: @"MessagesBranco.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    
-//    self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"MessagesVerde.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-
+    self.navigationController.tabBarItem.selectedImage = [[UIImage imageNamed: @"MessagesBranco.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
+    self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"MessagesVerde.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 
 
 -(void)viewWillAppear:(BOOL)animated{
     [_tableViewM reloadData];
     loadParse *lp = [[loadParse alloc] init];
-    _events = [lp loadEvents:_user1.objectId];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSMutableArray *a = [lp loadEvents:_user1.objectId];
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            _events = a;
+            [_tableViewM reloadData];
+        });
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,7 +65,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     PFObject *e = [_events objectAtIndex:(int)indexPath.row];
     cell.textLabel.text = e[@"name"];
     cell.backgroundColor = [UIColor colorWithRed:0.06 green:0.48 blue:0.40 alpha:0.7];
@@ -80,7 +85,6 @@
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-     
 }
 
 
