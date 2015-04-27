@@ -19,7 +19,7 @@
 #import "CustomCellPost.h"
 #import "ChatView.h"
 
-@interface OneEventViewController () <MKMapViewDelegate>
+@interface OneEventViewController () <MKMapViewDelegate, UIGestureRecognizerDelegate>
 
 @property User *user1;
 @property loadParse *lp;
@@ -50,18 +50,12 @@
         [_exit setTitle:@"Exit Event" forState:UIControlStateNormal];
     }
     
-    //UIBarButtonItem *gotoEvents = [[UIBarButtonItem alloc] initWithTitle:@"Events" style:UIBarButtonItemStylePlain target:nil action:@selector(goToEvents)];
-    //[self.navigationItem setBackBarButtonItem:gotoEvents];
     
-    //UIBarButtonItem *backB = [[UIBarButtonItem alloc] init];
-    //backB.title = @"Back";
-    //backB.action = @selector(goToEvents);
-    //self.navigationItem.backBarButtonItem = backB;
-  
-    self.navigationItem.hidesBackButton=NO;
-    SEL callback = @selector(goToEvents);
-    [self.navigationController.navigationItem.backBarButtonItem setAction:callback];
+    NSArray *myControllers = self.navigationController.viewControllers;
+    int previous = myControllers.count - 2;
+    UIViewController *previousController = [myControllers objectAtIndex:previous];
     
+    [self.navigationController popToViewController:previousController animated:YES];
     
     _tableView.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
@@ -81,11 +75,7 @@
   //  [self loadParticipants];
 }
 
--(void)goToEvents
-{
-    //customb *oevc = [[OneEventViewController alloc]init];
-    //[[self navigationController]pushViewController:oevc animated:YES];
-}
+
 
 -(void)loadPosts{
     _lp = [[loadParse alloc]init];
