@@ -70,7 +70,6 @@ static CGFloat keyboardHeightOffset = 0.0f;
     User *user1 = [User sharedUser];
     
     //CRIA O EVENTO
-    
     @try {
             _e = [[Event alloc]initWithValues:_txtName.text : _txtDescription.text : _txtLocalization.text : _txtDate.text : [_category titleForSegmentAtIndex:[_category selectedSegmentIndex]] : user1.email];
         
