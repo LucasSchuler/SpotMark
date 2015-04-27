@@ -11,7 +11,6 @@
 
 @interface Participant : NSObject
 @property NSString *name;
-@property NSData *dataImage;
+@property NSString *userid;
 
--(void)loadImage : (NSString *) url;
 @end

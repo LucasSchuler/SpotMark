@@ -46,7 +46,19 @@
     CustomCellInvite *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     Participant *p = [_participants objectAtIndex:(int)indexPath.row];
     cell.name.text = p.name;
-    [cell.image setImage:[UIImage imageWithData:p.dataImage]];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [cell.actIndicator startAnimating];
+       NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=200&height=200", p.userid]];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [cell.image setImage:[UIImage imageWithData:data]];
+            cell.image.layer.cornerRadius = cell.image.frame.size.width / 2;
+            cell.image.clipsToBounds = YES;
+            [cell.actIndicator stopAnimating];
+        });
+    });
+
     cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
