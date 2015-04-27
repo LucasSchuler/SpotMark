@@ -44,6 +44,7 @@
     
 }
 
+
 -(void)viewWillAppear:(BOOL)animated{
     [_tableView reloadData];
     loadParse *lp = [[loadParse alloc] init];

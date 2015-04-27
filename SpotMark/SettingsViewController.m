@@ -31,13 +31,14 @@
     
     self.image.layer.cornerRadius = 100.0f;
     
-    self.navigationController.tabBarItem.selectedImage = [[UIImage imageNamed: @"SettingsBranco.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //self.navigationController.tabBarItem.title = [UIColor whiteColor];
-    
-    self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"SettingsVede.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    self.navigationController.tabBarItem.selectedImage = [[UIImage imageNamed: @"SettingsBranco.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    //self.navigationController.tabBarItem.title = [UIColor whiteColor];
+//    
+//    self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"SettingsVede.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
