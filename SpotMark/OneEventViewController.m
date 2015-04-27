@@ -50,11 +50,8 @@
         [_exit setTitle:@"Exit Event" forState:UIControlStateNormal];
     }
     
-    //self.navigationController.navigationItem.backBarButtonItem.action = [self.navigationController popToRootViewControllerAnimated:YES];
-    
-    
-    
     _tableView.backgroundColor = [UIColor clearColor];
+    
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = _evt.name;
     _eventName.text = _evt.name;
