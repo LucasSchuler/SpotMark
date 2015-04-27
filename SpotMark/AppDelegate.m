@@ -44,6 +44,7 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
     
+       
     return YES;
 }
 

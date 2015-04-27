@@ -18,10 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+
     [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     [UITabBarItem.appearance setTitleTextAttributes:
-     @{NSForegroundColorAttributeName : [UIColor greenColor]}
+     @{NSForegroundColorAttributeName : [UIColor whiteColor]}
+                                           forState:UIControlStateSelected];
+
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    [UITabBarItem.appearance setTitleTextAttributes:
+     @{NSForegroundColorAttributeName : [UIColor colorWithRed:8/255 green:60/255 blue:50/255 alpha:1]}
                                            forState:UIControlStateNormal];
     
     UITabBarItem *tabBarItem1 = [self.tabBar.items objectAtIndex:0];
