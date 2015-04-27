@@ -11,6 +11,7 @@
 #import "Event.h"
 #import <Parse/Parse.h>
 #import "User.h"
+#import "AppDelegate.h"
 
 @interface NewEventsViewController ()< UIGestureRecognizerDelegate>
 
@@ -104,7 +105,13 @@ static CGFloat keyboardHeightOffset = 0.0f;
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
-        [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
+//        [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
+        
+        
+        AppDelegate *app = [[UIApplication sharedApplication] delegate];
+        app.eventCreated = _e;
+        
+        [self.navigationController popViewControllerAnimated:NO];
     }
     @catch (NSException *e) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"

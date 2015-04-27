@@ -50,12 +50,9 @@
         [_exit setTitle:@"Exit Event" forState:UIControlStateNormal];
     }
     
+    //self.navigationController.navigationItem.backBarButtonItem.action = [self.navigationController popToRootViewControllerAnimated:YES];
     
-    NSArray *myControllers = self.navigationController.viewControllers;
-    int previous = myControllers.count - 2;
-    UIViewController *previousController = [myControllers objectAtIndex:previous];
     
-    [self.navigationController popToViewController:previousController animated:YES];
     
     _tableView.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
@@ -66,11 +63,11 @@
     [self loadPosts];
     if(_newEvent)
        [self Invite:nil];
+    
+    
 }
 
--(void)viewWillAppear:(BOOL)animated{
-  //  [self loadParticipants];
-}
+
 
 
 
