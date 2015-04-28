@@ -151,7 +151,7 @@
         [DateFormatter setDateFormat:@"d/M/YYYY HH:mm"];
         NSString *post = _textView.text;
         PFObject *saveObject = [PFObject objectWithClassName:@"Post"];
-        saveObject[@"idEvent"] = _evt.idEvent;
+        saveObject[@"event"] = _evt.idEvent;
         saveObject[@"post"] = post;
         saveObject[@"name"] = _user1.name;
         saveObject[@"datetime"] = [DateFormatter stringFromDate:[NSDate date]];
