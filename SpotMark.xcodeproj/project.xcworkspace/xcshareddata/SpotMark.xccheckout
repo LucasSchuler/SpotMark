@@ -12,6 +12,8 @@
 	<dict>
 		<key>5B7CDDE5C9766C4016ED1F88BC5EEE5D0CF3C38B</key>
 		<string>https://github.com/LucasSchuler/SpotMark.git</string>
+		<key>994DC367948E9B89F1027DF8031057382DC6C180</key>
+		<string>https://github.com/rafaelabertolini/SpotMark.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SpotMark.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>5B7CDDE5C9766C4016ED1F88BC5EEE5D0CF3C38B</key>
 		<string>../..</string>
+		<key>994DC367948E9B89F1027DF8031057382DC6C180</key>
+		<string>../../../SpotMark</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/LucasSchuler/SpotMark.git</string>
@@ -28,6 +32,14 @@
 	<string>5B7CDDE5C9766C4016ED1F88BC5EEE5D0CF3C38B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>994DC367948E9B89F1027DF8031057382DC6C180</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SpotMark</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
