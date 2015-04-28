@@ -33,6 +33,8 @@
     self.image.clipsToBounds = YES;
     
     self.navigationController.tabBarItem.selectedImage = [[UIImage imageNamed: @"SettingsBranco.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"SettingsVede.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
     self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"SettingsVede.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
