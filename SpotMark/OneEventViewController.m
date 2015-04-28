@@ -143,19 +143,19 @@
         [DateFormatter setDateFormat:@"d/M/YYYY HH:mm"];
         NSString *post = _textView.text;
         PFObject *saveObject = [PFObject objectWithClassName:@"Post"];
-        saveObject[@"event"] = _evt.idEvent;
+        saveObject[@"idEvent"] = _evt.idEvent;
         saveObject[@"post"] = post;
         saveObject[@"name"] = _user1.name;
         saveObject[@"datetime"] = [DateFormatter stringFromDate:[NSDate date]];
         [saveObject saveInBackground];
         
         // Send a notification to all devices subscribed to the channel.
-        PFPush *push = [[PFPush alloc] init];
-        [push setChannel:[@"event" stringByAppendingString:_evt.idEvent]];
-        NSString *message = [_user1.name stringByAppendingString:@" publicou no evento "];
-        NSString *message2 =[message stringByAppendingString:_evt.name];
-        [push setMessage:message2];
-        [push sendPushInBackground];
+//        PFPush *push = [[PFPush alloc] init];
+//        [push setChannel:[@"event" stringByAppendingString:_evt.idEvent]];
+//        NSString *message = [_user1.name stringByAppendingString:@" publicou no evento "];
+//        NSString *message2 =[message stringByAppendingString:_evt.name];
+//        [push setMessage:message2];
+//        [push sendPushInBackground];
         
         [self loadPosts];
     }

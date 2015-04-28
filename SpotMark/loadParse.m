@@ -54,11 +54,37 @@
 }
 
 -(void) excluirEvento:(NSString *)event{
-    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    [query whereKey:@"objectId" equalTo:event];
-    NSArray *objects = query.findObjects;
-    PFObject *delete = [objects objectAtIndex:0];
-    [delete deleteInBackground];
+    //DELETA O EVENTO
+    PFObject *query2 = [PFObject objectWithoutDataWithClassName:@"Event" objectId:event];
+    query2.deleteInBackground;
+
+    //DELETA OS POSTS
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query whereKey:@"idEvent" equalTo:event];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        if (!error){
+            for (PFObject *post in array){
+                post.deleteInBackground;
+            }
+        }else{
+            NSLog(@"%@",error);
+        }
+        
+    }];
+
+    //DELETA AS MENSAGENS DO CHAT
+    query = [PFQuery queryWithClassName:@"Message"];
+    [query whereKey:@"eventId" equalTo:event];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        if (!error){
+            for (PFObject *message in array){
+                message.deleteInBackground;
+            }
+        }else{
+            NSLog(@"%@",error);
+        }
+    }];
+        
 }
 
 @end
