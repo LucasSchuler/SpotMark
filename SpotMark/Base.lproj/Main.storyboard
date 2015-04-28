@@ -751,7 +751,8 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TV0-qB-Vpw">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem image="Shape" width="341" id="UXV-U5-p5V">
+                                    <barButtonItem image="Search" width="341" id="UXV-U5-p5V">
+                                        <color key="tintColor" red="0.41176470590000003" green="0.93725490199999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="zoomIn:" destination="fRk-Dv-AX3" id="BAR-eW-SNs"/>
                                         </connections>
@@ -1002,8 +1003,8 @@
         <image name="Plus" width="20" height="20"/>
         <image name="Rectangle 1" width="600" height="600"/>
         <image name="Rectangle 2" width="600" height="600"/>
+        <image name="Search" width="26" height="26"/>
         <image name="Settings" width="32" height="32"/>
-        <image name="Shape" width="32" height="32"/>
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
