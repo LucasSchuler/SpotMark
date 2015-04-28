@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import "Config.h"
 @class Event;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
