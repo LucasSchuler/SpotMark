@@ -10,7 +10,28 @@
 
 @implementation Event
 
+
+
 -(id)initWithValues: (NSString *)name : (NSString *)desc : (NSString *)local : (NSString *)datetime : (NSString *)category : (NSString *)admin{
+    
+    NSDate *today = [NSDate date];
+    
+     NSLog(@"%@",today);
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+    [dateFormat setDateFormat:@"d/M/YYYY HH:mm"];
+    
+    NSString *stgToday = [dateFormat stringFromDate:today];
+
+    
+    NSDate *datenow = [dateFormat dateFromString:datetime];
+    NSDate *now =[dateFormat dateFromString:stgToday];
+    
+    NSLog(@"%@",today);
+    NSLog(@"%@",stgToday);
+    NSLog(@"%@",datenow);
+    //NSLog(@"%@",datetime);
+    NSLog(@"%@",now);
     
     self = [super init];
     if(self){
@@ -27,6 +48,13 @@
             NSException *exception = [NSException exceptionWithName:@"" reason:@"Select a date for the event!" userInfo:nil];
             @throw exception;
         }
+//        if([now laterDate:datenow]){
+//            NSException *exception = [NSException exceptionWithName:@"" reason:@"This date already passed" userInfo:nil];
+//            @throw exception;
+//        }
+        
+        
+        
         _name = name;
         _desc = desc;
         _local = local;

@@ -23,6 +23,7 @@
 //@property NSMutableArray *feed;
 @property NSString *admin;
 @property NSString *category;
+@property NSDate *today;
 
 @end
 
