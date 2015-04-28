@@ -74,6 +74,13 @@ static CGFloat keyboardHeightOffset = 0.0f;
     
     //CRIA O EVENTO
     @try {
+        
+        NSDate *now = [NSDate date];
+        NSLog(@"%@",_dtPicker.date);
+        if([now compare: _dtPicker.date] == NSOrderedDescending){
+            NSException *exception = [NSException exceptionWithName:@"" reason:@"This date already passed" userInfo:nil];
+            @throw exception;
+        }
             _e = [[Event alloc]initWithValues:_txtName.text : _txtDescription.text : _txtLocalization.text : _txtDate.text : [_category titleForSegmentAtIndex:[_category selectedSegmentIndex]] : user1.email];
         
         //ADICIONA O EVENTO AO PARSE
@@ -91,12 +98,7 @@ static CGFloat keyboardHeightOffset = 0.0f;
         _e.idEvent = saveObject.objectId;
         // _e.admin = user1.email;
         
-//        // ADICIONA O USUARIO AO EVENTO
-//        PFObject *userEvent = [PFObject objectWithClassName:@"UserEvent"];
-//        userEvent [@"user"] = user1.objectId;
-//        userEvent [@"userName"] = user1.name;
-//        userEvent [@"event"] = _e.idEvent;
-//        [userEvent saveInBackground];
+        
         
         // SE NAO OCORRER ERRO MOSTRA MENSAGEM E VAI P/ A TELA DO EVENTO
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully created event!"
