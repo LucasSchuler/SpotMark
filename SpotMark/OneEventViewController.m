@@ -19,7 +19,7 @@
 #import "CustomCellPost.h"
 #import "ChatView.h"
 
-@interface OneEventViewController () <MKMapViewDelegate>
+@interface OneEventViewController () <MKMapViewDelegate, UIGestureRecognizerDelegate>
 
 @property User *user1;
 @property loadParse *lp;
@@ -50,12 +50,8 @@
         [_exit setTitle:@"Exit Event" forState:UIControlStateNormal];
     }
     
-    //UIBarButtonItem *gotoEvents = [[UIBarButtonItem alloc] initWithTitle:@"Events" style:UIBarButtonItemStylePlain target:nil action:@selector(goToEvents)];
-    //[self.navigationItem setBackBarButtonItem:gotoEvents];
-    
-    //self.navigationController.navigationItem.backBarButtonItem
-    
     _tableView.backgroundColor = [UIColor clearColor];
+    
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = _evt.name;
     _eventName.text = _evt.name;
@@ -64,17 +60,13 @@
     [self loadPosts];
     if(_newEvent)
        [self Invite:nil];
+    
+    
 }
 
--(void)viewWillAppear:(BOOL)animated{
-  //  [self loadParticipants];
-}
 
--(void)goToEvents
-{
-    OneEventViewController *oevc = [[OneEventViewController alloc]init];
-    [[self navigationController]pushViewController:oevc animated:YES];
-}
+
+
 
 -(void)loadPosts{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

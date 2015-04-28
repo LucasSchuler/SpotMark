@@ -14,6 +14,8 @@
 #import "loadParse.h"
 #import "User.h"
 #import "EventTableCell.h"
+#import "AppDelegate.h"
+
 
 @interface EventsViewController ()
 
@@ -45,20 +47,35 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    [_tableView reloadData];
-    loadParse *lp = [[loadParse alloc] init];
-    User *user1 = [User sharedUser];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSMutableArray *a = [lp loadEvents:user1.objectId];
-        dispatch_async(dispatch_get_main_queue(), ^(void) {
-            _events = a;
-            [_tableView reloadData];
+    
+    AppDelegate *app = [[UIApplication sharedApplication] delegate];
+    
+    if(app.eventCreated != nil)
+    {
+        _evt = app.eventCreated;
+        [self performSegueWithIdentifier:@"gotoEventDetail" sender: nil];
+    }
+    else
+    {
+        [_tableView reloadData];
+        loadParse *lp = [[loadParse alloc] init];
+        User *user1 = [User sharedUser];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSMutableArray *a = [lp loadEvents:user1.objectId];
+            dispatch_async(dispatch_get_main_queue(), ^(void) {
+                _events = a;
+                [_tableView reloadData];
+            });
         });
-    });
+    }
+    
+
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
     return _events.count;
 }
 
@@ -94,10 +111,18 @@
     [self performSegueWithIdentifier:@"gotoEventDetail" sender: indexPath];
 }
 
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"gotoEventDetail"]){
         OneEventViewController *oevt = (OneEventViewController *) segue.destinationViewController;
         oevt.evt = _evt;
+        AppDelegate *app = [[UIApplication sharedApplication] delegate];
+
+        if(app.eventCreated != nil)
+        {
+            oevt.newEvent = YES;
+            app.eventCreated = nil;
+        }
     }
 }
 

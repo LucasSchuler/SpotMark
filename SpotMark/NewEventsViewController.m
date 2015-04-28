@@ -11,8 +11,9 @@
 #import "Event.h"
 #import <Parse/Parse.h>
 #import "User.h"
+#import "AppDelegate.h"
 
-@interface NewEventsViewController ()
+@interface NewEventsViewController ()< UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextView *txtDescription;
@@ -38,6 +39,8 @@
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.title = @"New Event";
+    
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 -(void)createDatePicker{
@@ -102,7 +105,13 @@ static CGFloat keyboardHeightOffset = 0.0f;
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
-        [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
+//        [self performSegueWithIdentifier:@"gotoOneEvent" sender:nil];
+        
+        
+        AppDelegate *app = [[UIApplication sharedApplication] delegate];
+        app.eventCreated = _e;
+        
+        [self.navigationController popViewControllerAnimated:NO];
     }
     @catch (NSException *e) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
@@ -125,6 +134,7 @@ static CGFloat keyboardHeightOffset = 0.0f;
 
     return NO;
 }
+
 
 
 - (BOOL) hidesBottomBarWhenPushed{

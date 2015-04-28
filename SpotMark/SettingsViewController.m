@@ -36,6 +36,8 @@
     
     self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"SettingsVede.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
+    self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"SettingsVede.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
     
 }
 
