@@ -27,6 +27,8 @@
             NSException *exception = [NSException exceptionWithName:@"" reason:@"Select a date for the event!" userInfo:nil];
             @throw exception;
         }
+        //if(datetime > )
+        
         _name = name;
         _desc = desc;
         _local = local;
