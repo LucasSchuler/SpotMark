@@ -33,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActIndicator;
 @property BOOL loaded;
 @property UITextView *textView;
+@property NSArray *idParticipants;
 
 @end
 
@@ -160,26 +161,20 @@
         //	PFUser *user = [PFUser currentUser];
         //	NSString *message = [NSString stringWithFormat:@"%@: %@", user[PF_USER_FULLNAME], text];
         //
-        //	PFQuery *query = [PFQuery queryWithClassName:PF_RECENT_CLASS_NAME];
-        //	[query whereKey:PF_RECENT_GROUPID equalTo:groupId];
-        //	[query whereKey:PF_RECENT_USER notEqualTo:user];
-        //	[query includeKey:PF_RECENT_USER];
-        //	[query setLimit:1000];
-        //
-        //	PFQuery *queryInstallation = [PFInstallation query];
-        //	[queryInstallation whereKey:PF_INSTALLATION_USER matchesKey:PF_RECENT_USER inQuery:query];
-        //
-        //	PFPush *push = [[PFPush alloc] init];
-        //	[push setQuery:queryInstallation];
-        //	[push setMessage:message];
-        //	[push sendPushInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
-        //	{
-        //		if (error != nil)
-        //		{
-        //			NSLog(@"SendPushNotification send error.");
-        //		}
-        //	}];
+//        	PFQuery *query = [PFQuery queryWithClassName:PF_RECENT_CLASS_NAME];
+//        	[query whereKey:PF_RECENT_GROUPID equalTo:groupId];
+//        	[query whereKey:PF_RECENT_USER notEqualTo:user];
+//        	[query includeKey:PF_RECENT_USER];
+//        	[query setLimit:1000];
+//        
+//        	PFQuery *queryInstallation = [PFInstallation query];
+//        	[queryInstallation whereKey:@"user" equalTo:@"jTRdr437ic"];
         
+        PFPush *push = [[PFPush alloc] init];
+        [push setChannels:_idParticipants];
+        NSString *message = [_user1.name stringByAppendingString:@" teste"];
+        [push setMessage:message];
+        [push sendPushInBackground];
         [self loadPosts];
     }
 }
@@ -241,7 +236,14 @@
            // [p loadImage:b[i]];
             [participants addObject:p];
         }
+        
+        for(int i=0; i<b.count; i++){
+            NSString *idUser = [@"user" stringByAppendingString:b[i]];
+            [b[i] replaceObjectAtIndex:i withObject:@""];
+        }
+        
         dispatch_async(dispatch_get_main_queue(), ^(void) {
+            _idParticipants = b;
             _evt.participants = participants;
             _loaded = YES;
          //   [_ActIndicator stopAnimating];
