@@ -50,6 +50,8 @@
         [_exit setTitle:@"Exit Event" forState:UIControlStateNormal];
     }
     
+    self.tabBarController.tabBar.hidden = YES;
+    
     _tableView.backgroundColor = [UIColor clearColor];
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
@@ -147,17 +149,17 @@
         saveObject[@"post"] = post;
         saveObject[@"name"] = _user1.name;
         saveObject[@"datetime"] = [DateFormatter stringFromDate:[NSDate date]];
-        [saveObject saveInBackground];
+        [saveObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+            if(succeeded){
+                [self loadPosts];
+            }else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Failure" message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        }];
+
         
-        // Send a notification to all devices subscribed to the channel.
-//        PFPush *push = [[PFPush alloc] init];
-//        [push setChannel:[@"event" stringByAppendingString:_evt.idEvent]];
-//        NSString *message = [_user1.name stringByAppendingString:@" publicou no evento "];
-//        NSString *message2 =[message stringByAppendingString:_evt.name];
-//        [push setMessage:message2];
-//        [push sendPushInBackground];
         
-        [self loadPosts];
     }
 }
 
@@ -226,29 +228,11 @@
     });
 }
 
--(IBAction)backFromInvite:(UIStoryboardSegue *)segue
-{
-}
+
 
 - (void)goBack:(id)sender {
     [self performSegueWithIdentifier:@"backtoEventFromEvent" sender:nil];
 }
-//
-//- (void)zoomIn{
-//    MKUserLocation *userLocation = _mapView.userLocation;
-//    MKCoordinateRegion region =
-//    MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, );
-//    [_mapView setRegion:region animated:NO];
-//}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
