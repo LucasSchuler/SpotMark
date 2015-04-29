@@ -228,7 +228,9 @@
     });
 }
 
-
+-(IBAction)backFromInvite:(UIStoryboardSegue *)segue{
+    
+}
 
 - (void)goBack:(id)sender {
     [self performSegueWithIdentifier:@"backtoEventFromEvent" sender:nil];
