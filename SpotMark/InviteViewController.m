@@ -85,7 +85,7 @@
         [push setChannel:[@"user" stringByAppendingString:friend.objectID]];
         NSString *message = [_user1.name stringByAppendingString:@" invited you to\""];
         NSString *message2 =[message stringByAppendingString:_eventName];
-        NSString *message3 =[message2 stringByAppendingString:@"\%"];
+        NSString *message3 =[message2 stringByAppendingString:@"\""];
 
         [push setMessage:message3];
         [push sendPushInBackground];
