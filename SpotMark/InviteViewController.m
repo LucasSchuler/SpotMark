@@ -29,6 +29,9 @@
     _tableView.allowsMultipleSelection = YES;
     _user1 = [User sharedUser];
     _tableView.backgroundColor = [UIColor clearColor];
+    
+   
+    
     // Do any additional setup after loading the view.
 }
 
@@ -84,6 +87,9 @@
             cell.image.layer.cornerRadius = cell.image.frame.size.width / 2;
             cell.image.clipsToBounds = YES;
             [cell.actIndicator stopAnimating];
+            self.tableView.estimatedRowHeight = 100.0;
+            self.tableView.rowHeight = UITableViewAutomaticDimension;
+
         });
     });
     cell.backgroundColor = [UIColor clearColor];

@@ -180,8 +180,6 @@
         [push setMessage:message];
         [push sendPushInBackground];
         [self loadPosts];
-=======
->>>>>>> d9107733645d0b7c888da25bf2e97432814ef794
     }
 }
 
