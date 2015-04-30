@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -409,7 +409,7 @@
                                         <color key="backgroundColor" red="0.086274509799999996" green="0.63529411759999999" blue="0.52941176469999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="18"/>
                                         <state key="normal" title="Post">
-                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="postar:" destination="a7T-MV-DoO" eventType="touchUpInside" id="Ctn-9a-LDf"/>
@@ -420,7 +420,7 @@
                                         <color key="backgroundColor" red="0.086274509799999996" green="0.63529411759999999" blue="0.52941176469999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="18"/>
                                         <state key="normal" title="Chat">
-                                            <color key="titleShadowColor" red="1" green="0.68235294120000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="abrirChat:" destination="a7T-MV-DoO" eventType="touchUpInside" id="KHS-jW-k0B"/>
@@ -602,6 +602,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateTime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83A-9F-fOa">
+                                <rect key="frame" x="510" y="230" width="82" height="27"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -629,7 +635,9 @@
                             <constraint firstAttribute="trailing" secondItem="qkW-lE-Hh9" secondAttribute="trailing" id="h31-v2-z3J"/>
                             <constraint firstItem="2R2-Ht-m22" firstAttribute="top" secondItem="qkW-lE-Hh9" secondAttribute="bottom" constant="8" id="h4v-r9-PGl"/>
                             <constraint firstItem="mfX-C6-Sg8" firstAttribute="top" secondItem="6Ns-TF-voB" secondAttribute="bottom" constant="5" id="hYK-A9-Heo"/>
+                            <constraint firstAttribute="trailing" secondItem="83A-9F-fOa" secondAttribute="trailing" constant="8" id="hwj-86-9du"/>
                             <constraint firstAttribute="trailing" secondItem="mfX-C6-Sg8" secondAttribute="trailing" id="i31-u6-8U7"/>
+                            <constraint firstItem="qkW-lE-Hh9" firstAttribute="top" secondItem="83A-9F-fOa" secondAttribute="bottom" constant="8" id="iol-7R-C3H"/>
                             <constraint firstAttribute="trailing" secondItem="yvN-ek-7WF" secondAttribute="trailing" id="mg8-lN-f1M"/>
                             <constraint firstItem="58z-XP-ZCZ" firstAttribute="leading" secondItem="LWL-tq-evF" secondAttribute="leading" id="nwU-F2-OId"/>
                             <constraint firstAttribute="trailing" secondItem="2R2-Ht-m22" secondAttribute="trailing" constant="20" id="o4D-ZN-hzF"/>
@@ -644,6 +652,7 @@
                     <navigationItem key="navigationItem" id="Pxh-vo-Y9a"/>
                     <connections>
                         <outlet property="ActIndicator" destination="QC4-wn-Eid" id="gpM-nl-s6j"/>
+                        <outlet property="dateTime" destination="83A-9F-fOa" id="o9E-OO-Bkb"/>
                         <outlet property="eventAdress" destination="Bvf-aB-knB" id="BHc-eV-TIB"/>
                         <outlet property="eventDescription" destination="6Ns-TF-voB" id="e6k-K3-Qyt"/>
                         <outlet property="eventImage" destination="yvN-ek-7WF" id="9y6-ZW-Ki1"/>
@@ -660,7 +669,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZj-KZ-1Q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817" y="2541"/>
+            <point key="canvasLocation" x="1582" y="2605"/>
         </scene>
         <!--Participants View Controller-->
         <scene sceneID="mbA-E2-XjD">
@@ -728,7 +737,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9p-bq-c3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1582" y="3267"/>
+            <point key="canvasLocation" x="2288" y="3343"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="aaf-hp-f4E">
@@ -773,7 +782,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPr-YN-X1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="3267"/>
+            <point key="canvasLocation" x="1582" y="3343"/>
         </scene>
         <!--New Events View Controller-->
         <scene sceneID="dvN-sj-Nki">
@@ -787,7 +796,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="Fvc-lm-NkM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-50-wTw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -865,17 +874,14 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tNF-oF-UgC" secondAttribute="trailing" id="2sc-6O-8vj"/>
                             <constraint firstAttribute="trailing" secondItem="7Rj-BD-gFf" secondAttribute="trailing" id="8d0-u1-noA"/>
-                            <constraint firstItem="puK-66-44e" firstAttribute="top" secondItem="Fvc-lm-NkM" secondAttribute="bottom" id="B9a-ND-tYr"/>
                             <constraint firstAttribute="trailing" secondItem="43i-gW-gnb" secondAttribute="trailing" constant="10" id="BnL-jz-z8p"/>
                             <constraint firstItem="9Wd-p0-ZpP" firstAttribute="top" secondItem="7Rj-BD-gFf" secondAttribute="bottom" constant="10" id="DLd-3q-Fjd"/>
                             <constraint firstAttribute="trailing" secondItem="gtZ-UR-Zkg" secondAttribute="trailing" id="Il6-oX-tul"/>
                             <constraint firstAttribute="trailing" secondItem="9Wd-p0-ZpP" secondAttribute="trailing" id="Iyq-2o-A0M"/>
                             <constraint firstAttribute="bottom" secondItem="gtZ-UR-Zkg" secondAttribute="bottom" constant="48" id="JHI-i9-GZE"/>
                             <constraint firstAttribute="trailing" secondItem="KOL-60-v1g" secondAttribute="trailing" id="Jf8-YM-REj"/>
-                            <constraint firstItem="Fvc-lm-NkM" firstAttribute="top" secondItem="oFE-dw-ZS4" secondAttribute="top" id="Mc0-wW-mJW"/>
                             <constraint firstItem="tNF-oF-UgC" firstAttribute="leading" secondItem="oFE-dw-ZS4" secondAttribute="leading" id="OCH-Ix-4ap"/>
                             <constraint firstItem="7Rj-BD-gFf" firstAttribute="top" secondItem="3HI-zm-aXd" secondAttribute="bottom" constant="25" id="THq-Fo-W0O"/>
-                            <constraint firstAttribute="trailing" secondItem="Fvc-lm-NkM" secondAttribute="trailing" id="Uil-m4-NKZ"/>
                             <constraint firstItem="9Wd-p0-ZpP" firstAttribute="leading" secondItem="oFE-dw-ZS4" secondAttribute="leading" id="VKh-ru-PVL"/>
                             <constraint firstItem="43i-gW-gnb" firstAttribute="top" secondItem="KOL-60-v1g" secondAttribute="bottom" constant="32" id="WeX-Ol-cMs"/>
                             <constraint firstItem="43i-gW-gnb" firstAttribute="leading" secondItem="oFE-dw-ZS4" secondAttribute="leading" constant="10" id="X3g-zt-cdN"/>
@@ -883,7 +889,6 @@
                             <constraint firstItem="KOL-60-v1g" firstAttribute="top" secondItem="9Wd-p0-ZpP" secondAttribute="bottom" constant="11" id="cvk-1r-CVy"/>
                             <constraint firstItem="KOL-60-v1g" firstAttribute="leading" secondItem="oFE-dw-ZS4" secondAttribute="leading" id="eZw-WL-5cM"/>
                             <constraint firstItem="7Rj-BD-gFf" firstAttribute="leading" secondItem="oFE-dw-ZS4" secondAttribute="leading" id="g6I-53-TTH"/>
-                            <constraint firstItem="Fvc-lm-NkM" firstAttribute="leading" secondItem="oFE-dw-ZS4" secondAttribute="leading" id="mxr-Gy-rgO"/>
                             <constraint firstItem="tNF-oF-UgC" firstAttribute="top" secondItem="43i-gW-gnb" secondAttribute="bottom" constant="25" id="zJV-2z-BoN"/>
                         </constraints>
                     </view>
@@ -900,7 +905,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNc-8N-NY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1582" y="2526"/>
+            <point key="canvasLocation" x="905" y="2605"/>
         </scene>
         <!--Invite View Controller-->
         <scene sceneID="8ir-LP-kMH">
@@ -994,7 +999,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAC-Yn-j4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UJW-Vp-4Mt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2236" y="2526"/>
+            <point key="canvasLocation" x="905" y="3335"/>
         </scene>
     </scenes>
     <resources>
@@ -1008,13 +1013,13 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yi9-bJ-R6a"/>
         <segue reference="9Yv-mm-iMM"/>
+        <segue reference="pIX-m6-7rI"/>
 <<<<<<< HEAD
+        <segue reference="07s-Np-hEV"/>
 =======
-        <segue reference="yi9-bJ-R6a"/>
->>>>>>> 533f3ca926177434e2781f355d30f6829f56f027
         <segue reference="Kvc-Bv-HLe"/>
+>>>>>>> 20e78bdfb12e5ab7d3664af9a3bc5cdfa538531e
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
