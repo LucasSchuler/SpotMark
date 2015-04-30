@@ -14,7 +14,7 @@
 #import "JSQMessages.h"
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-@interface ChatView : JSQMessagesViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate>
+@interface ChatView : JSQMessagesViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UITextViewDelegate>
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 @property NSString *name;
 
