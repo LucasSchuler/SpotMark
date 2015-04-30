@@ -33,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActIndicator;
 @property BOOL loaded;
 @property UITextView *textView;
+@property NSArray *idParticipants;
 
 @end
 
@@ -49,6 +50,8 @@
         _invite.hidden=YES;
         [_exit setTitle:@"Exit Event" forState:UIControlStateNormal];
     }
+    
+    self.tabBarController.tabBar.hidden = YES;
     
     _tableView.backgroundColor = [UIColor clearColor];
     
@@ -147,7 +150,15 @@
         saveObject[@"post"] = post;
         saveObject[@"name"] = _user1.name;
         saveObject[@"datetime"] = [DateFormatter stringFromDate:[NSDate date]];
-        [saveObject saveInBackground];
+        [saveObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+            if(succeeded){
+                [self loadPosts];
+            }else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Failure" message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        }];
+
         
         // Send a notification to all devices subscribed to the channel.
 //        PFPush *push = [[PFPush alloc] init];
@@ -157,6 +168,23 @@
 //        [push setMessage:message2];
 //        [push sendPushInBackground];
         
+        //	PFUser *user = [PFUser currentUser];
+        //	NSString *message = [NSString stringWithFormat:@"%@: %@", user[PF_USER_FULLNAME], text];
+        //
+//        	PFQuery *query = [PFQuery queryWithClassName:PF_RECENT_CLASS_NAME];
+//        	[query whereKey:PF_RECENT_GROUPID equalTo:groupId];
+//        	[query whereKey:PF_RECENT_USER notEqualTo:user];
+//        	[query includeKey:PF_RECENT_USER];
+//        	[query setLimit:1000];
+//        
+//        	PFQuery *queryInstallation = [PFInstallation query];
+//        	[queryInstallation whereKey:@"user" equalTo:@"jTRdr437ic"];
+        
+        PFPush *push = [[PFPush alloc] init];
+        [push setChannels:_idParticipants];
+        NSString *message = [_user1.name stringByAppendingString:@" teste"];
+        [push setMessage:message];
+        [push sendPushInBackground];
         [self loadPosts];
     }
 }
@@ -218,7 +246,14 @@
            // [p loadImage:b[i]];
             [participants addObject:p];
         }
+        
+        for(int i=0; i<b.count; i++){
+            NSString *idUser = [@"user" stringByAppendingString:b[i]];
+            [b[i] replaceObjectAtIndex:i withObject:@""];
+        }
+        
         dispatch_async(dispatch_get_main_queue(), ^(void) {
+            _idParticipants = b;
             _evt.participants = participants;
             _loaded = YES;
          //   [_ActIndicator stopAnimating];
@@ -226,22 +261,11 @@
     });
 }
 
--(IBAction)backFromInvite:(UIStoryboardSegue *)segue
-{
-}
+
 
 - (void)goBack:(id)sender {
     [self performSegueWithIdentifier:@"backtoEventFromEvent" sender:nil];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

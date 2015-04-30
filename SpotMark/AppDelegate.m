@@ -35,7 +35,6 @@
     
     [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:0.1 green:0.73 blue:0.61 alpha:1]];
     
-    //Navigation
     
      
     //PUSH NOTIFICATIONS
