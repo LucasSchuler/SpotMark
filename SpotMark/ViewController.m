@@ -35,21 +35,16 @@
         user1.email = [user objectForKey:@"email"];
         user1.name = [user name];
         user1.objectId = [user objectID];
-        
-//        PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-//        [currentInstallation addUniqueObject:[@"user" stringByAppendingString:user1.objectId] forKey:@"channels"];
-//        [currentInstallation saveInBackground];
 
-        
         PFUser *user = [PFUser user];
         user.username = user1.objectId;
         user.password = @"pass";
         user.email = user1.email;
         user[@"name"] = user1.name;
         
-        [PFUser logInWithUsernameInBackground:user.username password:user.password block:^(PFUser *user, NSError *error)
+        [PFUser logInWithUsernameInBackground:user.username password:user.password block:^(PFUser *pfuser, NSError *error)
          {
-             if (user != nil)
+             if (pfuser != nil)
              {
                  ParsePushUserAssign(user.username);
             }
@@ -63,13 +58,6 @@
                   }];
              }
          }];
-        
-        PFUser *pfUser = [PFUser user];
-        pfUser.username = user1.name;
-        pfUser.objectId = user1.objectId;
-        [pfUser saveInBackground];
-        
-        
         
         //REQUEST IMAGE
          dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
