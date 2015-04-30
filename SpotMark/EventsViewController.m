@@ -35,8 +35,10 @@
     self.title = @"Events";
   
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.rowHeight = 110;
+   // _tableView.rowHeight = 110;
     _tableView.backgroundColor = [UIColor clearColor];
+    
+    
     
     self.navigationController.tabBarItem.selectedImage = [[UIImage imageNamed: @"Branco.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
@@ -92,6 +94,9 @@
     else
         cell.eventImage.image = [UIImage imageNamed:e[@"category"]];
     cell.backgroundColor = [UIColor clearColor];
+    self.tableView.estimatedRowHeight = 90.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     return cell;
 }
 

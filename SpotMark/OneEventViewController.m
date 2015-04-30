@@ -233,13 +233,6 @@
 - (void)goBack:(id)sender {
     [self performSegueWithIdentifier:@"backtoEventFromEvent" sender:nil];
 }
-//
-//- (void)zoomIn{
-//    MKUserLocation *userLocation = _mapView.userLocation;
-//    MKCoordinateRegion region =
-//    MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, );
-//    [_mapView setRegion:region animated:NO];
-//}
 
 /*
 #pragma mark - Navigation

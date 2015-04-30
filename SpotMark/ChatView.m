@@ -41,7 +41,7 @@
     self.inputToolbar.contentView.leftBarButtonItem = nil;
     
 	JSQMessagesBubbleImageFactory *bubbleFactory = [[JSQMessagesBubbleImageFactory alloc] init];
-    bubbleImageOutgoing = [bubbleFactory outgoingMessagesBubbleImageWithColor: [UIColor colorWithRed:0 green:0.478 blue:1 alpha:1]];
+    bubbleImageOutgoing = [bubbleFactory outgoingMessagesBubbleImageWithColor: [UIColor colorWithRed:0.1 green:0.73 blue:0.61 alpha:1]];
 	bubbleImageIncoming = [bubbleFactory incomingMessagesBubbleImageWithColor:[UIColor colorWithRed:0.902 green:0.898 blue:0.918 alpha:1]];
 
 	isLoading = NO;
