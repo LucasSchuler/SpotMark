@@ -602,6 +602,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateTime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83A-9F-fOa">
+                                <rect key="frame" x="510" y="230" width="82" height="27"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -629,7 +635,9 @@
                             <constraint firstAttribute="trailing" secondItem="qkW-lE-Hh9" secondAttribute="trailing" id="h31-v2-z3J"/>
                             <constraint firstItem="2R2-Ht-m22" firstAttribute="top" secondItem="qkW-lE-Hh9" secondAttribute="bottom" constant="8" id="h4v-r9-PGl"/>
                             <constraint firstItem="mfX-C6-Sg8" firstAttribute="top" secondItem="6Ns-TF-voB" secondAttribute="bottom" constant="5" id="hYK-A9-Heo"/>
+                            <constraint firstAttribute="trailing" secondItem="83A-9F-fOa" secondAttribute="trailing" constant="8" id="hwj-86-9du"/>
                             <constraint firstAttribute="trailing" secondItem="mfX-C6-Sg8" secondAttribute="trailing" id="i31-u6-8U7"/>
+                            <constraint firstItem="qkW-lE-Hh9" firstAttribute="top" secondItem="83A-9F-fOa" secondAttribute="bottom" constant="8" id="iol-7R-C3H"/>
                             <constraint firstAttribute="trailing" secondItem="yvN-ek-7WF" secondAttribute="trailing" id="mg8-lN-f1M"/>
                             <constraint firstItem="58z-XP-ZCZ" firstAttribute="leading" secondItem="LWL-tq-evF" secondAttribute="leading" id="nwU-F2-OId"/>
                             <constraint firstAttribute="trailing" secondItem="2R2-Ht-m22" secondAttribute="trailing" constant="20" id="o4D-ZN-hzF"/>
@@ -644,6 +652,7 @@
                     <navigationItem key="navigationItem" id="Pxh-vo-Y9a"/>
                     <connections>
                         <outlet property="ActIndicator" destination="QC4-wn-Eid" id="gpM-nl-s6j"/>
+                        <outlet property="dateTime" destination="83A-9F-fOa" id="o9E-OO-Bkb"/>
                         <outlet property="eventAdress" destination="Bvf-aB-knB" id="BHc-eV-TIB"/>
                         <outlet property="eventDescription" destination="6Ns-TF-voB" id="e6k-K3-Qyt"/>
                         <outlet property="eventImage" destination="yvN-ek-7WF" id="9y6-ZW-Ki1"/>
@@ -1009,7 +1018,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9Yv-mm-iMM"/>
-        <segue reference="yi9-bJ-R6a"/>
+        <segue reference="pIX-m6-7rI"/>
         <segue reference="Kvc-Bv-HLe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
