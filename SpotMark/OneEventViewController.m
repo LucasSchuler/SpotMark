@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *invite;
 @property (weak, nonatomic) IBOutlet UIButton *exit;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActIndicator;
+@property (weak, nonatomic) IBOutlet UILabel *dateTime;
+
 @property BOOL loaded;
 @property UITextView *textView;
 @property NSArray *idParticipants;
@@ -60,6 +62,7 @@
     _eventName.text = _evt.name;
     _eventDescription.text = _evt.desc;
     _eventAdress.text = _evt.local;
+    _dateTime.text = _evt.datetime;
     [self loadPosts];
     if(_newEvent)
        [self Invite:nil];
