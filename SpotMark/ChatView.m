@@ -47,6 +47,17 @@
 	isLoading = NO;
 	initialized = NO;
 	[self loadMessages];
+    
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    
+    [nc addObserver:self selector:@selector(keyboardWillShow:) name:
+     UIKeyboardWillShowNotification object:nil];
+    
+    [nc addObserver:self selector:@selector(keyboardWillHide:) name:
+     UIKeyboardWillHideNotification object:nil];
+    
+    tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                            action:@selector(didTapAnywhere:)];
 }
 
 
@@ -65,41 +76,18 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    
     [self.view endEditing:YES];
+    [self.view touchesBegan:touches withEvent:event];
 }
 
 
-
-- (void)keyboardWillShow:(NSNotification*)notification {
-    
-    // Getting the keyboard frame and animation duration.
-    CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-//    if (!_initialConstant) {
-//        _initialConstant = _CreateButton.constant;
-//    }
-    
-    // If screen can fit everything, leave the constant untouched.
-//    _CreateButton.constant = MAX(keyboardFrame.size.height + keyboardHeightOffset, _initialConstant);
-    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
-        // This method will automatically animate all views to satisfy new constants.
-        [self.view layoutIfNeeded];
-    }];
-    
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
-- (void)keyboardWillHide:(NSNotification*)notification {
-    
-    // Getting the keyboard frame and animation duration.
-    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    // Putting everything back to place.
-//    _CreateButton.constant = _initialConstant;
-    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
-        [self.view layoutIfNeeded];
-    }];
-}
 
 
 #pragma mark - Backend methods

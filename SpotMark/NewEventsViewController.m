@@ -13,7 +13,7 @@
 #import "User.h"
 #import "AppDelegate.h"
 
-@interface NewEventsViewController ()< UIGestureRecognizerDelegate>
+@interface NewEventsViewController ()< UIGestureRecognizerDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextView *txtDescription;
@@ -41,6 +41,12 @@
     self.title = @"New Event";
     
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
+    _txtDescription.delegate = self;
+    _txtDescription.text = @"Description";
+    _txtDescription.textColor = [UIColor colorWithRed:0.29803922 green:0.5333333 blue:0.48235294 alpha:0.8 ];
+    
+
 }
 
 -(void)createDatePicker{
@@ -146,6 +152,24 @@ static CGFloat keyboardHeightOffset = 0.0f;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@"Description"]) {
+        textView.text = @"";
+        textView.textColor = [UIColor whiteColor]; //optional
+    }
+    [textView becomeFirstResponder];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"Description";
+        textView.textColor = [UIColor colorWithRed:0.29803922 green:0.5333333 blue:0.48235294 alpha:0.8]; //optional
+    }
+    [textView resignFirstResponder];
 }
 
 - (void)keyboardWillShow:(NSNotification*)notification {
