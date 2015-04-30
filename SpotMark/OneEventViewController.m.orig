@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *invite;
 @property (weak, nonatomic) IBOutlet UIButton *exit;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActIndicator;
+@property (weak, nonatomic) IBOutlet UILabel *dateTime;
+
 @property BOOL loaded;
 @property UITextView *textView;
 @property NSArray *idParticipants;
@@ -60,16 +62,13 @@
     _eventName.text = _evt.name;
     _eventDescription.text = _evt.desc;
     _eventAdress.text = _evt.local;
+    _dateTime.text = _evt.datetime;
     [self loadPosts];
     if(_newEvent)
        [self Invite:nil];
     
     
 }
-
-
-
-
 
 -(void)loadPosts{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -159,33 +158,27 @@
             }
         }];
 
+        PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+        [query whereKey:@"objectId" equalTo:_evt.idEvent];
         
-        // Send a notification to all devices subscribed to the channel.
-//        PFPush *push = [[PFPush alloc] init];
-//        [push setChannel:[@"event" stringByAppendingString:_evt.idEvent]];
-//        NSString *message = [_user1.name stringByAppendingString:@" publicou no evento "];
-//        NSString *message2 =[message stringByAppendingString:_evt.name];
-//        [push setMessage:message2];
-//        [push sendPushInBackground];
-        
-        //	PFUser *user = [PFUser currentUser];
-        //	NSString *message = [NSString stringWithFormat:@"%@: %@", user[PF_USER_FULLNAME], text];
-        //
-//        	PFQuery *query = [PFQuery queryWithClassName:PF_RECENT_CLASS_NAME];
-//        	[query whereKey:PF_RECENT_GROUPID equalTo:groupId];
-//        	[query whereKey:PF_RECENT_USER notEqualTo:user];
-//        	[query includeKey:PF_RECENT_USER];
-//        	[query setLimit:1000];
-//        
-//        	PFQuery *queryInstallation = [PFInstallation query];
-//        	[queryInstallation whereKey:@"user" equalTo:@"jTRdr437ic"];
-        
-        PFPush *push = [[PFPush alloc] init];
-        [push setChannels:_idParticipants];
-        NSString *message = [_user1.name stringByAppendingString:@" teste"];
-        [push setMessage:message];
-        [push sendPushInBackground];
-        [self loadPosts];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if(!error){
+                PFObject *a = [[query findObjects] objectAtIndex:0];
+                NSArray *ids = a[@"members"];
+                
+                PFQuery *userQuery = [PFUser query];
+                [userQuery whereKey:@"username" containedIn:ids];
+                
+                PFQuery *pushQuery = [PFInstallation query];
+                [pushQuery whereKey:@"user" matchesKey:@"objectId" inQuery:userQuery];
+                
+                PFPush *push = [[PFPush alloc] init];
+                NSString *message = [[[_user1.name stringByAppendingString:@" posted in \""] stringByAppendingString:_evt.name] stringByAppendingString:@"\""];
+                [push setQuery:pushQuery]; // Set our Installation query
+                [push setMessage:message];
+                [push sendPushInBackground];
+            }
+        }];
     }
 }
 
@@ -243,13 +236,9 @@
             PFUser *uu = u[0];
             p.name = uu[@"name"];
             p.userid = b[i];
+            p.channel = [@"user" stringByAppendingString:b[i]];
            // [p loadImage:b[i]];
             [participants addObject:p];
-        }
-        
-        for(int i=0; i<b.count; i++){
-            NSString *idUser = [@"user" stringByAppendingString:b[i]];
-            [b[i] replaceObjectAtIndex:i withObject:@""];
         }
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
@@ -261,23 +250,20 @@
     });
 }
 
+<<<<<<< HEAD
+-(IBAction)backFromInvite:(UIStoryboardSegue *)segue{
+    
+}
+=======
+-(IBAction)backFromInvite:(UIStoryboardSegue *)segue
+{
+}
 
+>>>>>>> c420a58ef83b176119aeb0106f2f1045e916cdb3
 
 - (void)goBack:(id)sender {
     [self performSegueWithIdentifier:@"backtoEventFromEvent" sender:nil];
 }
 
-<<<<<<< HEAD
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-=======
->>>>>>> 533f3ca926177434e2781f355d30f6829f56f027
 
 @end

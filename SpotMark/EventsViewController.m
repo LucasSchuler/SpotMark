@@ -96,7 +96,7 @@
     cell.backgroundColor = [UIColor clearColor];
     self.tableView.estimatedRowHeight = 90.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

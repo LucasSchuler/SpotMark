@@ -12,5 +12,6 @@
 @interface Participant : NSObject
 @property NSString *name;
 @property NSString *userid;
+@property NSString *channel;
 
 @end

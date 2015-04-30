@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property User *user1;
+@property NSMutableArray *friends;
 
 @end
 
@@ -23,9 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _friends = [[NSMutableArray alloc]init];
+    [self loadParticipants];
     _tableView.allowsMultipleSelection = YES;
     _user1 = [User sharedUser];
-    _friend_list = [[NSMutableArray alloc] init];
     _tableView.backgroundColor = [UIColor clearColor];
     
    
@@ -38,16 +40,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) loadParticipants{
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query whereKey:@"objectId" equalTo:_idEvent];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error){
+            PFObject *a = [[query findObjects] objectAtIndex:0];
+            [self selectFriends:a[@"members"]];
+            [_tableView reloadData];
+        }
+    }];
+}
+
+-(void) selectFriends:(NSArray *)participants{
+    NSMutableArray *selecteds = [_user1.friends_list mutableCopy];
+    NSLog(@"%d",selecteds.count);
+    for(int i=0;i<participants.count;i++){
+        for(int j=0; j<selecteds.count;j++){
+            NSDictionary<FBGraphUser> *friend = [selecteds objectAtIndex:j];
+            if([participants[i] isEqualToString:friend.objectID]){
+                [selecteds removeObjectAtIndex:j];
+                break;
+            }
+        }
+    }
+    _friends = selecteds;
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _user1.friends_list.count;
+        return _friends.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
     CustomCellInvite *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    NSDictionary<FBGraphUser> *friend = [_user1.friends_list objectAtIndex:(int)indexPath.row];
+    NSDictionary<FBGraphUser> *friend = [_friends objectAtIndex:(int)indexPath.row];
     cell.name.text = friend.name;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [cell.actIndicator startAnimating];
@@ -81,7 +110,7 @@
     NSArray *indexes = [_tableView indexPathsForSelectedRows];
     for (NSIndexPath *path in indexes) {
         NSInteger index = [path indexAtPosition:[path length] - 1];
-        NSDictionary<FBGraphUser> *friend = [_user1.friends_list objectAtIndex:(int)index];
+        NSDictionary<FBGraphUser> *friend = [_friends objectAtIndex:(int)index];
         PFObject *object = [PFObject objectWithoutDataWithClassName:@"Event" objectId: _idEvent];
         [object addUniqueObject:friend.objectID forKey:@"members"];
         [object saveInBackground];
@@ -96,6 +125,14 @@
         [push setMessage:message3];
         [push sendPushInBackground];
     }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully invited friends!"
+                                                    message:@""
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    
     [self performSegueWithIdentifier:@"backToOneEvent" sender:nil];
 }
 

@@ -56,6 +56,7 @@
             cell.image.layer.cornerRadius = cell.image.frame.size.width / 2;
             cell.image.clipsToBounds = YES;
             [cell.actIndicator stopAnimating];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             self.tableView.estimatedRowHeight = 100.0;
             self.tableView.rowHeight = UITableViewAutomaticDimension;
 

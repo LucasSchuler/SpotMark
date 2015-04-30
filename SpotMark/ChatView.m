@@ -48,16 +48,7 @@
 	initialized = NO;
 	[self loadMessages];
     
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     
-    [nc addObserver:self selector:@selector(keyboardWillShow:) name:
-     UIKeyboardWillShowNotification object:nil];
-    
-    [nc addObserver:self selector:@selector(keyboardWillHide:) name:
-     UIKeyboardWillHideNotification object:nil];
-    
-    tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                            action:@selector(didTapAnywhere:)];
 }
 
 
@@ -74,19 +65,7 @@
 
 
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    
-    [self.view endEditing:YES];
-    [self.view touchesBegan:touches withEvent:event];
-}
 
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
-}
 
 
 
