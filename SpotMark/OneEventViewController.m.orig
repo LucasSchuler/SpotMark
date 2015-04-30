@@ -33,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActIndicator;
 @property BOOL loaded;
 @property UITextView *textView;
+@property NSArray *idParticipants;
 
 @end
 
@@ -50,13 +51,8 @@
         [_exit setTitle:@"Exit Event" forState:UIControlStateNormal];
     }
     
-<<<<<<< HEAD
-    //self.navigationController.navigationItem.backBarButtonItem.action = [self.navigationController popToRootViewControllerAnimated:YES];
+    self.tabBarController.tabBar.hidden = YES;
     
-    
-    
-=======
->>>>>>> c1bbda6805286c53c29a2a5f0fd1e6ddc951c2c8
     _tableView.backgroundColor = [UIColor clearColor];
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
@@ -154,17 +150,38 @@
         saveObject[@"post"] = post;
         saveObject[@"name"] = _user1.name;
         saveObject[@"datetime"] = [DateFormatter stringFromDate:[NSDate date]];
-        [saveObject saveInBackground];
+        [saveObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+            if(succeeded){
+                [self loadPosts];
+            }else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Failure" message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        }];
+
         
-        // Send a notification to all devices subscribed to the channel.
+        
+<<<<<<< HEAD
+        //	PFUser *user = [PFUser currentUser];
+        //	NSString *message = [NSString stringWithFormat:@"%@: %@", user[PF_USER_FULLNAME], text];
+        //
+//        	PFQuery *query = [PFQuery queryWithClassName:PF_RECENT_CLASS_NAME];
+//        	[query whereKey:PF_RECENT_GROUPID equalTo:groupId];
+//        	[query whereKey:PF_RECENT_USER notEqualTo:user];
+//        	[query includeKey:PF_RECENT_USER];
+//        	[query setLimit:1000];
+//        
+//        	PFQuery *queryInstallation = [PFInstallation query];
+//        	[queryInstallation whereKey:@"user" equalTo:@"jTRdr437ic"];
+        
         PFPush *push = [[PFPush alloc] init];
-        [push setChannel:[@"event" stringByAppendingString:_evt.idEvent]];
-        NSString *message = [_user1.name stringByAppendingString:@" publicou no evento "];
-        NSString *message2 =[message stringByAppendingString:_evt.name];
-        [push setMessage:message2];
+        [push setChannels:_idParticipants];
+        NSString *message = [_user1.name stringByAppendingString:@" teste"];
+        [push setMessage:message];
         [push sendPushInBackground];
-        
         [self loadPosts];
+=======
+>>>>>>> d9107733645d0b7c888da25bf2e97432814ef794
     }
 }
 
@@ -225,7 +242,14 @@
            // [p loadImage:b[i]];
             [participants addObject:p];
         }
+        
+        for(int i=0; i<b.count; i++){
+            NSString *idUser = [@"user" stringByAppendingString:b[i]];
+            [b[i] replaceObjectAtIndex:i withObject:@""];
+        }
+        
         dispatch_async(dispatch_get_main_queue(), ^(void) {
+            _idParticipants = b;
             _evt.participants = participants;
             _loaded = YES;
          //   [_ActIndicator stopAnimating];
@@ -233,29 +257,11 @@
     });
 }
 
--(IBAction)backFromInvite:(UIStoryboardSegue *)segue
-{
-}
+
 
 - (void)goBack:(id)sender {
     [self performSegueWithIdentifier:@"backtoEventFromEvent" sender:nil];
 }
-//
-//- (void)zoomIn{
-//    MKUserLocation *userLocation = _mapView.userLocation;
-//    MKCoordinateRegion region =
-//    MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, );
-//    [_mapView setRegion:region animated:NO];
-//}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
