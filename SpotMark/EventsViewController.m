@@ -38,8 +38,6 @@
    // _tableView.rowHeight = 110;
     _tableView.backgroundColor = [UIColor clearColor];
     
-    
-    
     self.navigationController.tabBarItem.selectedImage = [[UIImage imageNamed: @"Branco.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"Verde.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -70,9 +68,6 @@
             });
         });
     }
-    
-
-    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
