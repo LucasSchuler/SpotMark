@@ -41,6 +41,7 @@
     self.title = @"New Event";
     
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    self.tabBarController.tabBar.hidden = YES;
     
     _txtDescription.delegate = self;
     _txtDescription.text = @"Description";
