@@ -168,6 +168,7 @@
                 
                 PFQuery *userQuery = [PFUser query];
                 [userQuery whereKey:@"username" containedIn:ids];
+                [userQuery whereKey:@"username" notEqualTo:_user1.objectId];
                 
                 PFQuery *pushQuery = [PFInstallation query];
                 [pushQuery whereKey:@"user" matchesKey:@"objectId" inQuery:userQuery];

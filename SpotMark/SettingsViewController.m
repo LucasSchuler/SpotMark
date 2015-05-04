@@ -49,7 +49,14 @@
 
 -(void) loadUser{
     _lblUsername.text = _user1.name;
-    [_image setImage:[UIImage imageWithData:_user1.image]];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?width=200&height=200", _user1.objectId ]];
+        NSData *image = [NSData dataWithContentsOfURL:url];
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+                [_image setImage:[UIImage imageWithData:image]];
+        });
+    });
 }
 
 -(void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView{

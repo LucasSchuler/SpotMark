@@ -34,6 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     _listCategory = @[@"Sport", @"Party", @"Laisure", @"Meeting"];
     [self createDatePicker];
     
@@ -77,7 +78,6 @@ static CGFloat keyboardHeightOffset = 0.0f;
 
 - (IBAction)create:(id)sender {
     User *user1 = [User sharedUser];
-    
     //CRIA O EVENTO
     @try {
         
