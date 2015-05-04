@@ -107,12 +107,11 @@
 
 - (IBAction)inviteFriends:(id)sender {
     NSArray *indexes = [_tableView indexPathsForSelectedRows];
+    NSArray *membersInvite = [[NSArray alloc]init];
     for (NSIndexPath *path in indexes) {
         NSInteger index = [path indexAtPosition:[path length] - 1];
         NSDictionary<FBGraphUser> *friend = [_friends objectAtIndex:(int)index];
-        PFObject *object = [PFObject objectWithoutDataWithClassName:@"Event" objectId: _idEvent];
-        [object addUniqueObject:friend.objectID forKey:@"members"];
-        [object saveInBackground];
+        membersInvite = [membersInvite arrayByAddingObject:friend.objectID];
         
 // Send a notification to all devices subscribed to the channel.
         PFPush *push = [[PFPush alloc] init];
@@ -124,6 +123,10 @@
         [push setMessage:message3];
         [push sendPushInBackground];
     }
+    
+    PFObject *object = [PFObject objectWithoutDataWithClassName:@"Event" objectId: _idEvent];
+    [object addUniqueObjectsFromArray:membersInvite forKey:@"members"];
+    [object saveInBackground];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successfully invited friends!"
                                                     message:@""
