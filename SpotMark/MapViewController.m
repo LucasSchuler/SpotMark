@@ -57,6 +57,8 @@
     MKUserLocation *userLocation = _mapView.userLocation;
     MKCoordinateRegion region =
     MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, 10000, 10000);
+    _mapView.camera.altitude = pow(2, 11);
+
     [_mapView setRegion:region animated:NO];
 }
 
