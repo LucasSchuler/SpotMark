@@ -18,6 +18,7 @@
 #import "Participant.h"
 #import "CustomCellPost.h"
 #import "ChatView.h"
+#import "push.h"
 
 @interface OneEventViewController () <MKMapViewDelegate, UIGestureRecognizerDelegate>
 
@@ -157,29 +158,7 @@
                 [alert show];
             }
         }];
-
-        PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-        [query whereKey:@"objectId" equalTo:_evt.idEvent];
-        
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if(!error){
-                PFObject *a = [[query findObjects] objectAtIndex:0];
-                NSArray *ids = a[@"members"];
-                
-                PFQuery *userQuery = [PFUser query];
-                [userQuery whereKey:@"username" containedIn:ids];
-                [userQuery whereKey:@"username" notEqualTo:_user1.objectId];
-                
-                PFQuery *pushQuery = [PFInstallation query];
-                [pushQuery whereKey:@"user" matchesKey:@"objectId" inQuery:userQuery];
-                
-                PFPush *push = [[PFPush alloc] init];
-                NSString *message = [[[_user1.name stringByAppendingString:@" posted in \""] stringByAppendingString:_evt.name] stringByAppendingString:@"\""];
-                [push setQuery:pushQuery]; // Set our Installation query
-                [push setMessage:message];
-                [push sendPushInBackground];
-            }
-        }];
+        pushEvent(_evt.idEvent, _evt.name,0,@"");
     }
 }
 
@@ -203,23 +182,13 @@
 }
 
 - (IBAction)participants:(id)sender {
-      [_ActIndicator startAnimating];
     [self loadParticipants];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        while(_loaded == NO){
-            //do nothing
-        }
-        dispatch_async(dispatch_get_main_queue(), ^(void) {
-            [_ActIndicator stopAnimating];
-            [self performSegueWithIdentifier:@"gotoParticipants" sender:nil];
-        });
-    });
 }
 
 -(void) loadParticipants{
     _loaded = NO;
+    [_ActIndicator startAnimating];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-      //  [_ActIndicator startAnimating];
         NSUInteger limit = 1000;
         NSUInteger skip = 0;
         PFQuery *query = [PFQuery queryWithClassName:@"Event"];
@@ -228,17 +197,19 @@
         [query setSkip: skip];
         PFObject *a = [[query findObjects] objectAtIndex:0];
         NSArray *b = a[@"members"];
+        
+        PFQuery *userQuery = [PFUser query];
+        [userQuery whereKey:@"username" containedIn:b];
+        
+        NSArray *users = userQuery.findObjects;
+        
         NSMutableArray *participants = [[NSMutableArray alloc]init];
         for(int i=0; i<b.count; i++){
             Participant *p = [[Participant alloc]init];
-            PFQuery *query = [PFUser query];
-            [query whereKey:@"username" equalTo:b[i]];
-            NSArray *u = query.findObjects;
-            PFUser *uu = u[0];
+            PFUser *uu = users[i];
             p.name = uu[@"name"];
             p.userid = b[i];
             p.channel = [@"user" stringByAppendingString:b[i]];
-           // [p loadImage:b[i]];
             [participants addObject:p];
         }
         
@@ -246,7 +217,9 @@
             _idParticipants = b;
             _evt.participants = participants;
             _loaded = YES;
-         //   [_ActIndicator stopAnimating];
+            [_ActIndicator stopAnimating];
+            [self performSegueWithIdentifier:@"gotoParticipants" sender:nil];
+
         });
     });
 }

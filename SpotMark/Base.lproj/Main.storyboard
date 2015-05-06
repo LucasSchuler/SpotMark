@@ -760,13 +760,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="wQk-kp-3Gw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-uS-JQp">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-uS-JQp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TV0-qB-Vpw">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem image="Search" width="341" id="UXV-U5-p5V">
+                                    <barButtonItem image="Search" width="290" id="UXV-U5-p5V">
                                         <color key="tintColor" red="0.41176470590000003" green="0.93725490199999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="zoomIn:" destination="fRk-Dv-AX3" id="BAR-eW-SNs"/>
@@ -777,9 +777,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dpY-uS-JQp" firstAttribute="leading" secondItem="WUQ-MT-zbt" secondAttribute="leading" id="Ca5-WD-V7V"/>
+                            <constraint firstAttribute="trailing" secondItem="dpY-uS-JQp" secondAttribute="trailing" id="H1H-EM-O63"/>
                             <constraint firstAttribute="bottom" secondItem="TV0-qB-Vpw" secondAttribute="bottom" id="Iox-qM-6K1"/>
+                            <constraint firstAttribute="trailing" secondItem="TV0-qB-Vpw" secondAttribute="trailing" id="jnM-H9-d4w"/>
+                            <constraint firstItem="RrP-KT-CK7" firstAttribute="top" secondItem="dpY-uS-JQp" secondAttribute="bottom" id="kyc-9O-cCb"/>
                             <constraint firstItem="TV0-qB-Vpw" firstAttribute="leading" secondItem="WUQ-MT-zbt" secondAttribute="leading" id="mox-Pb-05n"/>
+                            <constraint firstItem="dpY-uS-JQp" firstAttribute="top" secondItem="WUQ-MT-zbt" secondAttribute="top" id="mug-qb-wFF"/>
                             <constraint firstAttribute="trailing" secondItem="TV0-qB-Vpw" secondAttribute="trailing" id="oy6-bA-kRW"/>
+                            <constraint firstItem="TV0-qB-Vpw" firstAttribute="leading" secondItem="WUQ-MT-zbt" secondAttribute="leading" id="t39-QF-nIK"/>
                         </constraints>
                     </view>
                     <connections>

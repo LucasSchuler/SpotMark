@@ -11,9 +11,6 @@
 
 #import <Parse/Parse.h>
 
-//-------------------------------------------------------------------------------------------------------------------------------------------------
-void			ParsePushUserAssign		(NSString *userid);
-void			ParsePushUserResign		(void);
+void ParsePushUserAssign (NSString *userid);
 
-//-------------------------------------------------------------------------------------------------------------------------------------------------
-void			SendPushNotification	(NSString *groupId, NSString *text);
+void pushEvent (NSString *eventId, NSString *eventName, NSInteger cod, NSString *text);

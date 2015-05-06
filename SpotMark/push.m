@@ -10,6 +10,7 @@
 // THE SOFTWARE.
 
 #import <Parse/Parse.h>
+#import "User.h"
 
 #import "push.h"
 
@@ -27,15 +28,35 @@ void ParsePushUserAssign(NSString *userid){
 }
 
 
-void ParsePushUserResign(void){
-	PFInstallation *installation = [PFInstallation currentInstallation];
-	//[installation removeObjectForKey:PF_INSTALLATION_USER];
-	[installation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
-	{
-		if (error != nil)
-		{
-			NSLog(@"ParsePushUserResign save error.");
-		}
-	}];
+void pushEvent(NSString *eventId, NSString *eventName, NSInteger cod, NSString *text){
+    User *user1 = [User sharedUser];
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query whereKey:@"objectId" equalTo:eventId];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error){
+            PFObject *a = [[query findObjects] objectAtIndex:0];
+            NSArray *ids = a[@"members"];
+            
+            PFQuery *userQuery = [PFUser query];
+            [userQuery whereKey:@"username" containedIn:ids];
+            [userQuery whereKey:@"username" notEqualTo:user1.objectId];
+            
+            PFQuery *pushQuery = [PFInstallation query];
+            [pushQuery whereKey:@"user" matchesKey:@"objectId" inQuery:userQuery];
+            
+            PFPush *push = [[PFPush alloc] init];
+            
+            NSString *message = @"";
+            if(cod==0)
+                 message = [[[user1.name stringByAppendingString:@" posted in \""] stringByAppendingString:eventName] stringByAppendingString:@"\""];
+            else
+                 message = [[[[user1.name stringByAppendingString:@" in "] stringByAppendingString:eventName] stringByAppendingString:@": "] stringByAppendingString:text];
+            
+            [push setQuery:pushQuery]; // Set our Installation query
+            [push setMessage:message];
+            [push sendPushInBackground];
+        }
+    }];
 }
 

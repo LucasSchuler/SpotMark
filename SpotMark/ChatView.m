@@ -1,6 +1,7 @@
 #import <Parse/Parse.h>
 #import "push.h"
 #import "ChatView.h"
+#import "push.h"
 
 @interface ChatView()
 {
@@ -136,6 +137,7 @@
                   [self loadMessages];
              }
          }];
+    pushEvent(groupId, _name,1,text);
     [self finishSendingMessage];
 
 }
