@@ -12,6 +12,7 @@
 #import "Event.h"
 #import "User.h"
 #import "ChatView.h"
+#import "AppDelegate.h"
 
 @interface MessagesViewController ()
 
@@ -38,8 +39,13 @@
     self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"MessagesVerde.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 
-
 -(void)viewWillAppear:(BOOL)animated{
+    AppDelegate *app = [[UIApplication sharedApplication] delegate];
+    if(app.eventCreated != nil)
+    {
+        [self.tabBarController setSelectedIndex:1];
+    }
+    
     [_tableViewM reloadData];
     loadParse *lp = [[loadParse alloc] init];
     

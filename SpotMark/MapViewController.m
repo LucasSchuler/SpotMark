@@ -31,9 +31,8 @@
         [self.locationManager requestWhenInUseAuthorization];
     }
     
-    
     [_mapView setCenterCoordinate:_mapView.userLocation.location.coordinate animated:YES];
-
+    
     [self textFieldReturn];
     // Do any additional setup after loading the view.
 }
@@ -55,16 +54,13 @@
 
 - (IBAction)zoomIn:(id)sender {
     MKUserLocation *userLocation = _mapView.userLocation;
-    MKCoordinateRegion region =
-    MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, 10000, 10000);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate, 10000, 10000);
     _mapView.camera.altitude = pow(2, 11);
-
     [_mapView setRegion:region animated:NO];
 }
 
 
 - (void) performSearch {
-    
     MKLocalSearchRequest *request =
     [[MKLocalSearchRequest alloc] init];
     if(_evt.local == nil)
@@ -92,6 +88,15 @@
                 [_mapView addAnnotation:annotation];
             }
     }];
+}
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+        MKCoordinateRegion mapRegion;
+        mapRegion.center = mapView.userLocation.coordinate;
+        mapRegion.span.latitudeDelta = 0.2;
+        mapRegion.span.longitudeDelta = 0.2;
+        [mapView setRegion:mapRegion animated: YES];
 }
 
 /*

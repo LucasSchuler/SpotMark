@@ -12,6 +12,7 @@
 #import <Parse/Parse.h>
 #import "User.h"
 #import "AppDelegate.h"
+#import "EventsViewController.h"
 
 @interface NewEventsViewController ()< UIGestureRecognizerDelegate, UITextViewDelegate>
 

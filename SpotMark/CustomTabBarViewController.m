@@ -19,6 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    NSLog(@"passou aqui");
+    
     [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     [UITabBarItem.appearance setTitleTextAttributes:
      @{NSForegroundColorAttributeName : [UIColor whiteColor]}

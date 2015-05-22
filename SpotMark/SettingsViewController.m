@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "User.h"
+#import "AppDelegate.h"
 
 @interface SettingsViewController ()
 
@@ -37,10 +38,15 @@
     self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"SettingsVede.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
     self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"SettingsVede.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-
-    
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    AppDelegate *app = [[UIApplication sharedApplication] delegate];
+    if(app.eventCreated != nil)
+    {
+                [self.tabBarController setSelectedIndex:1];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

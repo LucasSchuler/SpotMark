@@ -41,22 +41,20 @@
     self.navigationController.tabBarItem.selectedImage = [[UIImage imageNamed: @"Branco.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     self.navigationController.tabBarItem.image = [[UIImage imageNamed:@"Verde.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    
 }
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    
     AppDelegate *app = [[UIApplication sharedApplication] delegate];
-    
+
     if(app.eventCreated != nil)
     {
         _evt = app.eventCreated;
         [self performSegueWithIdentifier:@"gotoEventDetail" sender: nil];
     }
-    else
-    {
+}
+
+-(void)viewDidAppear:(BOOL)animated{
         [_tableView reloadData];
         loadParse *lp = [[loadParse alloc] init];
         User *user1 = [User sharedUser];
@@ -67,7 +65,6 @@
                 [_tableView reloadData];
             });
         });
-    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
