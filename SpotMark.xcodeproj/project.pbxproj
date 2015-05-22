@@ -92,6 +92,17 @@
 		0AEC21851AE597650021D560 /* push.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC21841AE597650021D560 /* push.m */; };
 		0AF8A8761ADC549000498AC6 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A8751ADC549000498AC6 /* CustomTabBarViewController.m */; };
 		0AF8A8791ADD93A900498AC6 /* CustomCellPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A8781ADD93A900498AC6 /* CustomCellPost.m */; };
+		951129971B0FBE8700739F69 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13B1ABE597900025127 /* AudioToolbox.framework */; };
+		951129981B0FBE8700739F69 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13C1ABE597900025127 /* CFNetwork.framework */; };
+		951129991B0FBE8700739F69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13D1ABE597900025127 /* CoreGraphics.framework */; };
+		9511299A1B0FBE8700739F69 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13E1ABE597900025127 /* CoreLocation.framework */; };
+		9511299B1B0FBE8700739F69 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1501ABE598F00025127 /* libsqlite3.dylib */; };
+		9511299C1B0FBE8700739F69 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1511ABE598F00025127 /* libz.dylib */; };
+		9511299D1B0FBE8700739F69 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13F1ABE597900025127 /* MobileCoreServices.framework */; };
+		9511299E1B0FBE8700739F69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1401ABE597900025127 /* QuartzCore.framework */; };
+		9511299F1B0FBE8700739F69 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1411ABE597900025127 /* Security.framework */; };
+		951129A01B0FBE8700739F69 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A96DC931AF4575E002AE26C /* StoreKit.framework */; };
+		951129A11B0FBE8700739F69 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1441ABE597900025127 /* SystemConfiguration.framework */; };
 		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
@@ -338,6 +349,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				951129971B0FBE8700739F69 /* AudioToolbox.framework in Frameworks */,
+				951129981B0FBE8700739F69 /* CFNetwork.framework in Frameworks */,
+				951129991B0FBE8700739F69 /* CoreGraphics.framework in Frameworks */,
+				9511299A1B0FBE8700739F69 /* CoreLocation.framework in Frameworks */,
+				9511299B1B0FBE8700739F69 /* libsqlite3.dylib in Frameworks */,
+				9511299C1B0FBE8700739F69 /* libz.dylib in Frameworks */,
+				9511299D1B0FBE8700739F69 /* MobileCoreServices.framework in Frameworks */,
+				9511299E1B0FBE8700739F69 /* QuartzCore.framework in Frameworks */,
+				9511299F1B0FBE8700739F69 /* Security.framework in Frameworks */,
+				951129A01B0FBE8700739F69 /* StoreKit.framework in Frameworks */,
+				951129A11B0FBE8700739F69 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

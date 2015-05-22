@@ -15,7 +15,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var table: WKInterfaceTable!
 
     // 1 - Create Rows
-    let titles = ["Appple Watch Sport", "Apple Watch", "Apple Watch Edition"]
+    let titles = ["Apple Watch Sport", "Apple Watch", "Apple Watch Edition"]
     let images = ["watch-0", "watch-1","watch-2"]
 
     override func awakeWithContext(context: AnyObject?) {
