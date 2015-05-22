@@ -12,7 +12,7 @@
                     <items>
                         <table alignment="left" id="arR-x3-32I">
                             <items>
-                                <tableRow id="q3a-Yh-BEA">
+                                <tableRow identifier="WatchRow" id="q3a-Yh-BEA" customClass="WatchRow" customModule="SpotMark_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="DNV-lZ-96i">
                                         <items>
                                             <label width="128.5" height="36.5" alignment="left" text="Label" id="3wH-2Y-pWl"/>
@@ -21,6 +21,9 @@
                                             <segue destination="kZv-1B-fDm" kind="push" identifier="goToDetail" id="Q9A-p3-2oW"/>
                                         </connections>
                                     </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="3wH-2Y-pWl" id="efH-vt-laa"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>

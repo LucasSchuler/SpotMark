@@ -1179,5 +1179,68 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotMark WatchKit Extension/WatchRow.swift"
+            timestampString = "454015284.96987"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "WatchRow"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotMark_WatchKit_Extension.WatchRow.titleLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.WKInterfaceLabel&gt;"
+                  moduleName = "SpotMark WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragaschuler/SpotMark2/SpotMark%20WatchKit%20Extension/WatchRow.swift"
+                  timestampString = "454015887.186513"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotMark_WatchKit_Extension.WatchRow.titleLabel.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.WKInterfaceLabel&gt;"
+                  moduleName = "SpotMark WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragaschuler/SpotMark2/SpotMark%20WatchKit%20Extension/WatchRow.swift"
+                  timestampString = "454015887.186684"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotMark_WatchKit_Extension.WatchRow.init (SpotMark_WatchKit_Extension.WatchRow.Type)() -&gt; SpotMark_WatchKit_Extension.WatchRow"
+                  moduleName = "SpotMark WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragaschuler/SpotMark2/SpotMark%20WatchKit%20Extension/WatchRow.swift"
+                  timestampString = "454015887.186803"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -83,6 +83,7 @@
 		0ADB74201B0F92B800805D45 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB741E1B0F92B800805D45 /* Interface.storyboard */; };
 		0ADB74221B0F92B800805D45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74211B0F92B800805D45 /* Images.xcassets */; };
 		0ADB74251B0F92B800805D45 /* SpotMark WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0ADB743D1B0FB8F100805D45 /* WatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB743C1B0FB8F100805D45 /* WatchRow.swift */; };
 		0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF09D1AC5281700F221E0 /* loadParse.m */; };
 		0AEBF0A41AC5D26000F221E0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A31AC5D26000F221E0 /* User.m */; };
 		0AEBF0A71AC5E0C400F221E0 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */; };
@@ -271,6 +272,7 @@
 		0ADB741D1B0F92B800805D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ADB741F1B0F92B800805D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		0ADB74211B0F92B800805D45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0ADB743C1B0FB8F100805D45 /* WatchRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchRow.swift; sourceTree = "<group>"; };
 		0AEBF09C1AC5281700F221E0 /* loadParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadParse.h; sourceTree = "<group>"; };
 		0AEBF09D1AC5281700F221E0 /* loadParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadParse.m; sourceTree = "<group>"; };
 		0AEBF0A21AC5D26000F221E0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -601,6 +603,7 @@
 			isa = PBXGroup;
 			children = (
 				0ADB740D1B0F92B800805D45 /* InterfaceController.swift */,
+				0ADB743C1B0FB8F100805D45 /* WatchRow.swift */,
 				0ADB740F1B0F92B800805D45 /* NotificationController.swift */,
 				95914C631B0FB0200099B9F0 /* EventDetailInterfaceController.swift */,
 				0ADB74111B0F92B800805D45 /* GlanceController.swift */,
@@ -908,6 +911,7 @@
 			files = (
 				0ADB74101B0F92B800805D45 /* NotificationController.swift in Sources */,
 				95914C641B0FB0200099B9F0 /* EventDetailInterfaceController.swift in Sources */,
+				0ADB743D1B0FB8F100805D45 /* WatchRow.swift in Sources */,
 				0ADB740E1B0F92B800805D45 /* InterfaceController.swift in Sources */,
 				0ADB74121B0F92B800805D45 /* GlanceController.swift in Sources */,
 			);
