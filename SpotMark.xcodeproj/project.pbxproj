@@ -1042,7 +1042,7 @@
 					/Users/matheusbaptistabondan/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = SpotMark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1068,7 +1068,7 @@
 					/Users/matheusbaptistabondan/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = SpotMark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1091,7 +1091,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SpotMark WatchKit Extension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
@@ -1107,7 +1107,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "SpotMark WatchKit Extension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
@@ -1126,7 +1126,7 @@
 				);
 				IBSC_MODULE = SpotMark_WatchKit_Extension;
 				INFOPLIST_FILE = "SpotMark WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1142,7 +1142,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				IBSC_MODULE = SpotMark_WatchKit_Extension;
 				INFOPLIST_FILE = "SpotMark WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1178,6 +1178,7 @@
 				0ADB74291B0F92B800805D45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0ADB742B1B0F92B800805D45 /* Build configuration list for PBXNativeTarget "SpotMark WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -1186,6 +1187,7 @@
 				0ADB74271B0F92B800805D45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
