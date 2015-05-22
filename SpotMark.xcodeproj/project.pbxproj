@@ -75,6 +75,14 @@
 		0A61CB6C1AE0454B00CB11F6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A61CB6B1AE0454B00CB11F6 /* AVFoundation.framework */; };
 		0A96DC941AF4575F002AE26C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A96DC931AF4575E002AE26C /* StoreKit.framework */; };
 		0AC553101AD594D100FC3F22 /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5530F1AD594D100FC3F22 /* Participant.m */; };
+		0ADB740E1B0F92B800805D45 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB740D1B0F92B800805D45 /* InterfaceController.swift */; };
+		0ADB74101B0F92B800805D45 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB740F1B0F92B800805D45 /* NotificationController.swift */; };
+		0ADB74121B0F92B800805D45 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB74111B0F92B800805D45 /* GlanceController.swift */; };
+		0ADB74141B0F92B800805D45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74131B0F92B800805D45 /* Images.xcassets */; };
+		0ADB74181B0F92B800805D45 /* SpotMark WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74171B0F92B800805D45 /* SpotMark WatchKit App.app */; };
+		0ADB74201B0F92B800805D45 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB741E1B0F92B800805D45 /* Interface.storyboard */; };
+		0ADB74221B0F92B800805D45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74211B0F92B800805D45 /* Images.xcassets */; };
+		0ADB74251B0F92B800805D45 /* SpotMark WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF09D1AC5281700F221E0 /* loadParse.m */; };
 		0AEBF0A41AC5D26000F221E0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A31AC5D26000F221E0 /* User.m */; };
 		0AEBF0A71AC5E0C400F221E0 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */; };
@@ -94,6 +102,37 @@
 		F290D8E71AE71579007F78DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F290D8E61AE71579007F78DA /* Parse.framework */; };
 		F290D8E91AE71622007F78DA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F290D8E81AE71622007F78DA /* Bolts.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ADB74191B0F92B800805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A32BF031ABE039E00025127 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ADB74161B0F92B800805D45;
+			remoteInfo = "SpotMark WatchKit App";
+		};
+		0ADB74231B0F92B800805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A32BF031ABE039E00025127 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ADB74071B0F92B800805D45;
+			remoteInfo = "SpotMark WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0ADB742C1B0F92B800805D45 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0ADB74251B0F92B800805D45 /* SpotMark WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A0F98C71ACB3F9400B6D006 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
@@ -220,6 +259,17 @@
 		0A96DC931AF4575E002AE26C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0AC5530E1AD594D100FC3F22 /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
 		0AC5530F1AD594D100FC3F22 /* Participant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participant.m; sourceTree = "<group>"; };
+		0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SpotMark WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADB740B1B0F92B800805D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADB740C1B0F92B800805D45 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		0ADB740D1B0F92B800805D45 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		0ADB740F1B0F92B800805D45 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		0ADB74111B0F92B800805D45 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		0ADB74131B0F92B800805D45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0ADB74171B0F92B800805D45 /* SpotMark WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpotMark WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADB741D1B0F92B800805D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADB741F1B0F92B800805D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0ADB74211B0F92B800805D45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0AEBF09C1AC5281700F221E0 /* loadParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadParse.h; sourceTree = "<group>"; };
 		0AEBF09D1AC5281700F221E0 /* loadParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadParse.m; sourceTree = "<group>"; };
 		0AEBF0A21AC5D26000F221E0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -277,6 +327,13 @@
 				0A32C14C1ABE597900025127 /* Security.framework in Frameworks */,
 				0A32C14D1ABE597900025127 /* Social.framework in Frameworks */,
 				0A32C14F1ABE597900025127 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADB74051B0F92B800805D45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +509,8 @@
 		0A32BF021ABE039E00025127 = {
 			isa = PBXGroup;
 			children = (
+				0ADB74091B0F92B800805D45 /* SpotMark WatchKit Extension */,
+				0ADB741B1B0F92B800805D45 /* SpotMark WatchKit App */,
 				955619551AC1B2E600010C68 /* Frameworks */,
 				0A32BF0D1ABE039E00025127 /* SpotMark */,
 				0A32BF271ABE039E00025127 /* SpotMarkTests */,
@@ -463,6 +522,8 @@
 			isa = PBXGroup;
 			children = (
 				0A32BF0B1ABE039E00025127 /* SpotMark.app */,
+				0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */,
+				0ADB74171B0F92B800805D45 /* SpotMark WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -534,6 +595,45 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		0ADB74091B0F92B800805D45 /* SpotMark WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB740D1B0F92B800805D45 /* InterfaceController.swift */,
+				0ADB740F1B0F92B800805D45 /* NotificationController.swift */,
+				0ADB74111B0F92B800805D45 /* GlanceController.swift */,
+				0ADB74131B0F92B800805D45 /* Images.xcassets */,
+				0ADB740A1B0F92B800805D45 /* Supporting Files */,
+			);
+			path = "SpotMark WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		0ADB740A1B0F92B800805D45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB740B1B0F92B800805D45 /* Info.plist */,
+				0ADB740C1B0F92B800805D45 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0ADB741B1B0F92B800805D45 /* SpotMark WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB741E1B0F92B800805D45 /* Interface.storyboard */,
+				0ADB74211B0F92B800805D45 /* Images.xcassets */,
+				0ADB741C1B0F92B800805D45 /* Supporting Files */,
+			);
+			path = "SpotMark WatchKit App";
+			sourceTree = "<group>";
+		};
+		0ADB741C1B0F92B800805D45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB741D1B0F92B800805D45 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		955619551AC1B2E600010C68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,15 +699,50 @@
 				0A32BF071ABE039E00025127 /* Sources */,
 				0A32BF081ABE039E00025127 /* Frameworks */,
 				0A32BF091ABE039E00025127 /* Resources */,
+				0ADB742C1B0F92B800805D45 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0ADB74241B0F92B800805D45 /* PBXTargetDependency */,
 			);
 			name = SpotMark;
 			productName = SpotMark;
 			productReference = 0A32BF0B1ABE039E00025127 /* SpotMark.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0ADB74071B0F92B800805D45 /* SpotMark WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ADB742B1B0F92B800805D45 /* Build configuration list for PBXNativeTarget "SpotMark WatchKit Extension" */;
+			buildPhases = (
+				0ADB74041B0F92B800805D45 /* Sources */,
+				0ADB74051B0F92B800805D45 /* Frameworks */,
+				0ADB74061B0F92B800805D45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0ADB741A1B0F92B800805D45 /* PBXTargetDependency */,
+			);
+			name = "SpotMark WatchKit Extension";
+			productName = "SpotMark WatchKit Extension";
+			productReference = 0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		0ADB74161B0F92B800805D45 /* SpotMark WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ADB742A1B0F92B800805D45 /* Build configuration list for PBXNativeTarget "SpotMark WatchKit App" */;
+			buildPhases = (
+				0ADB74151B0F92B800805D45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpotMark WatchKit App";
+			productName = "SpotMark WatchKit App";
+			productReference = 0ADB74171B0F92B800805D45 /* SpotMark WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
 		};
 /* End PBXNativeTarget section */
 
@@ -630,6 +765,13 @@
 							};
 						};
 					};
+					0ADB74071B0F92B800805D45 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 6D93DA2TT6;
+					};
+					0ADB74161B0F92B800805D45 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
 				};
 			};
 			buildConfigurationList = 0A32BF061ABE039E00025127 /* Build configuration list for PBXProject "SpotMark" */;
@@ -647,6 +789,8 @@
 			projectRoot = "";
 			targets = (
 				0A32BF0A1ABE039E00025127 /* SpotMark */,
+				0ADB74071B0F92B800805D45 /* SpotMark WatchKit Extension */,
+				0ADB74161B0F92B800805D45 /* SpotMark WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -665,6 +809,24 @@
 				0A2187271AE5D83E00F7CDDD /* JSQMessagesCollectionViewCellOutgoing.xib in Resources */,
 				0A3BD4A81ACB1D8D00DAE12B /* Main.storyboard in Resources */,
 				0A2187111AE5D83E00F7CDDD /* JSQMessagesViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADB74061B0F92B800805D45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADB74141B0F92B800805D45 /* Images.xcassets in Resources */,
+				0ADB74181B0F92B800805D45 /* SpotMark WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADB74151B0F92B800805D45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADB74201B0F92B800805D45 /* Interface.storyboard in Resources */,
+				0ADB74221B0F92B800805D45 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,7 +899,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0ADB74041B0F92B800805D45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADB74101B0F92B800805D45 /* NotificationController.swift in Sources */,
+				0ADB740E1B0F92B800805D45 /* InterfaceController.swift in Sources */,
+				0ADB74121B0F92B800805D45 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0ADB741A1B0F92B800805D45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ADB74161B0F92B800805D45 /* SpotMark WatchKit App */;
+			targetProxy = 0ADB74191B0F92B800805D45 /* PBXContainerItemProxy */;
+		};
+		0ADB74241B0F92B800805D45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ADB74071B0F92B800805D45 /* SpotMark WatchKit Extension */;
+			targetProxy = 0ADB74231B0F92B800805D45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0A3BD4A61ACB1D8D00DAE12B /* Main.storyboard */ = {
@@ -746,6 +931,14 @@
 				0A3BD4A71ACB1D8D00DAE12B /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0ADB741E1B0F92B800805D45 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0ADB741F1B0F92B800805D45 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -886,6 +1079,77 @@
 			};
 			name = Release;
 		};
+		0ADB74261B0F92B800805D45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SpotMark WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0ADB74271B0F92B800805D45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "SpotMark WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0ADB74281B0F92B800805D45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = SpotMark_WatchKit_Extension;
+				INFOPLIST_FILE = "SpotMark WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		0ADB74291B0F92B800805D45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = SpotMark_WatchKit_Extension;
+				INFOPLIST_FILE = "SpotMark WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -906,6 +1170,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		0ADB742A1B0F92B800805D45 /* Build configuration list for PBXNativeTarget "SpotMark WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADB74281B0F92B800805D45 /* Debug */,
+				0ADB74291B0F92B800805D45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0ADB742B1B0F92B800805D45 /* Build configuration list for PBXNativeTarget "SpotMark WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADB74261B0F92B800805D45 /* Debug */,
+				0ADB74271B0F92B800805D45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
