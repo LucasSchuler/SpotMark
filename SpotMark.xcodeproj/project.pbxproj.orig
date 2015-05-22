@@ -57,10 +57,6 @@
 		0A32BF111ABE039E00025127 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32BF101ABE039E00025127 /* main.m */; };
 		0A32BF141ABE039E00025127 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32BF131ABE039E00025127 /* AppDelegate.m */; };
 		0A32BF171ABE039E00025127 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32BF161ABE039E00025127 /* ViewController.m */; };
-		0A32BF2B1ABE039E00025127 /* SpotMarkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32BF2A1ABE039E00025127 /* SpotMarkTests.m */; };
-<<<<<<< HEAD
-		0A32C16F1ABF24A800025127 /* Invites.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C16B1ABF24A800025127 /* Invites.m */; };
-=======
 		0A32C1451ABE597900025127 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13A1ABE597900025127 /* Accounts.framework */; };
 		0A32C1461ABE597900025127 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13B1ABE597900025127 /* AudioToolbox.framework */; };
 		0A32C1471ABE597900025127 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13C1ABE597900025127 /* CFNetwork.framework */; };
@@ -73,13 +69,19 @@
 		0A32C14F1ABE597900025127 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1441ABE597900025127 /* SystemConfiguration.framework */; };
 		0A32C1521ABE598F00025127 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1501ABE598F00025127 /* libsqlite3.dylib */; };
 		0A32C1531ABE598F00025127 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1511ABE598F00025127 /* libz.dylib */; };
-		0A32C2921AC08FEB00025127 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */; };
->>>>>>> fad4d8a3061a7a2aa3d4c1f3aaa387b1f101c15c
 		0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */; };
 		0A3BD4A41AC9D46A00DAE12B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BD4A31AC9D46A00DAE12B /* Images.xcassets */; };
 		0A3BD4A81ACB1D8D00DAE12B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BD4A61ACB1D8D00DAE12B /* Main.storyboard */; };
 		0A61CB6C1AE0454B00CB11F6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A61CB6B1AE0454B00CB11F6 /* AVFoundation.framework */; };
 		0AC553101AD594D100FC3F22 /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5530F1AD594D100FC3F22 /* Participant.m */; };
+		0ADB740E1B0F92B800805D45 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB740D1B0F92B800805D45 /* InterfaceController.swift */; };
+		0ADB74101B0F92B800805D45 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB740F1B0F92B800805D45 /* NotificationController.swift */; };
+		0ADB74121B0F92B800805D45 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB74111B0F92B800805D45 /* GlanceController.swift */; };
+		0ADB74141B0F92B800805D45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74131B0F92B800805D45 /* Images.xcassets */; };
+		0ADB74181B0F92B800805D45 /* SpotMark WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74171B0F92B800805D45 /* SpotMark WatchKit App.app */; };
+		0ADB74201B0F92B800805D45 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB741E1B0F92B800805D45 /* Interface.storyboard */; };
+		0ADB74221B0F92B800805D45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74211B0F92B800805D45 /* Images.xcassets */; };
+		0ADB74251B0F92B800805D45 /* SpotMark WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF09D1AC5281700F221E0 /* loadParse.m */; };
 		0AEBF0A41AC5D26000F221E0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A31AC5D26000F221E0 /* User.m */; };
 		0AEBF0A71AC5E0C400F221E0 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */; };
@@ -91,40 +93,45 @@
 		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
-		955619781AC48ABA00010C68 /* Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619771AC48ABA00010C68 /* Chat.m */; };
 		95FD4AC11AC5BD7E0075A78A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4ABE1AC5BD7E0075A78A /* Event.m */; };
 		95FD4AC21AC5BD7E0075A78A /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4AC01AC5BD7E0075A78A /* EventsViewController.m */; };
 		95FD4AC51AC5BDF80075A78A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4AC41AC5BDF80075A78A /* MapViewController.m */; };
 		95FD4ACD1AC9D68C0075A78A /* EventTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4ACC1AC9D68C0075A78A /* EventTableCell.m */; };
-		F290D8CE1AE6BE34007F78DA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955619711AC46B8900010C68 /* MapKit.framework */; };
-		F290D8CF1AE6BE34007F78DA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1501ABE598F00025127 /* libsqlite3.dylib */; };
-		F290D8D01AE6BE34007F78DA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1511ABE598F00025127 /* libz.dylib */; };
-		F290D8D11AE6BE34007F78DA /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E98A01AE03FBC0053F557 /* ParseFacebookUtilsV4.framework */; };
-		F290D8D21AE6BE34007F78DA /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E989E1AE03F550053F557 /* ParseFacebookUtils.framework */; };
-		F290D8D31AE6BE34007F78DA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E98961AE03AC20053F557 /* FacebookSDK.framework */; };
-		F290D8D41AE6BE34007F78DA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E98941AE03ABA0053F557 /* Bolts.framework */; };
-		F290D8D51AE6BE34007F78DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27E988E1AE034C30053F557 /* Parse.framework */; };
-		F290D8D61AE6BE34007F78DA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13A1ABE597900025127 /* Accounts.framework */; };
-		F290D8D71AE6BE34007F78DA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13B1ABE597900025127 /* AudioToolbox.framework */; };
-		F290D8D81AE6BE34007F78DA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13C1ABE597900025127 /* CFNetwork.framework */; };
-		F290D8D91AE6BE34007F78DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13D1ABE597900025127 /* CoreGraphics.framework */; };
-		F290D8DA1AE6BE34007F78DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13E1ABE597900025127 /* CoreLocation.framework */; };
-		F290D8DB1AE6BE34007F78DA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13F1ABE597900025127 /* MobileCoreServices.framework */; };
-		F290D8DC1AE6BE34007F78DA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1401ABE597900025127 /* QuartzCore.framework */; };
-		F290D8DD1AE6BE34007F78DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1411ABE597900025127 /* Security.framework */; };
-		F290D8DE1AE6BE34007F78DA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1421ABE597900025127 /* Social.framework */; };
-		F290D8DF1AE6BE34007F78DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1441ABE597900025127 /* SystemConfiguration.framework */; };
+		F290D8E31AE712BA007F78DA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F290D8E21AE712BA007F78DA /* FacebookSDK.framework */; };
+		F290D8E71AE71579007F78DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F290D8E61AE71579007F78DA /* Parse.framework */; };
+		F290D8E91AE71622007F78DA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F290D8E81AE71622007F78DA /* Bolts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A32BF251ABE039E00025127 /* PBXContainerItemProxy */ = {
+		0ADB74191B0F92B800805D45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A32BF031ABE039E00025127 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0A32BF0A1ABE039E00025127;
-			remoteInfo = SpotMark;
+			remoteGlobalIDString = 0ADB74161B0F92B800805D45;
+			remoteInfo = "SpotMark WatchKit App";
+		};
+		0ADB74231B0F92B800805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A32BF031ABE039E00025127 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ADB74071B0F92B800805D45;
+			remoteInfo = "SpotMark WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0ADB742C1B0F92B800805D45 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0ADB74251B0F92B800805D45 /* SpotMark WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A0F98C71ACB3F9400B6D006 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
@@ -228,7 +235,6 @@
 		0A32BF131ABE039E00025127 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0A32BF151ABE039E00025127 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0A32BF161ABE039E00025127 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0A32BF241ABE039E00025127 /* SpotMarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotMarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A32BF291ABE039E00025127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A32BF2A1ABE039E00025127 /* SpotMarkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotMarkTests.m; sourceTree = "<group>"; };
 		0A32C13A1ABE597900025127 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -243,12 +249,6 @@
 		0A32C1441ABE597900025127 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0A32C1501ABE598F00025127 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		0A32C1511ABE598F00025127 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-<<<<<<< HEAD
-		0A32C16A1ABF24A800025127 /* Invites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invites.h; sourceTree = "<group>"; };
-		0A32C16B1ABF24A800025127 /* Invites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invites.m; sourceTree = "<group>"; };
-=======
-		0A32C28E1AC08FEB00025127 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
->>>>>>> fad4d8a3061a7a2aa3d4c1f3aaa387b1f101c15c
 		0A32C2991AC1ED8500025127 /* NewEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEventsViewController.h; sourceTree = "<group>"; };
 		0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventsViewController.m; sourceTree = "<group>"; };
 		0A3BD4A31AC9D46A00DAE12B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -257,6 +257,17 @@
 		0A61CB6B1AE0454B00CB11F6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AC5530E1AD594D100FC3F22 /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
 		0AC5530F1AD594D100FC3F22 /* Participant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participant.m; sourceTree = "<group>"; };
+		0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SpotMark WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADB740B1B0F92B800805D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADB740C1B0F92B800805D45 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		0ADB740D1B0F92B800805D45 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		0ADB740F1B0F92B800805D45 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		0ADB74111B0F92B800805D45 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		0ADB74131B0F92B800805D45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0ADB74171B0F92B800805D45 /* SpotMark WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpotMark WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADB741D1B0F92B800805D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADB741F1B0F92B800805D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0ADB74211B0F92B800805D45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0AEBF09C1AC5281700F221E0 /* loadParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadParse.h; sourceTree = "<group>"; };
 		0AEBF09D1AC5281700F221E0 /* loadParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadParse.m; sourceTree = "<group>"; };
 		0AEBF0A21AC5D26000F221E0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -279,8 +290,6 @@
 		955619681AC3229D00010C68 /* OneEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneEventViewController.h; sourceTree = "<group>"; };
 		955619691AC3229D00010C68 /* OneEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneEventViewController.m; sourceTree = "<group>"; };
 		955619711AC46B8900010C68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		955619761AC48ABA00010C68 /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
-		955619771AC48ABA00010C68 /* Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.m; sourceTree = "<group>"; };
 		95FD4ABE1AC5BD7E0075A78A /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		95FD4ABF1AC5BD7E0075A78A /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		95FD4AC01AC5BD7E0075A78A /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
@@ -288,12 +297,9 @@
 		95FD4AC41AC5BDF80075A78A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		95FD4ACB1AC9D68C0075A78A /* EventTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableCell.h; sourceTree = "<group>"; };
 		95FD4ACC1AC9D68C0075A78A /* EventTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableCell.m; sourceTree = "<group>"; };
-		F27E988E1AE034C30053F557 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		F27E98941AE03ABA0053F557 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		F27E98961AE03AC20053F557 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		F27E989E1AE03F550053F557 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		F27E98A01AE03FBC0053F557 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		F27E98A41AE085F30053F557 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		F290D8E21AE712BA007F78DA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		F290D8E61AE71579007F78DA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F290D8E81AE71622007F78DA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,51 +307,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				F290D8CE1AE6BE34007F78DA /* MapKit.framework in Frameworks */,
-				F290D8CF1AE6BE34007F78DA /* libsqlite3.dylib in Frameworks */,
-				F290D8D01AE6BE34007F78DA /* libz.dylib in Frameworks */,
-				F290D8D11AE6BE34007F78DA /* ParseFacebookUtilsV4.framework in Frameworks */,
-				F290D8D21AE6BE34007F78DA /* ParseFacebookUtils.framework in Frameworks */,
-				F290D8D31AE6BE34007F78DA /* FacebookSDK.framework in Frameworks */,
-				F290D8D41AE6BE34007F78DA /* Bolts.framework in Frameworks */,
-				F290D8D51AE6BE34007F78DA /* Parse.framework in Frameworks */,
-				F290D8D61AE6BE34007F78DA /* Accounts.framework in Frameworks */,
-				F290D8D71AE6BE34007F78DA /* AudioToolbox.framework in Frameworks */,
-				F290D8D81AE6BE34007F78DA /* CFNetwork.framework in Frameworks */,
-				F290D8D91AE6BE34007F78DA /* CoreGraphics.framework in Frameworks */,
-				F290D8DA1AE6BE34007F78DA /* CoreLocation.framework in Frameworks */,
-				F290D8DB1AE6BE34007F78DA /* MobileCoreServices.framework in Frameworks */,
-				F290D8DC1AE6BE34007F78DA /* QuartzCore.framework in Frameworks */,
-				F290D8DD1AE6BE34007F78DA /* Security.framework in Frameworks */,
-				F290D8DE1AE6BE34007F78DA /* Social.framework in Frameworks */,
-				F290D8DF1AE6BE34007F78DA /* SystemConfiguration.framework in Frameworks */,
-=======
 				0A61CB6C1AE0454B00CB11F6 /* AVFoundation.framework in Frameworks */,
-				955619721AC46B8900010C68 /* MapKit.framework in Frameworks */,
-				0A32C2921AC08FEB00025127 /* FacebookSDK.framework in Frameworks */,
-				F27E98651ADC28C50053F557 /* ParseFacebookUtils.framework in Frameworks */,
 				0A32C1521ABE598F00025127 /* libsqlite3.dylib in Frameworks */,
 				0A32C1531ABE598F00025127 /* libz.dylib in Frameworks */,
 				0A32C1451ABE597900025127 /* Accounts.framework in Frameworks */,
-				F27E98601ADC286F0053F557 /* Parse.framework in Frameworks */,
+				F290D8E31AE712BA007F78DA /* FacebookSDK.framework in Frameworks */,
 				0AEC21821AE596C90021D560 /* ParseUI.framework in Frameworks */,
+				F290D8E71AE71579007F78DA /* Parse.framework in Frameworks */,
 				0A32C1461ABE597900025127 /* AudioToolbox.framework in Frameworks */,
 				0A32C1471ABE597900025127 /* CFNetwork.framework in Frameworks */,
 				0A32C1481ABE597900025127 /* CoreGraphics.framework in Frameworks */,
 				0A32C1491ABE597900025127 /* CoreLocation.framework in Frameworks */,
 				0A32C14A1ABE597900025127 /* MobileCoreServices.framework in Frameworks */,
+				F290D8E91AE71622007F78DA /* Bolts.framework in Frameworks */,
 				0A32C14B1ABE597900025127 /* QuartzCore.framework in Frameworks */,
-				F27E98631ADC28A70053F557 /* Bolts.framework in Frameworks */,
 				0A32C14C1ABE597900025127 /* Security.framework in Frameworks */,
-				F27E98611ADC286F0053F557 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				0A32C14D1ABE597900025127 /* Social.framework in Frameworks */,
 				0A32C14F1ABE597900025127 /* SystemConfiguration.framework in Frameworks */,
->>>>>>> fad4d8a3061a7a2aa3d4c1f3aaa387b1f101c15c
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A32BF211ABE039E00025127 /* Frameworks */ = {
+		0ADB74051B0F92B800805D45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -524,6 +506,8 @@
 		0A32BF021ABE039E00025127 = {
 			isa = PBXGroup;
 			children = (
+				0ADB74091B0F92B800805D45 /* SpotMark WatchKit Extension */,
+				0ADB741B1B0F92B800805D45 /* SpotMark WatchKit App */,
 				955619551AC1B2E600010C68 /* Frameworks */,
 				0A32BF0D1ABE039E00025127 /* SpotMark */,
 				0A32BF271ABE039E00025127 /* SpotMarkTests */,
@@ -535,7 +519,8 @@
 			isa = PBXGroup;
 			children = (
 				0A32BF0B1ABE039E00025127 /* SpotMark.app */,
-				0A32BF241ABE039E00025127 /* SpotMarkTests.xctest */,
+				0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */,
+				0ADB74171B0F92B800805D45 /* SpotMark WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -588,12 +573,9 @@
 				0AEC21831AE597650021D560 /* push.h */,
 				0AEC21841AE597650021D560 /* push.m */,
 				0AEBF0A21AC5D26000F221E0 /* User.h */,
-				F27E98A41AE085F30053F557 /* Config.h */,
 				0AEBF0A31AC5D26000F221E0 /* User.m */,
 				0A3BD4A51ACB11B900DAE12B /* Event.h */,
 				95FD4ABE1AC5BD7E0075A78A /* Event.m */,
-				955619761AC48ABA00010C68 /* Chat.h */,
-				955619771AC48ABA00010C68 /* Chat.m */,
 				0AEBF09C1AC5281700F221E0 /* loadParse.h */,
 				0AEBF09D1AC5281700F221E0 /* loadParse.m */,
 				0AEBF0A81AC635E000F221E0 /* CustonCellInvite.h */,
@@ -610,29 +592,56 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		0ADB74091B0F92B800805D45 /* SpotMark WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB740D1B0F92B800805D45 /* InterfaceController.swift */,
+				0ADB740F1B0F92B800805D45 /* NotificationController.swift */,
+				0ADB74111B0F92B800805D45 /* GlanceController.swift */,
+				0ADB74131B0F92B800805D45 /* Images.xcassets */,
+				0ADB740A1B0F92B800805D45 /* Supporting Files */,
+			);
+			path = "SpotMark WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		0ADB740A1B0F92B800805D45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB740B1B0F92B800805D45 /* Info.plist */,
+				0ADB740C1B0F92B800805D45 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0ADB741B1B0F92B800805D45 /* SpotMark WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB741E1B0F92B800805D45 /* Interface.storyboard */,
+				0ADB74211B0F92B800805D45 /* Images.xcassets */,
+				0ADB741C1B0F92B800805D45 /* Supporting Files */,
+			);
+			path = "SpotMark WatchKit App";
+			sourceTree = "<group>";
+		};
+		0ADB741C1B0F92B800805D45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ADB741D1B0F92B800805D45 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		955619551AC1B2E600010C68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-=======
 				0A61CB6B1AE0454B00CB11F6 /* AVFoundation.framework */,
-				F27E98641ADC28C50053F557 /* ParseFacebookUtils.framework */,
-				F27E98621ADC28A70053F557 /* Bolts.framework */,
-				F27E985E1ADC286F0053F557 /* Parse.framework */,
-				F27E985F1ADC286F0053F557 /* ParseFacebookUtilsV4.framework */,
->>>>>>> fad4d8a3061a7a2aa3d4c1f3aaa387b1f101c15c
 				955619711AC46B8900010C68 /* MapKit.framework */,
 				0A32C1501ABE598F00025127 /* libsqlite3.dylib */,
+				F290D8E61AE71579007F78DA /* Parse.framework */,
 				0A32C1511ABE598F00025127 /* libz.dylib */,
-<<<<<<< HEAD
-				F27E98A01AE03FBC0053F557 /* ParseFacebookUtilsV4.framework */,
-				F27E989E1AE03F550053F557 /* ParseFacebookUtils.framework */,
-				F27E98961AE03AC20053F557 /* FacebookSDK.framework */,
-				F27E98941AE03ABA0053F557 /* Bolts.framework */,
-				F27E988E1AE034C30053F557 /* Parse.framework */,
-=======
+				F290D8E81AE71622007F78DA /* Bolts.framework */,
+				F290D8E21AE712BA007F78DA /* FacebookSDK.framework */,
 				0AEC21811AE596C90021D560 /* ParseUI.framework */,
->>>>>>> fad4d8a3061a7a2aa3d4c1f3aaa387b1f101c15c
 				0A32C13A1ABE597900025127 /* Accounts.framework */,
 				0A32C13B1ABE597900025127 /* AudioToolbox.framework */,
 				0A32C13C1ABE597900025127 /* CFNetwork.framework */,
@@ -686,33 +695,50 @@
 				0A32BF071ABE039E00025127 /* Sources */,
 				0A32BF081ABE039E00025127 /* Frameworks */,
 				0A32BF091ABE039E00025127 /* Resources */,
+				0ADB742C1B0F92B800805D45 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0ADB74241B0F92B800805D45 /* PBXTargetDependency */,
 			);
 			name = SpotMark;
 			productName = SpotMark;
 			productReference = 0A32BF0B1ABE039E00025127 /* SpotMark.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0A32BF231ABE039E00025127 /* SpotMarkTests */ = {
+		0ADB74071B0F92B800805D45 /* SpotMark WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A32BF311ABE039E00025127 /* Build configuration list for PBXNativeTarget "SpotMarkTests" */;
+			buildConfigurationList = 0ADB742B1B0F92B800805D45 /* Build configuration list for PBXNativeTarget "SpotMark WatchKit Extension" */;
 			buildPhases = (
-				0A32BF201ABE039E00025127 /* Sources */,
-				0A32BF211ABE039E00025127 /* Frameworks */,
-				0A32BF221ABE039E00025127 /* Resources */,
+				0ADB74041B0F92B800805D45 /* Sources */,
+				0ADB74051B0F92B800805D45 /* Frameworks */,
+				0ADB74061B0F92B800805D45 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0A32BF261ABE039E00025127 /* PBXTargetDependency */,
+				0ADB741A1B0F92B800805D45 /* PBXTargetDependency */,
 			);
-			name = SpotMarkTests;
-			productName = SpotMarkTests;
-			productReference = 0A32BF241ABE039E00025127 /* SpotMarkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "SpotMark WatchKit Extension";
+			productName = "SpotMark WatchKit Extension";
+			productReference = 0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		0ADB74161B0F92B800805D45 /* SpotMark WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ADB742A1B0F92B800805D45 /* Build configuration list for PBXNativeTarget "SpotMark WatchKit App" */;
+			buildPhases = (
+				0ADB74151B0F92B800805D45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpotMark WatchKit App";
+			productName = "SpotMark WatchKit App";
+			productReference = 0ADB74171B0F92B800805D45 /* SpotMark WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
 		};
 /* End PBXNativeTarget section */
 
@@ -725,7 +751,7 @@
 				TargetAttributes = {
 					0A32BF0A1ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6D93DA2TT6;
+						DevelopmentTeam = 6ZVL2ANYP3;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -735,10 +761,13 @@
 							};
 						};
 					};
-					0A32BF231ABE039E00025127 = {
-						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6D93DA2TT6;
-						TestTargetID = 0A32BF0A1ABE039E00025127;
+					0ADB74071B0F92B800805D45 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 6ZVL2ANYP3;
+					};
+					0ADB74161B0F92B800805D45 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 6ZVL2ANYP3;
 					};
 				};
 			};
@@ -757,7 +786,8 @@
 			projectRoot = "";
 			targets = (
 				0A32BF0A1ABE039E00025127 /* SpotMark */,
-				0A32BF231ABE039E00025127 /* SpotMarkTests */,
+				0ADB74071B0F92B800805D45 /* SpotMark WatchKit Extension */,
+				0ADB74161B0F92B800805D45 /* SpotMark WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -779,10 +809,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A32BF221ABE039E00025127 /* Resources */ = {
+		0ADB74061B0F92B800805D45 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADB74141B0F92B800805D45 /* Images.xcassets in Resources */,
+				0ADB74181B0F92B800805D45 /* SpotMark WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADB74151B0F92B800805D45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADB74201B0F92B800805D45 /* Interface.storyboard in Resources */,
+				0ADB74221B0F92B800805D45 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,7 +851,6 @@
 				0A2187081AE5D83E00F7CDDD /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
 				0A2187161AE5D83E00F7CDDD /* JSQMessagesToolbarButtonFactory.m in Sources */,
 				0A21870F1AE5D83E00F7CDDD /* JSQMessagesKeyboardController.m in Sources */,
-				955619781AC48ABA00010C68 /* Chat.m in Sources */,
 				0A2187171AE5D83E00F7CDDD /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
 				0A2187151AE5D83E00F7CDDD /* JSQMessagesTimestampFormatter.m in Sources */,
 				0A2187351AE62AC900F7CDDD /* ChatView.m in Sources */,
@@ -856,21 +896,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A32BF201ABE039E00025127 /* Sources */ = {
+		0ADB74041B0F92B800805D45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A32BF2B1ABE039E00025127 /* SpotMarkTests.m in Sources */,
+				0ADB74101B0F92B800805D45 /* NotificationController.swift in Sources */,
+				0ADB740E1B0F92B800805D45 /* InterfaceController.swift in Sources */,
+				0ADB74121B0F92B800805D45 /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0A32BF261ABE039E00025127 /* PBXTargetDependency */ = {
+		0ADB741A1B0F92B800805D45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0A32BF0A1ABE039E00025127 /* SpotMark */;
-			targetProxy = 0A32BF251ABE039E00025127 /* PBXContainerItemProxy */;
+			target = 0ADB74161B0F92B800805D45 /* SpotMark WatchKit App */;
+			targetProxy = 0ADB74191B0F92B800805D45 /* PBXContainerItemProxy */;
+		};
+		0ADB74241B0F92B800805D45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ADB74071B0F92B800805D45 /* SpotMark WatchKit Extension */;
+			targetProxy = 0ADB74231B0F92B800805D45 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -881,6 +928,14 @@
 				0A3BD4A71ACB1D8D00DAE12B /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0ADB741E1B0F92B800805D45 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0ADB741F1B0F92B800805D45 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -903,7 +958,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -920,10 +976,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
+				PROVISIONING_PROFILE = "4d603e73-b3a6-4272-9cbf-af4ccf7d4e07";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -946,7 +1003,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -957,9 +1015,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
+				PROVISIONING_PROFILE = "4d603e73-b3a6-4272-9cbf-af4ccf7d4e07";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -971,20 +1030,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+<<<<<<< HEAD
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+=======
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
+>>>>>>> e0cd95a59afd684841e6960d7b73f515ebe8e293
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					/Users/matheusbaptistabondan/Downloads/Sinch,
 					/Users/matheusbaptistabondan/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = SpotMark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotMark/SpotMark-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -993,53 +1062,108 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+<<<<<<< HEAD
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+=======
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
+>>>>>>> e0cd95a59afd684841e6960d7b73f515ebe8e293
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					/Users/matheusbaptistabondan/Downloads/Sinch,
 					/Users/matheusbaptistabondan/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = SpotMark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotMark/SpotMark-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
-		0A32BF321ABE039E00025127 /* Debug */ = {
+		0ADB74261B0F92B800805D45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SpotMarkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpotMark.app/SpotMark";
+				INFOPLIST_FILE = "SpotMark WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		0A32BF331ABE039E00025127 /* Release */ = {
+		0ADB74271B0F92B800805D45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "SpotMark WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0ADB74281B0F92B800805D45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SpotMarkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IBSC_MODULE = SpotMark_WatchKit_Extension;
+				INFOPLIST_FILE = "SpotMark WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpotMark.app/SpotMark";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		0ADB74291B0F92B800805D45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = SpotMark_WatchKit_Extension;
+				INFOPLIST_FILE = "SpotMark WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
 			name = Release;
 		};
@@ -1064,11 +1188,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A32BF311ABE039E00025127 /* Build configuration list for PBXNativeTarget "SpotMarkTests" */ = {
+		0ADB742A1B0F92B800805D45 /* Build configuration list for PBXNativeTarget "SpotMark WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A32BF321ABE039E00025127 /* Debug */,
-				0A32BF331ABE039E00025127 /* Release */,
+				0ADB74281B0F92B800805D45 /* Debug */,
+				0ADB74291B0F92B800805D45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ADB742B1B0F92B800805D45 /* Build configuration list for PBXNativeTarget "SpotMark WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADB74261B0F92B800805D45 /* Debug */,
+				0ADB74271B0F92B800805D45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
