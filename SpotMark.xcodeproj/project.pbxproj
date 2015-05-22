@@ -84,6 +84,7 @@
 		0ADB74221B0F92B800805D45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74211B0F92B800805D45 /* Images.xcassets */; };
 		0ADB74251B0F92B800805D45 /* SpotMark WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0ADB743D1B0FB8F100805D45 /* WatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB743C1B0FB8F100805D45 /* WatchRow.swift */; };
+		0ADB74441B0FBF6100805D45 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADB74431B0FBF6100805D45 /* Parse.framework */; };
 		0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF09D1AC5281700F221E0 /* loadParse.m */; };
 		0AEBF0A41AC5D26000F221E0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A31AC5D26000F221E0 /* User.m */; };
 		0AEBF0A71AC5E0C400F221E0 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */; };
@@ -284,6 +285,7 @@
 		0ADB741F1B0F92B800805D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		0ADB74211B0F92B800805D45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0ADB743C1B0FB8F100805D45 /* WatchRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchRow.swift; sourceTree = "<group>"; };
+		0ADB74431B0FBF6100805D45 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = SOURCE_ROOT; };
 		0AEBF09C1AC5281700F221E0 /* loadParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadParse.h; sourceTree = "<group>"; };
 		0AEBF09D1AC5281700F221E0 /* loadParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadParse.m; sourceTree = "<group>"; };
 		0AEBF0A21AC5D26000F221E0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				9511299E1B0FBE8700739F69 /* QuartzCore.framework in Frameworks */,
 				9511299F1B0FBE8700739F69 /* Security.framework in Frameworks */,
 				951129A01B0FBE8700739F69 /* StoreKit.framework in Frameworks */,
+				0ADB74441B0FBF6100805D45 /* Parse.framework in Frameworks */,
 				951129A11B0FBE8700739F69 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,6 +627,7 @@
 		0ADB74091B0F92B800805D45 /* SpotMark WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0ADB74431B0FBF6100805D45 /* Parse.framework */,
 				0ADB740D1B0F92B800805D45 /* InterfaceController.swift */,
 				0ADB743C1B0FB8F100805D45 /* WatchRow.swift */,
 				0ADB740F1B0F92B800805D45 /* NotificationController.swift */,
@@ -1118,6 +1122,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1139,6 +1147,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "SpotMark WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
