@@ -12,6 +12,11 @@ import Foundation
 
 class EventDetailInterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var image: WKInterfaceImage!
+    @IBOutlet weak var name: WKInterfaceLabel!
+    @IBOutlet weak var local: WKInterfaceLabel!
+    @IBOutlet weak var dateTime: WKInterfaceDate!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
