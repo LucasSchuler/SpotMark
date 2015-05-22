@@ -18,7 +18,7 @@
                                             <label width="128.5" height="36.5" alignment="left" text="Label" id="3wH-2Y-pWl"/>
                                         </items>
                                         <connections>
-                                            <segue destination="kZv-1B-fDm" kind="push" identifier="goToDetail" id="xBD-LV-VjA"/>
+                                            <segue destination="kZv-1B-fDm" kind="push" identifier="goToDetail" id="Q9A-p3-2oW"/>
                                         </connections>
                                     </group>
                                 </tableRow>
