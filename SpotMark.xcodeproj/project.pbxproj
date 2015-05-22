@@ -94,6 +94,7 @@
 		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
+		95914C641B0FB0200099B9F0 /* EventDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95914C631B0FB0200099B9F0 /* EventDetailInterfaceController.swift */; };
 		95FD4AC11AC5BD7E0075A78A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4ABE1AC5BD7E0075A78A /* Event.m */; };
 		95FD4AC21AC5BD7E0075A78A /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4AC01AC5BD7E0075A78A /* EventsViewController.m */; };
 		95FD4AC51AC5BDF80075A78A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4AC41AC5BDF80075A78A /* MapViewController.m */; };
@@ -292,6 +293,7 @@
 		955619681AC3229D00010C68 /* OneEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneEventViewController.h; sourceTree = "<group>"; };
 		955619691AC3229D00010C68 /* OneEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneEventViewController.m; sourceTree = "<group>"; };
 		955619711AC46B8900010C68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		95914C631B0FB0200099B9F0 /* EventDetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailInterfaceController.swift; sourceTree = "<group>"; };
 		95FD4ABE1AC5BD7E0075A78A /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		95FD4ABF1AC5BD7E0075A78A /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		95FD4AC01AC5BD7E0075A78A /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
@@ -600,6 +602,7 @@
 			children = (
 				0ADB740D1B0F92B800805D45 /* InterfaceController.swift */,
 				0ADB740F1B0F92B800805D45 /* NotificationController.swift */,
+				95914C631B0FB0200099B9F0 /* EventDetailInterfaceController.swift */,
 				0ADB74111B0F92B800805D45 /* GlanceController.swift */,
 				0ADB74131B0F92B800805D45 /* Images.xcassets */,
 				0ADB740A1B0F92B800805D45 /* Supporting Files */,
@@ -904,6 +907,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADB74101B0F92B800805D45 /* NotificationController.swift in Sources */,
+				95914C641B0FB0200099B9F0 /* EventDetailInterfaceController.swift in Sources */,
 				0ADB740E1B0F92B800805D45 /* InterfaceController.swift in Sources */,
 				0ADB74121B0F92B800805D45 /* GlanceController.swift in Sources */,
 			);
