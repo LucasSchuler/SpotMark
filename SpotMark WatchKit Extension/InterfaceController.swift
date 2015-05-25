@@ -52,7 +52,7 @@ class InterfaceController: WKInterfaceController {
         for i in 0..<lista.count {
             if let row = table.rowControllerAtIndex(i) as? WatchRow {
                 var event: PFObject = lista.objectAtIndex(i) as! PFObject
-                row.titleLabel.setText(event["name"] as! String)
+                row.titleLabel.setText(event["name"] as? String)
             }
         }
     }
@@ -64,7 +64,7 @@ class InterfaceController: WKInterfaceController {
           //  return imgWatch
         //}
         
-        return nil
+        return lista.objectAtIndex(rowIndex)
     }
 
     
