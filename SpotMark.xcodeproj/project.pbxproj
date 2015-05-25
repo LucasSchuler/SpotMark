@@ -72,6 +72,7 @@
 		0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */; };
 		0A3BD4A41AC9D46A00DAE12B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BD4A31AC9D46A00DAE12B /* Images.xcassets */; };
 		0A3BD4A81ACB1D8D00DAE12B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BD4A61ACB1D8D00DAE12B /* Main.storyboard */; };
+		0A60844B1B138B7900B3A1C8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A60844A1B138B7900B3A1C8 /* Bolts.framework */; };
 		0A61CB6C1AE0454B00CB11F6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A61CB6B1AE0454B00CB11F6 /* AVFoundation.framework */; };
 		0A96DC941AF4575F002AE26C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A96DC931AF4575E002AE26C /* StoreKit.framework */; };
 		0AC553101AD594D100FC3F22 /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5530F1AD594D100FC3F22 /* Participant.m */; };
@@ -269,6 +270,8 @@
 		0A3BD4A31AC9D46A00DAE12B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0A3BD4A51ACB11B900DAE12B /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		0A3BD4A71ACB1D8D00DAE12B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A60844A1B138B7900B3A1C8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = SOURCE_ROOT; };
+		0A60844C1B139A0500B3A1C8 /* SpotMark WatchKit Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotMark WatchKit Extension-Bridging-Header.h"; sourceTree = "<group>"; };
 		0A61CB6B1AE0454B00CB11F6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0A96DC931AF4575E002AE26C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0AC5530E1AD594D100FC3F22 /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
@@ -358,6 +361,7 @@
 				9511299B1B0FBE8700739F69 /* libsqlite3.dylib in Frameworks */,
 				9511299C1B0FBE8700739F69 /* libz.dylib in Frameworks */,
 				9511299D1B0FBE8700739F69 /* MobileCoreServices.framework in Frameworks */,
+				0A60844B1B138B7900B3A1C8 /* Bolts.framework in Frameworks */,
 				9511299E1B0FBE8700739F69 /* QuartzCore.framework in Frameworks */,
 				9511299F1B0FBE8700739F69 /* Security.framework in Frameworks */,
 				951129A01B0FBE8700739F69 /* StoreKit.framework in Frameworks */,
@@ -627,6 +631,7 @@
 		0ADB74091B0F92B800805D45 /* SpotMark WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0A60844A1B138B7900B3A1C8 /* Bolts.framework */,
 				0ADB74431B0FBF6100805D45 /* Parse.framework */,
 				0ADB740D1B0F92B800805D45 /* InterfaceController.swift */,
 				0ADB743C1B0FB8F100805D45 /* WatchRow.swift */,
@@ -635,6 +640,7 @@
 				0ADB74111B0F92B800805D45 /* GlanceController.swift */,
 				0ADB74131B0F92B800805D45 /* Images.xcassets */,
 				0ADB740A1B0F92B800805D45 /* Supporting Files */,
+				0A60844C1B139A0500B3A1C8 /* SpotMark WatchKit Extension-Bridging-Header.h */,
 			);
 			path = "SpotMark WatchKit Extension";
 			sourceTree = "<group>";
@@ -1118,6 +1124,7 @@
 		0ADB74261B0F92B800805D45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1136,6 +1143,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotMark WatchKit Extension/SpotMark WatchKit Extension-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1143,6 +1151,7 @@
 		0ADB74271B0F92B800805D45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1157,6 +1166,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotMark WatchKit Extension/SpotMark WatchKit Extension-Bridging-Header.h";
 			};
 			name = Release;
 		};
