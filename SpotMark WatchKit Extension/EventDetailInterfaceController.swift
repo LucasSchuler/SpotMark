@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import Parse
 
 class EventDetailInterfaceController: WKInterfaceController {
 
@@ -20,6 +20,16 @@ class EventDetailInterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
+        if let event = context as? PFObject {
+            setTitle("Event")
+            self.name.setText(event["name"]as? String)
+            self.local.setText(event["local"]as? String)
+            var imageName = (event["category"]as? String)! + ".png"
+            self.image.setImageNamed(imageName)
+//            let datetime = event["datetime"]!.componentsSeparatedByString(" ")
+//           //self.imgWatch.setImageNamed(imgWatchName)
+//            self.name.setText("name")
+        }
         // Configure interface objects here.
     }
 
