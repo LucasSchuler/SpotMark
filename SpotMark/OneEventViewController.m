@@ -20,6 +20,7 @@
 #import "ChatView.h"
 #import "push.h"
 
+
 @interface OneEventViewController () <MKMapViewDelegate, UIGestureRecognizerDelegate>
 
 @property User *user1;
@@ -224,6 +225,8 @@
     });
 }
 
+
+
 -(IBAction)backFromInvite:(UIStoryboardSegue *)segue
 {
 }
@@ -231,6 +234,25 @@
 - (void)goBack:(id)sender {
     [self performSegueWithIdentifier:@"backtoEventFromEvent" sender:nil];
 }
+
+//HANDOFF
+- (void)restoreUserActivityState:(NSUserActivity *)activity  {
+    
+    
+    NSString *userInfo = [activity userInfo];
+        
+    [super restoreUserActivityState : activity];
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @end

@@ -20,6 +20,9 @@ class EventDetailInterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
+        //HANDOFF
+        self.updateUserActivity("com.SpotMark.Handoff.eventsDetail", userInfo: ["OneEvent": "Veio do Handoff!"], webpageURL: nil)
+        
         if let event = context as? PFObject {
             setTitle("Event")
             self.name.setText(event["name"]as? String)

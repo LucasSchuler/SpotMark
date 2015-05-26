@@ -127,4 +127,14 @@
 }
 
 
+//HANDOFF
+- (void)restoreUserActivityState:(NSUserActivity *)activity  {
+    
+    
+    NSString *userInfo = [activity userInfo];
+    
+    [super restoreUserActivityState : activity];
+}
+
+
 @end

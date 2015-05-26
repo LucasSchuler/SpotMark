@@ -16,6 +16,8 @@ class GlanceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        //HANDOFF
+        
     }
 
     override func willActivate() {
