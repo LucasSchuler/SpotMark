@@ -17,4 +17,6 @@
 @property BOOL newEvent;
 @property NSMutableArray *posts;
 
++(void)restoreUserActivityState:(NSUserActivity *)activity;
+
 @end
