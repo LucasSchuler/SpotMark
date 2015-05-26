@@ -12,15 +12,18 @@
                     <items>
                         <table alignment="left" id="arR-x3-32I">
                             <items>
-                                <tableRow id="q3a-Yh-BEA">
+                                <tableRow identifier="WatchRow" id="q3a-Yh-BEA" customClass="WatchRow" customModule="SpotMark_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="DNV-lZ-96i">
                                         <items>
                                             <label width="128.5" height="36.5" alignment="left" text="Label" id="3wH-2Y-pWl"/>
                                         </items>
                                         <connections>
-                                            <segue destination="kZv-1B-fDm" kind="push" identifier="goToDetail" id="xBD-LV-VjA"/>
+                                            <segue destination="kZv-1B-fDm" kind="push" identifier="goToDetail" id="Q9A-p3-2oW"/>
                                         </connections>
                                     </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="3wH-2Y-pWl" id="efH-vt-laa"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
@@ -35,7 +38,24 @@
         <!--Event Detail Interface Controller-->
         <scene sceneID="mte-ud-a08">
             <objects>
-                <controller id="kZv-1B-fDm" customClass="EventDetailInterfaceController"/>
+                <controller id="kZv-1B-fDm" customClass="EventDetailInterfaceController" customModule="SpotMark_WatchKit_Extension">
+                    <items>
+                        <imageView width="135" height="46" alignment="left" id="NBA-qp-rwc"/>
+                        <label alignment="left" text="Nome" id="H4K-Gi-wbn"/>
+                        <label alignment="left" text="Local" id="GFh-ML-ck9"/>
+                        <label alignment="left" id="v3f-wa-reR"/>
+                        <dateLabel alignment="center" id="5LJ-8b-LTn">
+                            <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
+                        </dateLabel>
+                    </items>
+                    <connections>
+                        <outlet property="dateTime" destination="5LJ-8b-LTn" id="yOD-pf-jSl"/>
+                        <outlet property="image" destination="NBA-qp-rwc" id="Y1f-MI-s9t"/>
+                        <outlet property="local" destination="GFh-ML-ck9" id="iL2-iD-bJD"/>
+                        <outlet property="name" destination="H4K-Gi-wbn" id="3zb-Me-To0"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="472" y="348"/>
         </scene>

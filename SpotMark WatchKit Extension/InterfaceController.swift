@@ -8,47 +8,64 @@
 
 import WatchKit
 import Foundation
-
+import Parse
 
 class InterfaceController: WKInterfaceController {
     
     @IBOutlet weak var table: WKInterfaceTable!
-
-//    // 1 - Create Rows
-//    let titles = ["Appple Watch Sport", "Apple Watch", "Apple Watch Edition"]
-//    let images = ["watch-0", "watch-1","watch-2"]
+    var lista : NSMutableArray! = NSMutableArray()
+    
+    // 1 - Create Rows
+   // let titles = ["Apple Watch Sport", "Apple Watch", "Apple Watch Edition"]
+   // let images = ["watch-0", "watch-1","watch-2"]
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-//        // Configure interface objects here.
-//        self.presentTextInputControllerWithSuggestions(nil, allowedInputMode: .AllowAnimatedEmoji) { (results) -> Void in
-//            // Do something here...
-//        }
-//        
-//        
-//        // 2 - Set the number of rows in table
-//        table.setNumberOfRows(titles.count, withRowType: "WatchRow")
-//        
-//        // 3 - Create the rows
-//        for i in 0..<titles.count {
-//            if let row = table.rowControllerAtIndex(i) as? WatchRow {
-//                row.titleLabel.setText(titles[i])
-//            }
-//        }
-       
+        // Configure interface objects here.
+        self.presentTextInputControllerWithSuggestions(nil, allowedInputMode: .AllowAnimatedEmoji) { (results) -> Void in
+            // Do something here...
+        }
+        
+        self.loadParse()
     }
-
+    
+    func loadParse(){
+       // Parse.enableDataSharingWithApplicationGroupIdentifier(“group.com.parse.parseuidemo”);
+        // Setup Parse
+        Parse.setApplicationId("7ySEIDHgB3RuHV5aD1xCXUm0FWfyF9MGS6Qi3NFx", clientKey: "UlA9Y5wpNe1nFWADy9jLmGCHCoPT1dnkIWdAJ2RN")
+        var query = PFQuery(className:"Event")
+        query.whereKey("members", equalTo: "959340524084525")
+        self.lista = NSMutableArray(array:query.findObjects()!)
+        query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
+            println(objects!.count);
+            self.lista = NSMutableArray(array: objects!)
+            self.loadTableView()
+        })
+    }
+    
+    func loadTableView(){
+        // Set the number of rows in table
+        table.setNumberOfRows(lista.count, withRowType: "WatchRow")
+        
+        // 3 - Create the rows
+        for i in 0..<lista.count {
+            if let row = table.rowControllerAtIndex(i) as? WatchRow {
+                var event: PFObject = lista.objectAtIndex(i) as! PFObject
+                row.titleLabel.setText(event["name"] as? String)
+            }
+        }
+    }
   
-//    override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
-//        
-//        if segueIdentifier == "gotoDetail" {
-//            let imgWatch = images[rowIndex]
-//            return imgWatch
-//        }
-//        
-//        return nil
-//    }
+    override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
+        
+       // if segueIdentifier == "gotoDetail" {
+        //    let imgWatch = images[rowIndex]
+          //  return imgWatch
+        //}
+        
+        return lista.objectAtIndex(rowIndex)
+    }
 
     
     override func willActivate() {

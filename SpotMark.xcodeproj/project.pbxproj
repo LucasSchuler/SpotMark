@@ -72,6 +72,7 @@
 		0A32C29B1AC1ED8500025127 /* NewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32C29A1AC1ED8500025127 /* NewEventsViewController.m */; };
 		0A3BD4A41AC9D46A00DAE12B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BD4A31AC9D46A00DAE12B /* Images.xcassets */; };
 		0A3BD4A81ACB1D8D00DAE12B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BD4A61ACB1D8D00DAE12B /* Main.storyboard */; };
+		0A60844B1B138B7900B3A1C8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A60844A1B138B7900B3A1C8 /* Bolts.framework */; };
 		0A61CB6C1AE0454B00CB11F6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A61CB6B1AE0454B00CB11F6 /* AVFoundation.framework */; };
 		0AC553101AD594D100FC3F22 /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5530F1AD594D100FC3F22 /* Participant.m */; };
 		0ADB740E1B0F92B800805D45 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB740D1B0F92B800805D45 /* InterfaceController.swift */; };
@@ -82,6 +83,8 @@
 		0ADB74201B0F92B800805D45 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB741E1B0F92B800805D45 /* Interface.storyboard */; };
 		0ADB74221B0F92B800805D45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74211B0F92B800805D45 /* Images.xcassets */; };
 		0ADB74251B0F92B800805D45 /* SpotMark WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0ADB743D1B0FB8F100805D45 /* WatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB743C1B0FB8F100805D45 /* WatchRow.swift */; };
+		0ADB74441B0FBF6100805D45 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADB74431B0FBF6100805D45 /* Parse.framework */; };
 		0AEBF09E1AC5281700F221E0 /* loadParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF09D1AC5281700F221E0 /* loadParse.m */; };
 		0AEBF0A41AC5D26000F221E0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A31AC5D26000F221E0 /* User.m */; };
 		0AEBF0A71AC5E0C400F221E0 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF0A61AC5E0C400F221E0 /* InviteViewController.m */; };
@@ -90,9 +93,21 @@
 		0AEC21851AE597650021D560 /* push.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC21841AE597650021D560 /* push.m */; };
 		0AF8A8761ADC549000498AC6 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A8751ADC549000498AC6 /* CustomTabBarViewController.m */; };
 		0AF8A8791ADD93A900498AC6 /* CustomCellPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A8781ADD93A900498AC6 /* CustomCellPost.m */; };
+		951129971B0FBE8700739F69 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13B1ABE597900025127 /* AudioToolbox.framework */; };
+		951129981B0FBE8700739F69 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13C1ABE597900025127 /* CFNetwork.framework */; };
+		951129991B0FBE8700739F69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13D1ABE597900025127 /* CoreGraphics.framework */; };
+		9511299A1B0FBE8700739F69 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13E1ABE597900025127 /* CoreLocation.framework */; };
+		9511299B1B0FBE8700739F69 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1501ABE598F00025127 /* libsqlite3.dylib */; };
+		9511299C1B0FBE8700739F69 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1511ABE598F00025127 /* libz.dylib */; };
+		9511299D1B0FBE8700739F69 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13F1ABE597900025127 /* MobileCoreServices.framework */; };
+		9511299E1B0FBE8700739F69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1401ABE597900025127 /* QuartzCore.framework */; };
+		9511299F1B0FBE8700739F69 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1411ABE597900025127 /* Security.framework */; };
+		951129A01B0FBE8700739F69 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A96DC931AF4575E002AE26C /* StoreKit.framework */; };
+		951129A11B0FBE8700739F69 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1441ABE597900025127 /* SystemConfiguration.framework */; };
 		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
+		95914C641B0FB0200099B9F0 /* EventDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95914C631B0FB0200099B9F0 /* EventDetailInterfaceController.swift */; };
 		95FD4AC11AC5BD7E0075A78A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4ABE1AC5BD7E0075A78A /* Event.m */; };
 		95FD4AC21AC5BD7E0075A78A /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4AC01AC5BD7E0075A78A /* EventsViewController.m */; };
 		95FD4AC51AC5BDF80075A78A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD4AC41AC5BDF80075A78A /* MapViewController.m */; };
@@ -254,6 +269,8 @@
 		0A3BD4A31AC9D46A00DAE12B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0A3BD4A51ACB11B900DAE12B /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		0A3BD4A71ACB1D8D00DAE12B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A60844A1B138B7900B3A1C8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = SOURCE_ROOT; };
+		0A60844C1B139A0500B3A1C8 /* SpotMark WatchKit Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotMark WatchKit Extension-Bridging-Header.h"; sourceTree = "<group>"; };
 		0A61CB6B1AE0454B00CB11F6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AC5530E1AD594D100FC3F22 /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
 		0AC5530F1AD594D100FC3F22 /* Participant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participant.m; sourceTree = "<group>"; };
@@ -268,6 +285,8 @@
 		0ADB741D1B0F92B800805D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ADB741F1B0F92B800805D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		0ADB74211B0F92B800805D45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0ADB743C1B0FB8F100805D45 /* WatchRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchRow.swift; sourceTree = "<group>"; };
+		0ADB74431B0FBF6100805D45 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = SOURCE_ROOT; };
 		0AEBF09C1AC5281700F221E0 /* loadParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadParse.h; sourceTree = "<group>"; };
 		0AEBF09D1AC5281700F221E0 /* loadParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadParse.m; sourceTree = "<group>"; };
 		0AEBF0A21AC5D26000F221E0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -290,6 +309,7 @@
 		955619681AC3229D00010C68 /* OneEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneEventViewController.h; sourceTree = "<group>"; };
 		955619691AC3229D00010C68 /* OneEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneEventViewController.m; sourceTree = "<group>"; };
 		955619711AC46B8900010C68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		95914C631B0FB0200099B9F0 /* EventDetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailInterfaceController.swift; sourceTree = "<group>"; };
 		95FD4ABE1AC5BD7E0075A78A /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		95FD4ABF1AC5BD7E0075A78A /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		95FD4AC01AC5BD7E0075A78A /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
@@ -331,6 +351,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				951129971B0FBE8700739F69 /* AudioToolbox.framework in Frameworks */,
+				951129981B0FBE8700739F69 /* CFNetwork.framework in Frameworks */,
+				951129991B0FBE8700739F69 /* CoreGraphics.framework in Frameworks */,
+				9511299A1B0FBE8700739F69 /* CoreLocation.framework in Frameworks */,
+				9511299B1B0FBE8700739F69 /* libsqlite3.dylib in Frameworks */,
+				9511299C1B0FBE8700739F69 /* libz.dylib in Frameworks */,
+				9511299D1B0FBE8700739F69 /* MobileCoreServices.framework in Frameworks */,
+				0A60844B1B138B7900B3A1C8 /* Bolts.framework in Frameworks */,
+				9511299E1B0FBE8700739F69 /* QuartzCore.framework in Frameworks */,
+				9511299F1B0FBE8700739F69 /* Security.framework in Frameworks */,
+				951129A01B0FBE8700739F69 /* StoreKit.framework in Frameworks */,
+				0ADB74441B0FBF6100805D45 /* Parse.framework in Frameworks */,
+				951129A11B0FBE8700739F69 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,11 +628,16 @@
 		0ADB74091B0F92B800805D45 /* SpotMark WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0A60844A1B138B7900B3A1C8 /* Bolts.framework */,
+				0ADB74431B0FBF6100805D45 /* Parse.framework */,
 				0ADB740D1B0F92B800805D45 /* InterfaceController.swift */,
+				0ADB743C1B0FB8F100805D45 /* WatchRow.swift */,
 				0ADB740F1B0F92B800805D45 /* NotificationController.swift */,
+				95914C631B0FB0200099B9F0 /* EventDetailInterfaceController.swift */,
 				0ADB74111B0F92B800805D45 /* GlanceController.swift */,
 				0ADB74131B0F92B800805D45 /* Images.xcassets */,
 				0ADB740A1B0F92B800805D45 /* Supporting Files */,
+				0A60844C1B139A0500B3A1C8 /* SpotMark WatchKit Extension-Bridging-Header.h */,
 			);
 			path = "SpotMark WatchKit Extension";
 			sourceTree = "<group>";
@@ -901,6 +939,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADB74101B0F92B800805D45 /* NotificationController.swift in Sources */,
+				95914C641B0FB0200099B9F0 /* EventDetailInterfaceController.swift in Sources */,
+				0ADB743D1B0FB8F100805D45 /* WatchRow.swift in Sources */,
 				0ADB740E1B0F92B800805D45 /* InterfaceController.swift in Sources */,
 				0ADB74121B0F92B800805D45 /* GlanceController.swift in Sources */,
 			);
@@ -1081,9 +1121,15 @@
 		0ADB74261B0F92B800805D45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1095,6 +1141,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotMark WatchKit Extension/SpotMark WatchKit Extension-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1102,9 +1149,15 @@
 		0ADB74271B0F92B800805D45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "SpotMark WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -1112,6 +1165,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotMark WatchKit Extension/SpotMark WatchKit Extension-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -1122,6 +1176,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1145,6 +1200,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IBSC_MODULE = SpotMark_WatchKit_Extension;
 				INFOPLIST_FILE = "SpotMark WatchKit App/Info.plist";
