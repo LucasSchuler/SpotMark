@@ -59,14 +59,15 @@
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="SpotMark_WatchKit_App" customModuleProvider="target">
+                <glanceController spacing="0.0" topTemplateType="body1Group" id="0uZ-2p-rRc" customClass="GlanceController" customModule="SpotMark_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <label alignment="left" text="Next Event:" id="CJa-mn-nZ4"/>
                         <group alignment="left" id="t8f-Gd-c4y">
                             <items>
-                                <imageView width="136" alignment="left" id="hWm-YL-7Tx"/>
+                                <imageView width="1" height="50" alignment="center" id="hWm-YL-7Tx"/>
                             </items>
                         </group>
-                        <group alignment="left" layout="vertical" id="uCw-4Q-Ouw">
+                        <group alignment="left" layout="vertical" spacing="4" id="uCw-4Q-Ouw">
                             <items>
                                 <label alignment="left" text="Name" id="reY-6i-AfW"/>
                                 <label alignment="left" text="Local" id="x2V-zl-P0u"/>

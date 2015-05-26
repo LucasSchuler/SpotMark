@@ -34,7 +34,7 @@ class NotificationController: WKUserNotificationInterfaceController {
     
     override func didReceiveLocalNotification(localNotification: UILocalNotification, withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
         
-        notifyLabel.setText(localNotification["customKey"] as? String)
+     //   notifyLabel.setText(localNotification["customKey"] as? String)
         
         completionHandler(.Custom)
     }
