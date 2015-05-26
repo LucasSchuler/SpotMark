@@ -39,6 +39,11 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Can I use your location?</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>com.SpotMark.Handoff.events</string>
+		<string>com.SpotMark.Handoff.eventsDetail</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Main</string>
 	<key>UIMainStoryboardFile</key>

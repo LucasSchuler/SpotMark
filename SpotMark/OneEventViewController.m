@@ -239,9 +239,9 @@
 - (void)restoreUserActivityState:(NSUserActivity *)activity  {
     
     
-    NSString *userInfo = activity.userInfo;
+    NSString *userInfo = [activity userInfo];
         
- //   super.restoreUserActivityState(activity);
+    [super restoreUserActivityState : activity];
 }
 
 

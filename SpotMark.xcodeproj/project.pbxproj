@@ -102,7 +102,7 @@
 		9511299D1B0FBE8700739F69 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C13F1ABE597900025127 /* MobileCoreServices.framework */; };
 		9511299E1B0FBE8700739F69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1401ABE597900025127 /* QuartzCore.framework */; };
 		9511299F1B0FBE8700739F69 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1411ABE597900025127 /* Security.framework */; };
-		951129A01B0FBE8700739F69 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A96DC931AF4575E002AE26C /* StoreKit.framework */; };
+		951129A01B0FBE8700739F69 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		951129A11B0FBE8700739F69 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1441ABE597900025127 /* SystemConfiguration.framework */; };
 		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
@@ -361,7 +361,7 @@
 				0A60844B1B138B7900B3A1C8 /* Bolts.framework in Frameworks */,
 				9511299E1B0FBE8700739F69 /* QuartzCore.framework in Frameworks */,
 				9511299F1B0FBE8700739F69 /* Security.framework in Frameworks */,
-				951129A01B0FBE8700739F69 /* StoreKit.framework in Frameworks */,
+				951129A01B0FBE8700739F69 /* (null) in Frameworks */,
 				0ADB74441B0FBF6100805D45 /* Parse.framework in Frameworks */,
 				951129A11B0FBE8700739F69 /* SystemConfiguration.framework in Frameworks */,
 			);

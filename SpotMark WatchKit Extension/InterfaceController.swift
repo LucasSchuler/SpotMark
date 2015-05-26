@@ -22,6 +22,9 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
+        //HANDOFF
+        self.updateUserActivity("com.SpotMark.Handoff.events", userInfo: ["Event": "Veio do Handoff!"], webpageURL: nil)
+        
         // Configure interface objects here.
         self.presentTextInputControllerWithSuggestions(nil, allowedInputMode: .AllowAnimatedEmoji) { (results) -> Void in
             // Do something here...
