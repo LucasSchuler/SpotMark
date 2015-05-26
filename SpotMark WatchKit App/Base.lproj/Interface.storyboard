@@ -40,7 +40,7 @@
             <objects>
                 <controller id="kZv-1B-fDm" customClass="EventDetailInterfaceController" customModule="SpotMark_WatchKit_Extension">
                     <items>
-                        <imageView width="135" height="46" alignment="left" id="NBA-qp-rwc"/>
+                        <imageView width="1" height="46" alignment="center" id="NBA-qp-rwc"/>
                         <label alignment="left" text="Nome" id="H4K-Gi-wbn"/>
                         <label alignment="left" text="Local" id="GFh-ML-ck9"/>
                         <label alignment="left" id="v3f-wa-reR"/>
@@ -91,7 +91,16 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="SpotMark_WatchKit_App" customModuleProvider="target"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="SpotMark_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Label" id="Mzw-IA-xFx">
+                            <fontDescription key="font" type="system" pointSize="17"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="notifyLabel" destination="Mzw-IA-xFx" id="YSU-Vn-Xpi"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="553" y="1001"/>
         </scene>
