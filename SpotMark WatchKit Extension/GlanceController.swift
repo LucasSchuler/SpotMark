@@ -16,6 +16,8 @@ class GlanceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        //HANDOFF
+        self.updateUserActivity("com.SpotMark.Handoff.Glance", userInfo: ["Event": "Veio do Handoff!"], webpageURL: nil)
     }
 
     override func willActivate() {

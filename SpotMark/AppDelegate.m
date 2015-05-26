@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "OneEventViewController.h"
 
 @interface AppDelegate ()
 
@@ -89,4 +90,38 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+
+
+
+- (BOOL)application:(UIApplication *)application
+continueUserActivity:(NSUserActivity *)userActivity
+ restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler{
+    
+    UIWindow *win = _window;
+    
+    if (win != nil){
+        OneEventViewController *view = (OneEventViewController *)win.rootViewController;
+        
+        
+        [view restoreUserActivityState:userActivity];
+    }
+    return YES;
+}
+
+
+
+
+
+
+
 @end
+
+
+
+
+
+
+
+
+
