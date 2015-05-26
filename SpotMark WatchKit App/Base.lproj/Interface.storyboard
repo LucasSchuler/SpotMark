@@ -44,13 +44,10 @@
                         <label alignment="left" text="Nome" id="H4K-Gi-wbn"/>
                         <label alignment="left" text="Local" id="GFh-ML-ck9"/>
                         <label alignment="left" id="v3f-wa-reR"/>
-                        <dateLabel alignment="center" id="5LJ-8b-LTn">
-                            <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
-                            <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
-                        </dateLabel>
+                        <label width="136" alignment="center" text="Datetime" id="tHX-YZ-rXc"/>
                     </items>
                     <connections>
-                        <outlet property="dateTime" destination="5LJ-8b-LTn" id="yOD-pf-jSl"/>
+                        <outlet property="dateTime" destination="tHX-YZ-rXc" id="X6P-ye-gpv"/>
                         <outlet property="image" destination="NBA-qp-rwc" id="Y1f-MI-s9t"/>
                         <outlet property="local" destination="GFh-ML-ck9" id="iL2-iD-bJD"/>
                         <outlet property="name" destination="H4K-Gi-wbn" id="3zb-Me-To0"/>
@@ -64,10 +61,26 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="SpotMark_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <imageView width="136" alignment="left" id="hWm-YL-7Tx"/>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" id="uCw-4Q-Ouw">
+                            <items>
+                                <label alignment="left" text="Name" id="reY-6i-AfW"/>
+                                <label alignment="left" text="Local" id="x2V-zl-P0u"/>
+                                <label alignment="left" text="Datetime" id="e3Z-mr-g8a"/>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="dateTime" destination="e3Z-mr-g8a" id="c4a-Lt-sN1"/>
+                        <outlet property="image" destination="hWm-YL-7Tx" id="Nkc-yA-ve7"/>
+                        <outlet property="local" destination="x2V-zl-P0u" id="3bb-fj-sL6"/>
+                        <outlet property="name" destination="reY-6i-AfW" id="ioM-5F-3sR"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="235" y="672"/>

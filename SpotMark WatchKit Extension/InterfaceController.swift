@@ -39,7 +39,7 @@ class InterfaceController: WKInterfaceController {
         Parse.setApplicationId("7ySEIDHgB3RuHV5aD1xCXUm0FWfyF9MGS6Qi3NFx", clientKey: "UlA9Y5wpNe1nFWADy9jLmGCHCoPT1dnkIWdAJ2RN")
         var query = PFQuery(className:"Event")
         query.whereKey("members", equalTo: "959340524084525")
-        self.lista = NSMutableArray(array:query.findObjects()!)
+        query.orderByAscending("datetime")
         query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
             println(objects!.count);
             self.lista = NSMutableArray(array: objects!)
