@@ -15,7 +15,7 @@ class EventDetailInterfaceController: WKInterfaceController {
     @IBOutlet weak var image: WKInterfaceImage!
     @IBOutlet weak var name: WKInterfaceLabel!
     @IBOutlet weak var local: WKInterfaceLabel!
-    @IBOutlet weak var dateTime: WKInterfaceDate!
+    @IBOutlet weak var dateTime: WKInterfaceLabel!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -26,9 +26,7 @@ class EventDetailInterfaceController: WKInterfaceController {
             self.local.setText(event["local"]as? String)
             var imageName = (event["category"]as? String)! + ".png"
             self.image.setImageNamed(imageName)
-//            let datetime = event["datetime"]!.componentsSeparatedByString(" ")
-//           //self.imgWatch.setImageNamed(imgWatchName)
-//            self.name.setText("name")
+            self.dateTime.setText(event["datetime"]as? String)
         }
         // Configure interface objects here.
     }

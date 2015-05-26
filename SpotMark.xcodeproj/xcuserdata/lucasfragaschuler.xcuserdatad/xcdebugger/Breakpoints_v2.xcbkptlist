@@ -1297,7 +1297,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpotMark WatchKit Extension/InterfaceController.swift"
-            timestampString = "454269904.845048"
+            timestampString = "454356520.432994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -1313,7 +1313,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpotMark WatchKit Extension/InterfaceController.swift"
-            timestampString = "454269904.845048"
+            timestampString = "454356520.432994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -1329,7 +1329,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpotMark WatchKit Extension/InterfaceController.swift"
-            timestampString = "454269904.845048"
+            timestampString = "454356520.432994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -1345,7 +1345,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpotMark WatchKit Extension/InterfaceController.swift"
-            timestampString = "454269904.845048"
+            timestampString = "454351734.736699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -1361,7 +1361,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpotMark WatchKit Extension/InterfaceController.swift"
-            timestampString = "454269929.506625"
+            timestampString = "454356520.432994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -1377,23 +1377,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpotMark WatchKit Extension/EventDetailInterfaceController.swift"
-            timestampString = "454283530.668384"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "awakeWithContext(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpotMark WatchKit Extension/EventDetailInterfaceController.swift"
-            timestampString = "454283374.647221"
+            timestampString = "454287413.86122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -1409,11 +1393,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpotMark WatchKit Extension/EventDetailInterfaceController.swift"
-            timestampString = "454285773.775622"
+            timestampString = "454287413.86122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "awakeWithContext(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1425,11 +1409,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpotMark WatchKit Extension/EventDetailInterfaceController.swift"
-            timestampString = "454285745.388885"
+            timestampString = "454287413.86122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "awakeWithContext(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotMark WatchKit Extension/GlanceController.swift"
+            timestampString = "454356520.432994"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "awakeWithContext(_:)"
             landmarkType = "5">
          </BreakpointContent>
