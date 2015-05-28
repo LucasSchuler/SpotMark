@@ -15,7 +15,7 @@
                                 <tableRow identifier="WatchRow" id="q3a-Yh-BEA" customClass="WatchRow" customModule="SpotMark_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" radius="5" id="DNV-lZ-96i">
                                         <items>
-                                            <imageView width="31" alignment="left" image="Branco" contentMode="scaleAspectFit" id="V27-LQ-XeA"/>
+                                            <imageView width="31" alignment="left" verticalAlignment="center" image="Fill 205" contentMode="scaleAspectFit" id="V27-LQ-XeA"/>
                                             <label width="103.5" height="36.5" alignment="right" text="Label" minimumScaleFactor="0.99999999999999989" id="3wH-2Y-pWl">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                             </label>
