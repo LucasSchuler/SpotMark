@@ -81,7 +81,6 @@
 		0ADB74141B0F92B800805D45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74131B0F92B800805D45 /* Images.xcassets */; };
 		0ADB74181B0F92B800805D45 /* SpotMark WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74171B0F92B800805D45 /* SpotMark WatchKit App.app */; };
 		0ADB74201B0F92B800805D45 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB741E1B0F92B800805D45 /* Interface.storyboard */; };
-		0ADB74221B0F92B800805D45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB74211B0F92B800805D45 /* Images.xcassets */; };
 		0ADB74251B0F92B800805D45 /* SpotMark WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0ADB74081B0F92B800805D45 /* SpotMark WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0ADB743D1B0FB8F100805D45 /* WatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB743C1B0FB8F100805D45 /* WatchRow.swift */; };
 		0ADB74441B0FBF6100805D45 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADB74431B0FBF6100805D45 /* Parse.framework */; };
@@ -104,6 +103,7 @@
 		9511299F1B0FBE8700739F69 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1411ABE597900025127 /* Security.framework */; };
 		951129A01B0FBE8700739F69 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		951129A11B0FBE8700739F69 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32C1441ABE597900025127 /* SystemConfiguration.framework */; };
+		953359841B17996F007A2E6A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953359831B17996F007A2E6A /* Images.xcassets */; };
 		955619611AC320DF00010C68 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619601AC320DF00010C68 /* SettingsViewController.m */; };
 		955619641AC3215400010C68 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619631AC3215400010C68 /* MessagesViewController.m */; };
 		9556196A1AC3229D00010C68 /* OneEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955619691AC3229D00010C68 /* OneEventViewController.m */; };
@@ -284,7 +284,6 @@
 		0ADB74171B0F92B800805D45 /* SpotMark WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpotMark WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADB741D1B0F92B800805D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ADB741F1B0F92B800805D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		0ADB74211B0F92B800805D45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0ADB743C1B0FB8F100805D45 /* WatchRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchRow.swift; sourceTree = "<group>"; };
 		0ADB74431B0FBF6100805D45 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = SOURCE_ROOT; };
 		0AEBF09C1AC5281700F221E0 /* loadParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadParse.h; sourceTree = "<group>"; };
@@ -302,6 +301,7 @@
 		0AF8A8751ADC549000498AC6 /* CustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
 		0AF8A8771ADD93A900498AC6 /* CustomCellPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellPost.h; sourceTree = "<group>"; };
 		0AF8A8781ADD93A900498AC6 /* CustomCellPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellPost.m; sourceTree = "<group>"; };
+		953359831B17996F007A2E6A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9556195F1AC320DF00010C68 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		955619601AC320DF00010C68 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		955619621AC3215400010C68 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
@@ -655,7 +655,7 @@
 			isa = PBXGroup;
 			children = (
 				0ADB741E1B0F92B800805D45 /* Interface.storyboard */,
-				0ADB74211B0F92B800805D45 /* Images.xcassets */,
+				953359831B17996F007A2E6A /* Images.xcassets */,
 				0ADB741C1B0F92B800805D45 /* Supporting Files */,
 			);
 			path = "SpotMark WatchKit App";
@@ -861,7 +861,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADB74201B0F92B800805D45 /* Interface.storyboard in Resources */,
-				0ADB74221B0F92B800805D45 /* Images.xcassets in Resources */,
+				953359841B17996F007A2E6A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
