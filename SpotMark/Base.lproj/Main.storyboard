@@ -1032,9 +1032,9 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CgA-yG-iLN"/>
+        <segue reference="yi9-bJ-R6a"/>
+        <segue reference="9Yv-mm-iMM"/>
         <segue reference="Kvc-Bv-HLe"/>
-        <segue reference="pIX-m6-7rI"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

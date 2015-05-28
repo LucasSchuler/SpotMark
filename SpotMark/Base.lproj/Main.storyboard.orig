@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -509,15 +509,12 @@
                                     <constraint firstAttribute="width" secondItem="yvN-ek-7WF" secondAttribute="height" multiplier="1500:662" id="oOJ-8X-wwh"/>
                                 </constraints>
                             </imageView>
-<<<<<<< HEAD
-=======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws9-6r-LQ6">
                                 <rect key="frame" x="8" y="200" width="75" height="40"/>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
->>>>>>> 4dd19550e4e8f5a368e969bc799b48978d6e8053
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvf-aB-knB">
                                 <rect key="frame" x="8" y="229" width="55" height="33"/>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="23"/>
@@ -596,8 +593,8 @@
                                     <outlet property="delegate" destination="a7T-MV-DoO" id="ima-Cr-SwP"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QC4-wn-Eid">
-                                <rect key="frame" x="232" y="151" width="20" height="20"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QC4-wn-Eid">
+                                <rect key="frame" x="390" y="271" width="20" height="20"/>
                             </activityIndicatorView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ns-TF-voB">
                                 <rect key="frame" x="5" y="297" width="467" height="50"/>
@@ -611,18 +608,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws9-6r-LQ6">
-                                <rect key="frame" x="8" y="207" width="72" height="38"/>
-                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="27"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Bvf-aB-knB" firstAttribute="leading" secondItem="LWL-tq-evF" secondAttribute="leading" constant="8" id="3rv-7v-KGW"/>
                             <constraint firstItem="mfX-C6-Sg8" firstAttribute="top" secondItem="6Ns-TF-voB" secondAttribute="bottom" constant="5" id="4bG-lo-TVz"/>
                             <constraint firstItem="cKh-vJ-dzy" firstAttribute="top" secondItem="yvN-ek-7WF" secondAttribute="bottom" id="6LT-f5-yaO"/>
+                            <constraint firstItem="QC4-wn-Eid" firstAttribute="leading" secondItem="EZC-3b-oCs" secondAttribute="trailing" constant="-10" id="7Zs-el-LdK"/>
                             <constraint firstItem="yvN-ek-7WF" firstAttribute="top" secondItem="LWL-tq-evF" secondAttribute="top" id="9KN-Nf-4bw"/>
                             <constraint firstItem="yvN-ek-7WF" firstAttribute="leading" secondItem="LWL-tq-evF" secondAttribute="leading" id="9Uh-r8-ylj"/>
                             <constraint firstAttribute="trailing" secondItem="58z-XP-ZCZ" secondAttribute="trailing" id="DPv-fR-obS"/>
@@ -633,6 +625,7 @@
                             <constraint firstItem="6Ns-TF-voB" firstAttribute="top" secondItem="EZC-3b-oCs" secondAttribute="bottom" constant="2" id="P0z-eY-3n4"/>
                             <constraint firstItem="PgT-Sb-MEL" firstAttribute="leading" secondItem="LWL-tq-evF" secondAttribute="leading" id="PdP-iL-AP6"/>
                             <constraint firstItem="EZC-3b-oCs" firstAttribute="width" secondItem="yvN-ek-7WF" secondAttribute="width" multiplier="1/3" id="QcX-Es-6Ll"/>
+                            <constraint firstItem="6Ns-TF-voB" firstAttribute="top" secondItem="QC4-wn-Eid" secondAttribute="bottom" constant="6" id="T0A-KJ-yPu"/>
                             <constraint firstAttribute="centerX" secondItem="EZC-3b-oCs" secondAttribute="centerX" id="U6G-6k-EFL"/>
                             <constraint firstItem="cKh-vJ-dzy" firstAttribute="width" secondItem="EZC-3b-oCs" secondAttribute="width" id="Ze8-sx-bf0"/>
                             <constraint firstItem="qkW-lE-Hh9" firstAttribute="top" secondItem="yvN-ek-7WF" secondAttribute="bottom" id="Zjp-LT-dHG"/>
@@ -767,13 +760,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="wQk-kp-3Gw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-uS-JQp">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-uS-JQp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TV0-qB-Vpw">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem image="Search" width="341" id="UXV-U5-p5V">
+                                    <barButtonItem image="Search" width="51" id="UXV-U5-p5V">
                                         <color key="tintColor" red="0.41176470590000003" green="0.93725490199999995" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="zoomIn:" destination="fRk-Dv-AX3" id="BAR-eW-SNs"/>
@@ -784,9 +777,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="TV0-qB-Vpw" secondAttribute="bottom" id="Iox-qM-6K1"/>
-                            <constraint firstItem="TV0-qB-Vpw" firstAttribute="leading" secondItem="WUQ-MT-zbt" secondAttribute="leading" id="mox-Pb-05n"/>
-                            <constraint firstAttribute="trailing" secondItem="TV0-qB-Vpw" secondAttribute="trailing" id="oy6-bA-kRW"/>
+                            <constraint firstItem="RrP-KT-CK7" firstAttribute="top" secondItem="dpY-uS-JQp" secondAttribute="bottom" id="32v-Nh-pCR"/>
+                            <constraint firstItem="dpY-uS-JQp" firstAttribute="leading" secondItem="WUQ-MT-zbt" secondAttribute="leading" id="8oA-6I-X4z"/>
+                            <constraint firstItem="RrP-KT-CK7" firstAttribute="top" secondItem="TV0-qB-Vpw" secondAttribute="bottom" id="sGQ-VE-T6l"/>
+                            <constraint firstAttribute="trailing" secondItem="dpY-uS-JQp" secondAttribute="trailing" id="t8P-03-yqX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TV0-qB-Vpw" secondAttribute="trailing" constant="-16" id="tnf-ZN-rh1"/>
+                            <constraint firstItem="TV0-qB-Vpw" firstAttribute="leading" secondItem="WUQ-MT-zbt" secondAttribute="leadingMargin" constant="-16" id="vvq-X3-IsJ"/>
+                            <constraint firstItem="dpY-uS-JQp" firstAttribute="top" secondItem="WUQ-MT-zbt" secondAttribute="top" id="xpE-db-Un4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -813,15 +810,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Rj-BD-gFf">
-                                <rect key="frame" x="0.0" y="45" width="600" height="41"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Rj-BD-gFf">
+                                <rect key="frame" x="0.0" y="45" width="600" height="35"/>
                                 <color key="backgroundColor" red="0.086274509803921567" green="0.63529411764705879" blue="0.52941176470588236" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Ep7-og-8Fe"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-UR-Zkg">
@@ -850,36 +847,37 @@
                                 </segments>
                                 <color key="tintColor" red="0.031372549019607843" green="0.23529411764705882" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-p0-ZpP">
-                                <rect key="frame" x="0.0" y="90" width="600" height="60"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-p0-ZpP">
+                                <rect key="frame" x="0.0" y="90" width="600" height="55"/>
                                 <color key="backgroundColor" red="0.086274509799999996" green="0.63529411759999999" blue="0.52941176469999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Uqr-7T-wh5"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOL-60-v1g">
-                                <rect key="frame" x="0.0" y="156" width="600" height="41"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOL-60-v1g">
+                                <rect key="frame" x="0.0" y="156" width="600" height="35"/>
                                 <color key="backgroundColor" red="0.086274509803921567" green="0.63529411764705879" blue="0.52941176470588236" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="C3Z-io-w4y"/>
                                     <constraint firstAttribute="height" constant="35" id="rmn-LT-3ep"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-oF-UgC">
-                                <rect key="frame" x="0.0" y="286" width="600" height="41"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-oF-UgC">
+                                <rect key="frame" x="0.0" y="286" width="600" height="35"/>
                                 <color key="backgroundColor" red="0.086274509799999996" green="0.63529411759999999" blue="0.52941176469999995" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Kc5-sQ-YtT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -1034,9 +1032,14 @@
         <image name="SpotMark" width="706" height="203"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
+        <segue reference="CgA-yG-iLN"/>
+=======
+        <segue reference="yi9-bJ-R6a"/>
         <segue reference="9Yv-mm-iMM"/>
-        <segue reference="pIX-m6-7rI"/>
+>>>>>>> 5c5f6ecc52d6b26c49a81386112cffab09a4ae34
         <segue reference="Kvc-Bv-HLe"/>
+        <segue reference="pIX-m6-7rI"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

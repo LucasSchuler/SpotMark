@@ -107,7 +107,8 @@
             <objects>
                 <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="SpotMark_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="Label" id="Mzw-IA-xFx">
+                        <label alignment="center" text="Label" textAlignment="center" numberOfLines="0" id="Mzw-IA-xFx">
+                            <color key="textColor" red="0.98431372549999996" green="0.0" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" pointSize="17"/>
                         </label>
                     </items>
