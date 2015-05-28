@@ -73,9 +73,11 @@
                         </group>
                         <group alignment="left" layout="vertical" spacing="4" id="uCw-4Q-Ouw">
                             <items>
-                                <group width="1" height="19.5" alignment="left" radius="5" id="DsI-Hy-wes">
+                                <group width="1" height="19.5" alignment="left" radius="2" id="DsI-Hy-wes">
                                     <items>
-                                        <label alignment="left" text="Name" id="reY-6i-AfW"/>
+                                        <label alignment="left" text="Name" id="reY-6i-AfW">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
                                     </items>
                                     <color key="backgroundColor" red="0.1215686275" green="0.69411764710000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </group>
@@ -84,12 +86,17 @@
                                         <label alignment="left" text="Local" id="x2V-zl-P0u"/>
                                     </items>
                                 </group>
-                                <group width="1" alignment="left" radius="5" id="F6W-aR-Xbk">
+                                <group width="1" alignment="left" radius="2" id="F6W-aR-Xbk">
                                     <items>
                                         <label alignment="left" text="Datetime" id="e3Z-mr-g8a"/>
                                     </items>
                                     <color key="backgroundColor" red="0.1215686275" green="0.69411764710000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </group>
+                                <label width="1" alignment="left" text="Time Remainnig" textAlignment="center" id="dt9-4o-ziV">
+                                    <color key="textColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                                <timer width="1" alignment="left" textAlignment="center" id="Du7-NL-bWj"/>
                             </items>
                         </group>
                     </items>
