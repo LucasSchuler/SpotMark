@@ -11,6 +11,8 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "OneEventViewController.h"
+#import "CustomTabBarViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -52,25 +54,28 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setDeviceTokenFromData:deviceToken];
-    // currentInstallation.channels = @[];
     [currentInstallation saveInBackground];
 }
 
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
-    
-    
-
-
-}
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
 {
     NSLog(@"Failed to get token, error: %@", error);
 }
 
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+
     [PFPush handlePush:userInfo];
+    UILocalNotification *notify = [[UILocalNotification alloc]init];
+    notify.fireDate = [NSDate dateWithTimeIntervalSinceNow:3];
+    notify.alertAction = @"Xablay";
+    NSDictionary *dic = [userInfo objectForKey:@"aps"];
+    notify.alertBody = [dic objectForKey:@"alert"];
+    
+    [[UIApplication sharedApplication]scheduleLocalNotification:notify];
 }
+
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     //[FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
@@ -96,9 +101,6 @@
 }
 
 
-
-
-
 - (BOOL)application:(UIApplication *)application
 continueUserActivity:(NSUserActivity *)userActivity
  restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler{
@@ -106,7 +108,7 @@ continueUserActivity:(NSUserActivity *)userActivity
     UIWindow *win = _window;
     
     if (win != nil){
-        OneEventViewController *view = (OneEventViewController *)win.rootViewController;
+        CustomTabBarViewController *view = (CustomTabBarViewController *)win.rootViewController;
         
         
         [view restoreUserActivityState:userActivity];

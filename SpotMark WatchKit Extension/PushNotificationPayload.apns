@@ -14,5 +14,6 @@
         }
     ],
     
-    "customKey": "You have an update"
+    "customKey": "invited you to",
+    "test": "test"
 }

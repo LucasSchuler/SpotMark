@@ -32,10 +32,27 @@ class NotificationController: WKUserNotificationInterfaceController {
     }
     
     
-    override func didReceiveLocalNotification(localNotification: UILocalNotification, withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
+    override func didReceiveLocalNotification(localNotification: UILocalNotification, withCompletion completionHandler: (WKUserNotificationInterfaceType) -> Void) {
         
-     //   notifyLabel.setText(localNotification["customKey"] as? String)
+        notifyLabel.setText(localNotification.description)
+      //  notifyLabel.setText("Test message")
+        
+        println(localNotification.description)
         
         completionHandler(.Custom)
+    }
+    
+    override func didReceiveRemoteNotification(remoteNotification: [NSObject : AnyObject], withCompletion completionHandler: (WKUserNotificationInterfaceType) -> Void) {
+        
+        var strTitle = remoteNotification["aps"] as! [NSObject : AnyObject]
+        var strTitle2 = strTitle["alert"] as! [NSObject : AnyObject]
+        var strTitleAux = strTitle2["title"] as! String
+        
+        notifyLabel.setText(strTitleAux)
+        
+        completionHandler(.Custom)
+
+        
+        
     }
   }

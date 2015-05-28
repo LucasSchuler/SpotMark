@@ -789,7 +789,7 @@
 				TargetAttributes = {
 					0A32BF0A1ABE039E00025127 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6ZVL2ANYP3;
+						DevelopmentTeam = 6D93DA2TT6;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -801,11 +801,11 @@
 					};
 					0ADB74071B0F92B800805D45 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 6ZVL2ANYP3;
+						DevelopmentTeam = 6D93DA2TT6;
 					};
 					0ADB74161B0F92B800805D45 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 6ZVL2ANYP3;
+						DevelopmentTeam = 6D93DA2TT6;
 					};
 				};
 			};
@@ -1071,8 +1071,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lucas Fraga Schuler (2S7478QWLE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lucas Fraga Schuler (2S7478QWLE)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
@@ -1098,8 +1098,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lucas Fraga Schuler (2S7478QWLE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lucas Fraga Schuler (2S7478QWLE)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
@@ -1122,8 +1122,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1150,8 +1150,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Lucas Fraga Schuler";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lucas Fraga Schuler";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
