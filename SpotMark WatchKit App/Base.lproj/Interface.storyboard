@@ -111,8 +111,10 @@
                             <color key="textColor" red="0.98431372549999996" green="0.0" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" pointSize="17"/>
                         </label>
+                        <imageView width="1" alignment="center" verticalAlignment="bottom" id="nSM-iz-vji"/>
                     </items>
                     <connections>
+                        <outlet property="image" destination="nSM-iz-vji" id="oY9-1d-SqZ"/>
                         <outlet property="notifyLabel" destination="Mzw-IA-xFx" id="YSU-Vn-Xpi"/>
                     </connections>
                 </controller>

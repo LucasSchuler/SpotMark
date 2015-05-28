@@ -13,6 +13,8 @@ import Foundation
 class NotificationController: WKUserNotificationInterfaceController {
 
     @IBOutlet weak var notifyLabel: WKInterfaceLabel!
+ 
+    @IBOutlet weak var image: WKInterfaceImage!
     
     override init() {
         // Initialize variables here.
@@ -22,8 +24,14 @@ class NotificationController: WKUserNotificationInterfaceController {
     }
 
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
+        // This method is called when watch view controller is about to be visible to use
+        
         super.willActivate()
+        image.setImageNamed("spotmark_")
+        image.startAnimatingWithImagesInRange(NSMakeRange(0,26), duration: 1, repeatCount: 1)
+//        for i in 0...19{
+//            image.setImageNamed("spotmark_\(i)@2x")
+//        }
     }
 
     override func didDeactivate() {
