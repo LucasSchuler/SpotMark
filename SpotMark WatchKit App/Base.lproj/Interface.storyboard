@@ -13,10 +13,14 @@
                         <table alignment="left" id="arR-x3-32I">
                             <items>
                                 <tableRow identifier="WatchRow" id="q3a-Yh-BEA" customClass="WatchRow" customModule="SpotMark_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="DNV-lZ-96i">
+                                    <group key="rootItem" width="1" alignment="left" radius="5" id="DNV-lZ-96i">
                                         <items>
-                                            <label width="128.5" height="36.5" alignment="left" text="Label" id="3wH-2Y-pWl"/>
+                                            <imageView width="31" alignment="left" image="Branco" contentMode="scaleAspectFit" id="V27-LQ-XeA"/>
+                                            <label width="103.5" height="36.5" alignment="right" text="Label" minimumScaleFactor="0.99999999999999989" id="3wH-2Y-pWl">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
                                         </items>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.69411764710000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="kZv-1B-fDm" kind="push" identifier="goToDetail" id="Q9A-p3-2oW"/>
                                         </connections>
@@ -69,9 +73,23 @@
                         </group>
                         <group alignment="left" layout="vertical" spacing="4" id="uCw-4Q-Ouw">
                             <items>
-                                <label alignment="left" text="Name" id="reY-6i-AfW"/>
-                                <label alignment="left" text="Local" id="x2V-zl-P0u"/>
-                                <label alignment="left" text="Datetime" id="e3Z-mr-g8a"/>
+                                <group width="1" height="19.5" alignment="left" radius="5" id="DsI-Hy-wes">
+                                    <items>
+                                        <label alignment="left" text="Name" id="reY-6i-AfW"/>
+                                    </items>
+                                    <color key="backgroundColor" red="0.1215686275" green="0.69411764710000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </group>
+                                <group width="1" alignment="left" id="yEq-FT-D3M">
+                                    <items>
+                                        <label alignment="left" text="Local" id="x2V-zl-P0u"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" radius="5" id="F6W-aR-Xbk">
+                                    <items>
+                                        <label alignment="left" text="Datetime" id="e3Z-mr-g8a"/>
+                                    </items>
+                                    <color key="backgroundColor" red="0.1215686275" green="0.69411764710000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </group>
                             </items>
                         </group>
                     </items>

@@ -102,6 +102,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="xeA-oc-8Hd">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.12156862745098039" green="0.69411764705882351" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="aFA-Zi-CSE" customClass="FBProfilePictureView">
                                 <rect key="frame" x="220" y="72" width="160" height="150"/>
@@ -1033,8 +1034,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yi9-bJ-R6a"/>
-        <segue reference="9Yv-mm-iMM"/>
-        <segue reference="Kvc-Bv-HLe"/>
+        <segue reference="CgA-yG-iLN"/>
+        <segue reference="07s-Np-hEV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
