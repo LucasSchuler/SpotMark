@@ -11,5 +11,6 @@ import WatchKit
 class WatchRow: NSObject {
    
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
+    @IBOutlet weak var image: WKInterfaceImage!
 
 }
