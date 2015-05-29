@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>54E4AA24-2509-4CA6-9650-5D8E450C69DA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SpotMark</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5B7CDDE5C9766C4016ED1F88BC5EEE5D0CF3C38B</key>
 		<string>https://github.com/LucasSchuler/SpotMark.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SpotMark.xcodeproj</string>
+	<string>SpotMark.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5B7CDDE5C9766C4016ED1F88BC5EEE5D0CF3C38B</key>
