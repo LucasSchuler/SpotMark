@@ -1,8 +1,8 @@
 {
     "aps": {
         "alert": {
-            "body": "Test message",
-            "title": "Optional title"
+            "body": "Rafaela Bertolini invited you to \"Presentation\"",
+            "title": "Invite"
         },
         "category": "myCategory"
     },
