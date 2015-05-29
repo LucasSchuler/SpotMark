@@ -15,6 +15,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var table: WKInterfaceTable!
     var lista : NSMutableArray! = NSMutableArray()
     
+    @IBOutlet weak var img: WKInterfaceImage!
     // 1 - Create Rows
    // let titles = ["Apple Watch Sport", "Apple Watch", "Apple Watch Edition"]
    // let images = ["watch-0", "watch-1","watch-2"]
@@ -56,6 +57,8 @@ class InterfaceController: WKInterfaceController {
             if let row = table.rowControllerAtIndex(i) as? WatchRow {
                 var event: PFObject = lista.objectAtIndex(i) as! PFObject
                 row.titleLabel.setText(event["name"] as? String)
+                var imageName = (event["category"]as? String)! + "1" + ".png"
+                row.image.setImageNamed(imageName)
             }
         }
     }
