@@ -12,7 +12,7 @@ import Parse
 
 class GlanceController: WKInterfaceController {
 
-    @IBOutlet weak var image: WKInterfaceImage!
+    @IBOutlet weak var img: WKInterfaceImage!
     @IBOutlet weak var name: WKInterfaceLabel!
     @IBOutlet weak var local: WKInterfaceLabel!
     @IBOutlet weak var dateTime: WKInterfaceLabel!
@@ -29,7 +29,8 @@ class GlanceController: WKInterfaceController {
             self.name.setText(event["name"] as? String)
             self.local.setText(event["local"] as? String)
             self.dateTime.setText(event["datetime"] as? String)
-            self.image.setImageNamed(event["category"] as? String)
+            self.img.setImageNamed(event["category"] as? String)
+            
         })
     }
 

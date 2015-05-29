@@ -16,7 +16,7 @@
                                     <group key="rootItem" width="1" alignment="left" radius="5" id="DNV-lZ-96i">
                                         <items>
                                             <imageView width="31" alignment="left" verticalAlignment="center" contentMode="scaleAspectFit" id="V27-LQ-XeA"/>
-                                            <label width="103.5" height="36.5" alignment="right" text="Label" minimumScaleFactor="0.99999999999999989" id="3wH-2Y-pWl">
+                                            <label width="103.5" height="36.5" alignment="right" verticalAlignment="center" text="Label" minimumScaleFactor="0.99999999999999989" id="3wH-2Y-pWl">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                             </label>
                                         </items>
@@ -54,7 +54,7 @@
                         </group>
                         <group width="1" alignment="left" id="0vI-Q6-6bO">
                             <items>
-                                <label alignment="left" text="Local" id="GFh-ML-ck9"/>
+                                <label alignment="left" verticalAlignment="center" text="Local" id="GFh-ML-ck9"/>
                             </items>
                         </group>
                         <label alignment="left" id="v3f-wa-reR"/>
@@ -118,7 +118,7 @@
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                     <connections>
                         <outlet property="dateTime" destination="e3Z-mr-g8a" id="c4a-Lt-sN1"/>
-                        <outlet property="image" destination="hWm-YL-7Tx" id="Nkc-yA-ve7"/>
+                        <outlet property="img" destination="hWm-YL-7Tx" id="Hxs-by-sVq"/>
                         <outlet property="local" destination="x2V-zl-P0u" id="3bb-fj-sL6"/>
                         <outlet property="name" destination="reY-6i-AfW" id="ioM-5F-3sR"/>
                     </connections>
@@ -147,11 +147,11 @@
             <objects>
                 <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="SpotMark_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <imageView width="1" alignment="center" verticalAlignment="bottom" id="nSM-iz-vji"/>
                         <label alignment="center" text="Label" textAlignment="center" numberOfLines="0" id="Mzw-IA-xFx">
                             <color key="textColor" red="0.98431372549999996" green="0.0" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" pointSize="17"/>
                         </label>
-                        <imageView width="1" alignment="center" verticalAlignment="bottom" id="nSM-iz-vji"/>
                     </items>
                     <connections>
                         <outlet property="image" destination="nSM-iz-vji" id="oY9-1d-SqZ"/>
