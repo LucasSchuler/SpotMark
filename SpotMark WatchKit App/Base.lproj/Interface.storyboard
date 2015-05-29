@@ -111,7 +111,7 @@
                                     </items>
                                     <color key="backgroundColor" red="0.1215686275" green="0.69411764710000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </group>
-                                <label width="1" alignment="left" text="Time Remainnig" textAlignment="center" id="dt9-4o-ziV">
+                                <label width="1" alignment="left" text="Time Remaining" textAlignment="center" id="dt9-4o-ziV">
                                     <color key="textColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                 </label>
@@ -151,15 +151,22 @@
             <objects>
                 <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="SpotMark_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <imageView width="1" alignment="center" verticalAlignment="bottom" id="nSM-iz-vji"/>
-                        <label alignment="center" text="Label" textAlignment="center" numberOfLines="0" id="Mzw-IA-xFx">
-                            <color key="textColor" red="0.98431372549999996" green="0.0" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" type="system" pointSize="17"/>
+                        <group width="1" alignment="left" radius="0.0" id="41v-IX-H2t">
+                            <items>
+                                <label alignment="center" text="Label" textAlignment="center" numberOfLines="0" id="Mzw-IA-xFx">
+                                    <color key="textColor" red="0.78290602160196221" green="1" blue="0.90388145589367763" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label alignment="left" text="Text" numberOfLines="0" id="jQ2-TI-LOV">
+                            <color key="textColor" red="0.78431372549019607" green="1" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
                     </items>
                     <connections>
-                        <outlet property="image" destination="nSM-iz-vji" id="oY9-1d-SqZ"/>
+                        <outlet property="group" destination="41v-IX-H2t" id="UnT-VZ-ILA"/>
                         <outlet property="notifyLabel" destination="Mzw-IA-xFx" id="YSU-Vn-Xpi"/>
+                        <outlet property="text" destination="jQ2-TI-LOV" id="ebI-2O-Wwl"/>
                     </connections>
                 </controller>
             </objects>

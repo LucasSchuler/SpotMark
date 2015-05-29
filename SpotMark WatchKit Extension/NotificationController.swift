@@ -13,8 +13,9 @@ import Foundation
 class NotificationController: WKUserNotificationInterfaceController {
 
     @IBOutlet weak var notifyLabel: WKInterfaceLabel!
- 
-    @IBOutlet weak var image: WKInterfaceImage!
+    @IBOutlet weak var group: WKInterfaceGroup!
+    
+    @IBOutlet weak var text: WKInterfaceLabel!
     
     override init() {
         // Initialize variables here.
@@ -27,8 +28,10 @@ class NotificationController: WKUserNotificationInterfaceController {
         // This method is called when watch view controller is about to be visible to use
         
         super.willActivate()
-        image.setImageNamed("spotmark_")
-        image.startAnimatingWithImagesInRange(NSMakeRange(0,26), duration: 1, repeatCount: 1)
+        group.setBackgroundImageNamed("spotmark_")
+      //  image.setImageNamed("spotmark_")
+       group.startAnimatingWithImagesInRange(NSMakeRange(0,26), duration: 1, repeatCount: 1)
+     //   image.startAnimatingWithImagesInRange(NSMakeRange(0,26), duration: 1, repeatCount: 1)
 //        for i in 0...19{
 //            image.setImageNamed("spotmark_\(i)@2x")
 //        }
@@ -55,8 +58,10 @@ class NotificationController: WKUserNotificationInterfaceController {
         var strTitle = remoteNotification["aps"] as! [NSObject : AnyObject]
         var strTitle2 = strTitle["alert"] as! [NSObject : AnyObject]
         var strTitleAux = strTitle2["title"] as! String
+         var body = strTitle2["body"] as! String
         
         notifyLabel.setText(strTitleAux)
+        text.setText(body)
         
         completionHandler(.Custom)
 
